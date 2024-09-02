@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Route102_EventScript_ItemPotion::
 	finditem ITEM_POTION
 	end
@@ -502,6 +503,10 @@ MtPyre_6F_EventScript_ItemTMShadowBall::
 	finditem ITEM_TM_SHADOW_BALL
 	end
 
+MtChimney_EventScript_ItemTMLuminosity::
+	finditem ITEM_TM_LUMINOSITY
+	end
+
 MtPyre_Exterior_EventScript_ItemMaxPotion::
 	finditem ITEM_MAX_POTION
 	end
@@ -656,4 +661,9 @@ MagmaHideout_4F_EventScript_ItemMaxRevive::
 
 MagmaHideout_3F_3R_EventScript_ItemEscapeRope::
 	finditem ITEM_ESCAPE_ROPE
+=======
+Common_EventScript_FindItem::
+	callnative GetItemBallIdAndAmountFromTemplate
+	finditem VAR_RESULT VAR_0x8009
+>>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
 	end

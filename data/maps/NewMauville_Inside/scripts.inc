@@ -1,3 +1,15 @@
+NewMauville_Inside_CloseRegiEntrance::
+	setmetatile 33, 21, METATILE_BikeShop_Mauville_Block, TRUE
+	setmetatile 33, 20, METATILE_BikeShop_Mauville_Upper_Block, TRUE
+	setmetatile 33, 19, METATILE_BikeShop_Mauville_Closed_Doors, TRUE
+	setmetatile 33, 18, METATILE_BikeShop_Mauville_Closed_Doors, TRUE
+	return
+
+NewMauville_Inside_OnLoad:
+	call_if_unset FLAG_REGI_DOORS_OPENED, NewMauville_Inside_CloseRegiEntrance
+	call_if_eq VAR_NEW_MAUVILLE_STATE, 2, NewMauville_Inside_EventScript_SetGeneratorOffMetatiles
+	end
+
 NewMauville_Inside_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, NewMauville_Inside_OnResume
 	map_script MAP_SCRIPT_ON_TRANSITION, NewMauville_Inside_OnTransition
@@ -35,10 +47,6 @@ NewMauville_Inside_EventScript_ShowVoltorb2::
 NewMauville_Inside_EventScript_ShowVoltorb3::
 	clearflag FLAG_HIDE_NEW_MAUVILLE_VOLTORB_3
 	return
-
-NewMauville_Inside_OnLoad:
-	call_if_eq VAR_NEW_MAUVILLE_STATE, 2, NewMauville_Inside_EventScript_SetGeneratorOffMetatiles
-	end
 
 NewMauville_Inside_EventScript_BlueButton::
 	lockall
@@ -168,6 +176,10 @@ NewMauville_Inside_EventScript_Generator::
 	releaseall
 	end
 
+NewMauville_Inside_EventScript_RegielekiNotes::
+	msgbox NewMauville_Inside_Text_RegielekiNotes, MSGBOX_SIGN
+	end
+
 NewMauville_Inside_EventScript_GeneratorOff::
 	msgbox NewMauville_Inside_Text_GeneratorQuietedDown, MSGBOX_DEFAULT
 	releaseall
@@ -261,3 +273,41 @@ NewMauville_Inside_Text_SteppedOnSwitchGeneratorStopped:
 	.string "… … … … … … … …\p"
 	.string "The generator appears to have\n"
 	.string "stopped…$"
+
+NewMauville_Inside_Text_RegielekiNotes:
+	.string "Dear Wattson,\p"
+	.string "I can hardly contain my excitement\n"
+	.string "and frustration at the same time.\p"
+	.string "The energy fluctuations within\n"
+	.string "New Mauville are beyond anything\l"
+	.string "I've ever encountered.\p"
+	.string "It's as if the very essence of\n"
+	.string "electricity is alive within\l"
+	.string "these walls.\p"
+	.string "There are symbols etched into the\n"
+	.string "stone that defy conventional logic,\l"
+	.string "and the power surges are intense.\p"
+	.string "I've been chasing one elusive\n"
+	.string "entity, an Electric-type Pokémon,\l"
+	.string "I believe, but I can't get close\l"
+	.string "enough to document it properly.\p"
+	.string "I fear the city's power grid may\n"
+	.string "be in peril.\p"
+	.string "The more we rely on this entity's\n"
+	.string "electricity, the more likely we\l"
+	.string "are to face a catastrophic\l"
+	.string "collapse of our power\l"
+	.string "infrastructure.\p"
+	.string "If you ever venture here,\n"
+	.string "please be cautious and heed my\l"
+	.string "research.\p"
+	.string "There's something extraordinary\n"
+	.string "within these walls, something that\l"
+	.string "I suspect is guarding its secrets\l"
+	.string "fiercely.\p"
+	.string "Best of luck in your endeavors,\n"
+	.string "… … … … … … … …\p"
+	.string "The rest of the letter is\n"
+	.string "singed...$"
+
+	

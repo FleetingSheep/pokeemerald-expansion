@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
 {
     [ITEM_NONE] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
@@ -364,6 +365,7 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_GALLADITE] = {gItemIcon_Galladite, gItemIconPalette_Galladite},
     [ITEM_AUDINITE] = {gItemIcon_Audinite, gItemIconPalette_Audinite},
     [ITEM_DIANCITE] = {gItemIcon_Diancite, gItemIconPalette_Diancite},
+    [ITEM_FLYGONITE] = {gItemIcon_Flygonite, gItemIconPalette_Flygonite},
     // Gems
     [ITEM_NORMAL_GEM] = {gItemIcon_NormalGem, gItemIconPalette_NormalGem},
     [ITEM_FIRE_GEM] = {gItemIcon_FireGem, gItemIconPalette_FireGem},
@@ -847,3 +849,6 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     // Return to field arrow
     [ITEMS_COUNT] = {gItemIcon_ReturnToFieldArrow, gItemIconPalette_ReturnToFieldArrow},
 };
+=======
+
+>>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049

@@ -3260,6 +3260,50 @@ static const u8 sHydroSteamDescription[] = _(
     "This move's power increases\n"
     "under harsh sunlight.");
 
+static const u8 sSupernovaDescription[] = _(
+    "Leaves the user on death's\n"
+    "door.");
+
+static const u8 sSolarFlareDescription[] = _(
+    "Boosted in sun and\n"
+    "sometimes burns.");
+
+static const u8 sLuminosityDescription[] = _(
+    "Radiates burning light,\n"
+    "raising Special stats.");
+
+static const u8 sMeteorShowerDescription[] = _(
+    "Hits multiple targets\n"
+    "with large asteroids.");
+
+static const u8 sWormholeDescription[] = _(
+    "Sucks the target into a\n"
+    "portal, ending the battle.");
+
+static const u8 sGlimmerDescription[] = _(
+    "Flings rare unearthly\n"
+    "metals at the target.");
+
+static const u8 sAsteroidTossDescription[] = _(
+    "Hurls space debris\n"
+    "with surprising force.");
+
+static const u8 sRelativityDescription[] = _(
+    "Strikes harder if user is\n"
+    "slower than the target.");
+
+static const u8 sImpactEventDescription[] = _(
+    "Powerful, severely injures\n"
+    "the user.");
+
+static const u8 sRedShiftDescription[] = _(
+    "Alters perception of space,\n"
+    "confusing the target.");
+
+static const u8 sBlackHoleDescription[] = _(
+    "An ultra-dense mass\n"
+    "that may cause fainting.");
+
 const u8 gNotDoneYetDescription[] = _(
     "This move can't be used. Its\n"
     "effect is in development.");
@@ -4099,4 +4143,15 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_MAGICAL_TORQUE - 1] = sMagicalTorqueDescription,
     [MOVE_PSYBLADE - 1] = sPsybladeDescription,
     [MOVE_HYDRO_STEAM - 1] = sHydroSteamDescription,
+    [MOVE_BLACK_HOLE - 1] = sBlackHoleDescription,
+    [MOVE_SUPERNOVA - 1] = sSupernovaDescription,
+    [MOVE_SOLAR_FLARE - 1] = sSolarFlareDescription,
+    [MOVE_LUMINOSITY - 1] = sLuminosityDescription,
+    [MOVE_METEOR_SHOWER - 1] = sMeteorShowerDescription,
+    [MOVE_WORMHOLE - 1] = sWormholeDescription,
+    [MOVE_GLIMMER - 1] = sGlimmerDescription,
+    [MOVE_ASTEROID_TOSS - 1] = sAsteroidTossDescription,
+    [MOVE_RELATIVITY - 1] = sRelativityDescription,
+    [MOVE_IMPACT_EVENT - 1] = sImpactEventDescription,
+    [MOVE_RED_SHIFT - 1] = sRedShiftDescription,
 };

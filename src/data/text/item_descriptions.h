@@ -1776,6 +1776,10 @@ static const u8 sDianciteDesc[] = _(
     "Diancie to Mega\n"
     "Evolve in battle.");
 
+static const u8 sFlygoniteDesc[] =_(
+    "This stone enables\n"
+    "Flygon to Mega\n"
+    "Evolve in battle.");
 // Gems
 static const u8 sNormalGemDesc[] = _(
     "Increases the\n"
@@ -3281,8 +3285,10 @@ static const u8 sTM50Desc[] = _(
     "attack, but sharply\n"
     "lowers Sp. Atk.");
 
-static const u8 sTM51Desc[] = _( // Todo
-    "?????");
+static const u8 sTM51Desc[] = _(
+    "Radiates burning\n"
+    "light, raising\n"
+    "Special stats.");
 
 static const u8 sTM52Desc[] = _( // Todo
     "?????");

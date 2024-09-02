@@ -69,7 +69,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_MULTI_HIT,
         .power = 18,
-        .type = TYPE_NORMAL,
+        .type = TYPE_SPACE,
         .accuracy = 85,
         .pp = 15,
         .secondaryEffectChance = 0,
@@ -1935,7 +1935,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_LIGHT_SCREEN,
         .power = 0,
-        .type = TYPE_PSYCHIC,
+        .type = TYPE_SPACE,
         .accuracy = 0,
         .pp = 30,
         .secondaryEffectChance = 0,
@@ -1964,7 +1964,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_REFLECT,
         .power = 0,
-        .type = TYPE_PSYCHIC,
+        .type = TYPE_SPACE,
         .accuracy = 0,
         .pp = 20,
         .secondaryEffectChance = 0,
@@ -2211,7 +2211,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_HIT,
         .power = 60,
-        .type = TYPE_NORMAL,
+        .type = TYPE_SPACE,
         .accuracy = 0,
         .pp = 20,
         .secondaryEffectChance = 0,
@@ -2553,7 +2553,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
         #endif
         .effect = EFFECT_ACCURACY_DOWN,
         .power = 0,
-        .type = TYPE_NORMAL,
+        .type = TYPE_SPACE,
         .pp = 20,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -4060,7 +4060,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     [MOVE_MOONLIGHT] =
     {
         #if B_UPDATED_MOVE_TYPES >= GEN_6
-            .type = TYPE_FAIRY,
+            .type = TYPE_SPACE,
         #else
             .type = TYPE_NORMAL,
         #endif
@@ -4720,7 +4720,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_WISH,
         .power = 0,
-        .type = TYPE_NORMAL,
+        .type = TYPE_SPACE,
         .accuracy = 0,
         .pp = 10,
         .secondaryEffectChance = 0,
@@ -5300,7 +5300,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
             .accuracy = 85,
         #endif
         .effect = EFFECT_ATTACK_UP_HIT,
-        .type = TYPE_STEEL,
+        .type = TYPE_SPACE,
         .pp = 10,
         .secondaryEffectChance = 20,
         .target = MOVE_TARGET_SELECTED,
@@ -5522,7 +5522,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_COSMIC_POWER,
         .power = 0,
-        .type = TYPE_PSYCHIC,
+        .type = TYPE_SPACE,
         .accuracy = 0,
         .pp = 20,
         .secondaryEffectChance = 0,
@@ -5551,7 +5551,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_CONFUSE_HIT,
         .power = 75,
-        .type = TYPE_BUG,
+        .type = TYPE_SPACE,
         .accuracy = 100,
         .pp = 15,
         .secondaryEffectChance = 10,
@@ -6058,7 +6058,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
             .accuracy = 85,
         #endif
         .effect = EFFECT_FUTURE_SIGHT,
-        .type = TYPE_STEEL,
+        .type = TYPE_SPACE,
         .pp = 5,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -6106,7 +6106,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_GRAVITY,
         .power = 0,
-        .type = TYPE_PSYCHIC,
+        .type = TYPE_SPACE,
         .accuracy = 0,
         .pp = 5,
         .secondaryEffectChance = 0,
@@ -6187,7 +6187,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_HEALING_WISH,
         .power = 0,
-        .type = TYPE_PSYCHIC,
+        .type = TYPE_SPACE,
         .accuracy = 0,
         .pp = 10,
         .secondaryEffectChance = 0,
@@ -7790,7 +7790,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_HIT,
         .power = 100,
-        .type = TYPE_DRAGON,
+        .type = TYPE_SPACE,
         .accuracy = 95,
         .pp = 5,
         .secondaryEffectChance = 0,
@@ -7805,7 +7805,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_HEALING_WISH,
         .power = 0,
-        .type = TYPE_PSYCHIC,
+        .type = TYPE_SPACE,
         .accuracy = 0,
         .pp = 10,
         .secondaryEffectChance = 0,
@@ -11084,7 +11084,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_RECHARGE,
         .power = 160,
-        .type = TYPE_PSYCHIC,
+        .type = TYPE_SPACE,
         .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 0,
@@ -11247,7 +11247,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_PHOTON_GEYSER,
         .power = 100,
-        .type = TYPE_PSYCHIC,
+        .type = TYPE_SPACE,
         .accuracy = 100,
         .pp = 5,
         .secondaryEffectChance = 0,
@@ -12988,7 +12988,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_JUNGLE_HEALING,
         .power = 0,
-        .type = TYPE_PSYCHIC,
+        .type = TYPE_SPACE,
         .accuracy = 0,
         .pp = 10,
         .secondaryEffectChance = 0,
@@ -14272,5 +14272,168 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
         .priority = 0,
         .split = SPLIT_PHYSICAL,
         .zMoveEffect = 0,
+    },
+    [MOVE_BLACK_HOLE] =  // space ohko
+    {
+        .effect = EFFECT_OHKO,
+        .power = 1,
+        .type = TYPE_SPACE,
+        .accuracy = 30,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+    
+    },
+    [MOVE_SUPERNOVA] =  // space self destruct, leaves on 1hp
+    {
+        .effect = EFFECT_SUPERNOVA,
+        .power = 125,
+        .type = TYPE_SPACE,
+        .accuracy = 90,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+    
+    },
+    [MOVE_SOLAR_FLARE] =  // burns and boost in sunny day, flamethrower equivalent
+    {
+        .effect = EFFECT_SOLAR_FLARE,
+        .power = 85,
+        .type = TYPE_SPACE,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 10,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+    
+    },
+    [MOVE_LUMINOSITY] =  // special buffs and self applied burn
+    {
+        .effect = EFFECT_LUMINOSITY,
+        .power = 0,
+        .type = TYPE_SPACE,
+        .accuracy = 0,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_USER,
+        .priority = 0,
+        .split = SPLIT_STATUS,
+        .zMoveEffect = Z_EFFECT_RESET_STATS,
+        .snatchAffected = TRUE,
+    },
+    [MOVE_METEOR_SHOWER] =  // aoe space
+    {
+        .effect = EFFECT_HIT,
+        .power = 90,
+        .type = TYPE_SPACE,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_FOES_AND_ALLY,
+        .priority = 0,
+        .split = SPLIT_PHYSICAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+    
+    },
+    [MOVE_WORMHOLE] =  // priority move or phantom force?
+    {
+        .accuracy = 0,
+        .effect = EFFECT_ROAR,
+        .power = 0,
+        .type = TYPE_SPACE,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = -6,
+        .split = SPLIT_STATUS,
+        .zMoveEffect = Z_EFFECT_SPDEF_UP_1,
+        .windMove = TRUE,
+        .ignoresProtect = B_UPDATED_MOVE_FLAGS >= GEN_6,
+        .magicCoatAffected = B_UPDATED_MOVE_FLAGS >= GEN_5,
+        .copycatBanned = TRUE,
+    
+    },
+    [MOVE_GLIMMER] =  // weak sp attack
+    {
+        .effect = EFFECT_HIT,
+        .power = 50,
+        .type = TYPE_SPACE,
+        .accuracy = 100,
+        .pp = 30,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_BOTH,
+        .priority = 0,
+        .split = SPLIT_PHYSICAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+        .highCritRatio = TRUE,
+    
+    },
+    [MOVE_ASTEROID_TOSS] =  // flinching phys attack
+    {
+        .effect = EFFECT_FLINCH_HIT,
+        .power = 75,
+        .type = TYPE_SPACE,
+        .accuracy = 90,
+        .pp = 20,
+        .secondaryEffectChance = 30,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_PHYSICAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+        .sheerForceBoost = TRUE,
+    
+    },
+    [MOVE_RELATIVITY] =  // deals damage depending on speed difference between user and target
+    {
+        .effect = EFFECT_RELATIVITY,
+        .power = 1,
+        .type = TYPE_SPACE,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_PHYSICAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+        .makesContact = TRUE,
+        .ballisticMove = TRUE,
+    
+    },
+    [MOVE_IMPACT_EVENT] =  // high recoil move
+    {
+        .effect = EFFECT_RECOIL_33,
+        .power = 120,
+        .type = TYPE_SPACE,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_PHYSICAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+        .makesContact = TRUE,
+    
+    },
+    [MOVE_RED_SHIFT] =
+    {
+        .effect = EFFECT_RED_SHIFT,
+        .power = 0,
+        .type = TYPE_SPACE,
+        .accuracy = 70,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_STATUS,
+        .zMoveEffect = Z_EFFECT_SPD_UP_1,
+        .magicCoatAffected = TRUE,
     },
 };

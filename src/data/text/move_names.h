@@ -831,6 +831,17 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_MAGICAL_TORQUE] = _("Magical Torque"),
     [MOVE_PSYBLADE] = _("Psyblade"),
     [MOVE_HYDRO_STEAM] = _("Hydro Steam"),
+    [MOVE_BLACK_HOLE] = _("Black Hole"),
+    [MOVE_SUPERNOVA] = _("Supernova"),
+    [MOVE_SOLAR_FLARE] = _("Solar Flare"),
+    [MOVE_LUMINOSITY] = _("Luminosity"),
+    [MOVE_METEOR_SHOWER] = _("Meteor Shower"),
+    [MOVE_WORMHOLE] = _("Wormhole"),
+    [MOVE_GLIMMER] = _("Glimmer"),
+    [MOVE_ASTEROID_TOSS] = _("Asteroid Toss"),
+    [MOVE_RELATIVITY] = _("Relativity"),
+    [MOVE_IMPACT_EVENT] = _("Impact Event"),
+    [MOVE_RED_SHIFT] = _("Red Shift"),
 };
 #else
 // 12 letters
@@ -1665,6 +1676,17 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_MAGICAL_TORQUE] = _("MagiclTorque"),
     [MOVE_PSYBLADE] = _("Psyblade"),
     [MOVE_HYDRO_STEAM] = _("Hydro Steam"),
+    [MOVE_BLACK_HOLE] = _("Black Hole"),
+    [MOVE_SUPERNOVA] = _("Supernova"),
+    [MOVE_SOLAR_FLARE] = _("Solar Flare"),
+    [MOVE_LUMINOSITY] = _("Luminosity"),
+    [MOVE_METEOR_SHOWER] = _("MeteorShower"),
+    [MOVE_WORMHOLE] = _("Wormhole"),
+    [MOVE_GLIMMER] = _("Glimmer"),
+    [MOVE_ASTEROID_TOSS] = _("AsteroidToss"),
+    [MOVE_RELATIVITY] = _("Relativity"),
+    [MOVE_IMPACT_EVENT] = _("Impact Event"),
+    [MOVE_RED_SHIFT] = _("Red Shift"),
 };
 #endif
 

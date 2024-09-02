@@ -76,7 +76,7 @@ LittlerootTown_EventScript_SetExitedHouseAfterLatiSSTicketEvent::
 	return
 
 LittlerootTown_EventScript_MoveMomToMaysDoor::
-	setobjectxyperm LOCALID_MOM, 14, 8
+	setobjectxyperm LOCALID_MOM, 9, 26
 	return
 
 LittlerootTown_EventScript_SetTwinPos::
@@ -86,7 +86,7 @@ LittlerootTown_EventScript_SetTwinPos::
 	return
 
 LittlerootTown_EventScript_SetTwinGuardingRoutePos::
-	setobjectxyperm LOCALID_TWIN, 7, 2
+	setobjectxyperm LOCALID_TWIN, 12, 2
 	setobjectmovementtype LOCALID_TWIN, MOVEMENT_TYPE_FACE_DOWN
 	return
 
@@ -99,11 +99,11 @@ LittlerootTown_EventScript_SetMomStandingInFrontOfDoorPos::
 	return
 
 LittlerootTown_EventScript_SetMomInFrontOfDoorMale::
-	setobjectxyperm LOCALID_MOM, 5, 9
+	setobjectxyperm LOCALID_MOM, 30, 9
 	return
 
 LittlerootTown_EventScript_SetMomInFrontOfDoorFemale::
-	setobjectxyperm LOCALID_MOM, 14, 9
+	setobjectxyperm LOCALID_MOM, 9, 27
 	return
 
 LittlerootTown_OnFrame:
@@ -114,7 +114,7 @@ LittlerootTown_OnFrame:
 
 LittlerootTown_EventScript_StepOffTruckMale::
 	lockall
-	setvar VAR_0x8004, 5
+	setvar VAR_0x8004, 30
 	setvar VAR_0x8005, 8
 	call LittlerootTown_EventScript_GoInsideWithMom
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_TRUCK
@@ -125,8 +125,8 @@ LittlerootTown_EventScript_StepOffTruckMale::
 
 LittlerootTown_EventScript_StepOffTruckFemale::
 	lockall
-	setvar VAR_0x8004, 14
-	setvar VAR_0x8005, 8
+	setvar VAR_0x8004, 9
+	setvar VAR_0x8005, 26
 	call LittlerootTown_EventScript_GoInsideWithMom
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_TRUCK
 	warpsilent MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F, 2, 8
@@ -237,13 +237,13 @@ LittlerootTown_EventScript_SetRivalBirchPosForDexUpgrade::
 	end
 
 LittlerootTown_EventScript_SetRivalBirchPosForDexUpgradeMale::
-	setobjectxy LOCALID_RIVAL, 6, 10
-	setobjectxy LOCALID_BIRCH, 5, 10
+	setobjectxy LOCALID_RIVAL, 29, 11
+	setobjectxy LOCALID_BIRCH, 30, 11
 	end
 
 LittlerootTown_EventScript_SetRivalBirchPosForDexUpgradeFemale::
-	setobjectxy LOCALID_RIVAL, 13, 10
-	setobjectxy LOCALID_BIRCH, 14, 10
+	setobjectxy LOCALID_RIVAL, 9, 29
+	setobjectxy LOCALID_BIRCH, 10, 29
 	end
 
 LittlerootTown_EventScript_FatMan::
@@ -306,15 +306,12 @@ LittlerootTown_EventScript_DangerousWithoutPokemon::
 	return
 
 LittlerootTown_Movement_TwinApproachPlayerLeft:
-	face_right
+	face_left
 	delay_8
 	disable_jump_landing_ground_effect
-	jump_in_place_right
+	jump_in_place_left
 	delay_8
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
+	walk_fast_left
 	walk_fast_up
 	walk_fast_up
 	walk_fast_left
@@ -328,12 +325,7 @@ LittlerootTown_Movement_TwinPushPlayerFromRoute:
 LittlerootTown_Movement_TwinReturnLeft:
 	walk_right
 	walk_down
-	walk_down
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_up
+	walk_right
 	walk_in_place_faster_down
 	step_end
 
@@ -354,14 +346,13 @@ LittlerootTown_EventScript_NeedPokemonTriggerRight::
 	end
 
 LittlerootTown_Movement_TwinApproachPlayerRight:
-	face_right
+	face_down
 	delay_8
 	disable_jump_landing_ground_effect
-	jump_in_place_right
+	jump_in_place_down
 	delay_8
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
+	walk_fast_left
+	walk_fast_left
 	walk_fast_up
 	walk_fast_up
 	walk_fast_right
@@ -371,9 +362,11 @@ LittlerootTown_Movement_TwinApproachPlayerRight:
 LittlerootTown_Movement_TwinReturnRight:
 	walk_left
 	walk_down
-	walk_left
-	walk_left
-	walk_left
+	walk_down
+	walk_right
+	walk_right
+	walk_up
+	face_down
 	walk_in_place_faster_down
 	step_end
 
@@ -394,6 +387,10 @@ LittlerootTown_EventScript_GoSaveBirchTrigger::
 
 LittlerootTown_EventScript_TownSign::
 	msgbox LittlerootTown_Text_TownSign, MSGBOX_SIGN
+	end
+
+LittlerootTown_EventScript_DontTrampleSign::
+	msgbox LittlerootTown_Text_DontTrampleSign, MSGBOX_SIGN
 	end
 
 LittlerootTown_EventScript_BirchsLabSign::
@@ -490,13 +487,13 @@ LittlerootTown_EventScript_GiveRunningShoesTrigger::
 	end
 
 LittlerootTown_EventScript_SetHomeDoorCoordsMale::
-	setvar VAR_0x8009, 5
+	setvar VAR_0x8009, 30
 	setvar VAR_0x800A, 8
 	return
 
 LittlerootTown_EventScript_SetHomeDoorCoordsFemale::
-	setvar VAR_0x8009, 14
-	setvar VAR_0x800A, 8
+	setvar VAR_0x8009, 9
+	setvar VAR_0x800A, 26
 	return
 
 LittlerootTown_EventScript_MomNoticePlayerMale::
@@ -953,13 +950,12 @@ LittlerootTown_Text_ComeHomeIfAnythingHappens:
 	.string "To think that you have your very own\n"
 	.string "POKéMON now…\l"
 	.string "Your father will be overjoyed.\p"
-	.string "…But please be careful.\n"
-	.string "If anything happens, you can come home.\p"
-	.string "Go on, go get them, honey!$"
+	.string "… … … … … … … …\p"
+	.string "Tell your dad I love him, honey.$"
 
 LittlerootTown_Text_CanUsePCToStoreItems:
-	.string "If you use a PC, you can store items\n"
-	.string "and POKéMON.\p"
+	.string "If you decompile a POKéMON ROM...\n"
+	.string "you can make whatever you want!\p"
 	.string "The power of science is staggering!$"
 
 LittlerootTown_Text_BirchSpendsDaysInLab:
@@ -999,6 +995,8 @@ LittlerootTown_Text_TownSign:
 	.string "LITTLEROOT TOWN\n"
 	.string "“A town that can't be shaded any hue.”$"
 
+LittlerootTown_Text_DontTrampleSign:
+	.string "DON'T TRAMPLE!$"
 LittlerootTown_Text_ProfBirchsLab:
 	.string "PROF. BIRCH'S POKéMON LAB$"
 
@@ -1017,5 +1015,5 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "Oh, yes. Do you still have the POKéDEX\n"
 	.string "I gave you?\p"
 	.string "I have something to show you.\n"
-	.string "Let's go to my LAB.$"
+	.string "Let's head to my LAB.$"
 

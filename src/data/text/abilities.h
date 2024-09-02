@@ -289,6 +289,12 @@ static const u8 sToxicDebrisDescription[] = _("Throws poison spikes if hit.");
 static const u8 sArmorTailDescription[] = _("Protects from priority.");
 static const u8 sEarthEaterDescription[] = _("Eats ground to heal HP.");
 static const u8 sMyceliumMightDescription[] = _("Status moves never fail.");
+static const u8 sEventHorizonDescription[] = _("No one can escape.");
+static const u8 sAsteroidBeltDescription[] = _("Turns rock into defense.");
+static const u8 sFasterThanLightDescription[] = _("Raise speed in battle.");
+static const u8 sAnomalyDescription[] = _("Confuses enemy on contact.");
+static const u8 sPeriapsisDescription[] = _("Summons gravity in battle.");
+static const u8 sHyperdensityDescription[] = _("Moves faster under gravity.");
 
 #if B_EXPANDED_ABILITY_NAMES == TRUE
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -592,6 +598,12 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_ARMOR_TAIL] = _("Armor Tail"),
     [ABILITY_EARTH_EATER] = _("Earth Eater"),
     [ABILITY_MYCELIUM_MIGHT] = _("Mycelium Might"),
+    [ABILITY_EVENT_HORIZON] = _("Event Horizon"),
+    [ABILITY_ASTEROID_BELT] = _("Asteroid Belt"),
+    [ABILITY_FASTER_THAN_LIGHT] = _("FTL"),
+    [ABILITY_ANOMALY] = _("Anomaly"),
+    [ABILITY_PERIAPSIS] = _("Periapsis"),
+    [ABILITY_HYPERDENSITY] = _("Hyperdensity"),
 };
 #else   // 12 characters
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -895,6 +907,12 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_ARMOR_TAIL] = _("Armor Tail"),
     [ABILITY_EARTH_EATER] = _("Earth Eater"),
     [ABILITY_MYCELIUM_MIGHT] = _("MceliumMight"),
+    [ABILITY_EVENT_HORIZON] = _("EventHorizon"),
+    [ABILITY_ASTEROID_BELT] = _("AsteroidBelt"),
+    [ABILITY_FASTER_THAN_LIGHT] = _("FTL"),
+    [ABILITY_ANOMALY] = _("Anomaly"),
+    [ABILITY_PERIAPSIS] = _("Periapsis"),
+    [ABILITY_HYPERDENSITY] = _("Hyperdensity"),
 };
 #endif
 
@@ -1199,4 +1217,10 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_ARMOR_TAIL] = sArmorTailDescription,
     [ABILITY_EARTH_EATER] = sEarthEaterDescription,
     [ABILITY_MYCELIUM_MIGHT] = sMyceliumMightDescription,
+    [ABILITY_EVENT_HORIZON] = sEventHorizonDescription,
+    [ABILITY_ASTEROID_BELT] = sAsteroidBeltDescription,
+    [ABILITY_FASTER_THAN_LIGHT] = sFasterThanLightDescription,
+    [ABILITY_ANOMALY] = sAnomalyDescription,
+    [ABILITY_PERIAPSIS] = sPeriapsisDescription,
+    [ABILITY_HYPERDENSITY] = sHyperdensityDescription,
 };

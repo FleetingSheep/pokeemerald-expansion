@@ -285,16 +285,20 @@ Route101_Text_YouSavedMe:
 	.string "by my POKéMON LAB later, okay?$"
 
 Route101_Text_TakeTiredPokemonToPokeCenter:
-	.string "If POKéMON get tired, take them to\n"
-	.string "a POKéMON CENTER.\p"
-	.string "There's a POKéMON CENTER in OLDALE\n"
-	.string "TOWN right close by.$"
+	.string "When catching wild POKéMON,\n"
+	.string "your odds are best when they\l"
+	.string "are very close to fainting.\p"
+	.string "If you want to be extra\n"
+	.string "certain, afflicting a status\l"
+	.string "condition helps as well!$"
 
 Route101_Text_WildPokemonInTallGrass:
-	.string "Wild POKéMON will jump out at you in\n"
-	.string "tall grass.\p"
-	.string "If you want to catch POKéMON, you have\n"
-	.string "to go into the tall grass and search.$"
+	.string "I've heard that some regional\n"
+	.string "variants have started showing up\l"
+	.string "in place of normal POKéMON all\l"
+	.string "across Hoenn.\p"
+	.string "I still haven't found a\n"
+	.string "Galarian Zigzagoon...$"
 
 Route101_Text_RouteSign:
 	.string "ROUTE 101\n"
