@@ -499,14 +499,6 @@ static const struct FormChange sDeoxysNormalFormChangeTable[] = {
     {FORM_CHANGE_TERMINATOR},
 };
 
-<<<<<<< HEAD
-static const struct FormChange sFlygonFormChangeTable[] = {
-    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM,   SPECIES_FLYGON_MEGA, ITEM_FLYGONITE},
-    {FORM_CHANGE_TERMINATOR},
-};
-
-#if P_GEN_4_POKEMON == TRUE
-=======
 static const struct FormChange sDeoxysAttackFormChangeTable[] = {
     {FORM_CHANGE_ITEM_USE, SPECIES_DEOXYS_DEFENSE,  ITEM_METEORITE},
     {FORM_CHANGE_TERMINATOR},
@@ -524,7 +516,6 @@ static const struct FormChange sDeoxysSpeedFormChangeTable[] = {
 #endif //P_FAMILY_DEOXYS
 
 #if P_FAMILY_BURMY
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
 static const struct FormChange sBurmyFormChangeTable[] = {
     {FORM_CHANGE_END_BATTLE_TERRAIN, SPECIES_BURMY_PLANT_CLOAK, BATTLE_TERRAIN_GRASS},
     {FORM_CHANGE_END_BATTLE_TERRAIN, SPECIES_BURMY_PLANT_CLOAK, BATTLE_TERRAIN_LONG_GRASS},

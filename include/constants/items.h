@@ -966,11 +966,7 @@
 #define ITEM_LINKING_CORD 796
 #define ITEM_PEAT_BLOCK 797
 #define ITEM_BERSERK_GENE 798
-#define ITEM_FLYGONITE 799
 
-<<<<<<< HEAD
-#define ITEMS_COUNT 800
-=======
 #define ITEM_FAIRY_FEATHER 799
 #define ITEM_SYRUPY_APPLE 800
 #define ITEM_UNREMARKABLE_TEACUP 801
@@ -1001,12 +997,12 @@
 #define ITEM_SWAP_SNACK 825
 #define ITEM_TWICE_SPICED_RADISH 826
 #define ITEM_POKESHI_DOLL 827
+#define ITEM_FLYGONITE 828
 
 // HOPO BERRY
 // LEGEND PLATE
 
-#define ITEMS_COUNT 828
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
+#define ITEMS_COUNT 829
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

@@ -10979,31 +10979,6 @@ static void Cmd_various(void)
         }
         return;
     }
-<<<<<<< HEAD
-    case VARIOUS_TRY_TRAINER_SLIDE_MSG_Z_MOVE:
-    {
-        VARIOUS_ARGS();
-        if ((i = ShouldDoTrainerSlide(battler, TRAINER_SLIDE_Z_MOVE)))
-        {
-            gBattleScripting.battler = battler;
-            BattleScriptPush(cmd->nextInstr);
-            gBattlescriptCurrInstr = (i == 1 ? BattleScript_TrainerASlideMsgRet : BattleScript_TrainerBSlideMsgRet);
-            return;
-        }
-        break;
-    }
-    case VARIOUS_TRY_TRAINER_SLIDE_MSG_MEGA_EVOLUTION:
-    {
-        VARIOUS_ARGS();
-        if ((i = ShouldDoTrainerSlide(battler, TRAINER_SLIDE_MEGA_EVOLUTION)))
-        {
-            gBattleScripting.battler = battler;
-            BattleScriptPush(cmd->nextInstr);
-            gBattlescriptCurrInstr = (i == 1 ? BattleScript_TrainerASlideMsgRet : BattleScript_TrainerBSlideMsgRet);
-            return;
-        }
-        break;
-    }
     case VARIOUS_SET_HP_TO_ONE:
     {
         int battler_hp = gBattleMons[gBattlerAttacker].hp;
@@ -11019,15 +10994,11 @@ static void Cmd_various(void)
 
     }
 
-=======
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     } // End of switch (cmd->id)
 
     gBattlescriptCurrInstr = cmd->nextInstr;
 }
 
-<<<<<<< HEAD
-=======
 static void TryResetProtectUseCounter(u32 battler)
 {
     u32 lastMove = gLastResultingMoves[battler];
@@ -11036,7 +11007,6 @@ static void TryResetProtectUseCounter(u32 battler)
           && (B_ALLY_SWITCH_FAIL_CHANCE >= GEN_9 && gMovesInfo[lastMove].effect != EFFECT_ALLY_SWITCH)))
         gDisableStructs[battler].protectUses = 0;
 }
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
 
 static void Cmd_setprotectlike(void)
 {

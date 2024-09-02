@@ -892,14 +892,12 @@ static const union AnimCmd sSpriteAnim_TypeFairy[] = {
     ANIMCMD_FRAME(TYPE_FAIRY * 8, 0, FALSE, FALSE),
     ANIMCMD_END
 };
-<<<<<<< HEAD
+
 static const union AnimCmd sSpriteAnim_TypeSpace[] = {
     ANIMCMD_FRAME(TYPE_SPACE * 8, 0, FALSE, FALSE),
-=======
+};
 static const union AnimCmd sSpriteAnim_TypeStellar[] = {
     ANIMCMD_FRAME(TYPE_STELLAR * 8, 0, FALSE, FALSE),
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
-    ANIMCMD_END
 };
 static const union AnimCmd sSpriteAnim_CategoryCool[] = {
     ANIMCMD_FRAME((CONTEST_CATEGORY_COOL + NUMBER_OF_MON_TYPES) * 8, 0, FALSE, FALSE),
@@ -922,7 +920,6 @@ static const union AnimCmd sSpriteAnim_CategoryTough[] = {
     ANIMCMD_END
 };
 static const union AnimCmd *const sSpriteAnimTable_MoveTypes[NUMBER_OF_MON_TYPES + CONTEST_CATEGORIES_COUNT] = {
-<<<<<<< HEAD
     sSpriteAnim_TypeNormal,
     sSpriteAnim_TypeFighting,
     sSpriteAnim_TypeFlying,
@@ -948,7 +945,7 @@ static const union AnimCmd *const sSpriteAnimTable_MoveTypes[NUMBER_OF_MON_TYPES
     sSpriteAnim_CategoryCute,
     sSpriteAnim_CategorySmart,
     sSpriteAnim_CategoryTough,
-=======
+
     [TYPE_NONE] = sSpriteAnim_TypeNone,
     [TYPE_NORMAL] = sSpriteAnim_TypeNormal,
     [TYPE_FIGHTING] = sSpriteAnim_TypeFighting,
@@ -969,13 +966,13 @@ static const union AnimCmd *const sSpriteAnimTable_MoveTypes[NUMBER_OF_MON_TYPES
     [TYPE_DRAGON] = sSpriteAnim_TypeDragon,
     [TYPE_DARK] = sSpriteAnim_TypeDark,
     [TYPE_FAIRY] = sSpriteAnim_TypeFairy,
+    [TYPE_SPACE] = sSpriteAnim_TypeStellar,
     [TYPE_STELLAR] = sSpriteAnim_TypeStellar,
     [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_COOL] = sSpriteAnim_CategoryCool,
     [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_BEAUTY] = sSpriteAnim_CategoryBeauty,
     [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_CUTE] = sSpriteAnim_CategoryCute,
     [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_SMART] = sSpriteAnim_CategorySmart,
     [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_TOUGH] = sSpriteAnim_CategoryTough,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
 };
 
 const struct CompressedSpriteSheet gSpriteSheet_MoveTypes =
@@ -996,7 +993,6 @@ const struct SpriteTemplate gSpriteTemplate_MoveTypes =
 };
 static const u8 sContestCategoryToOamPaletteNum[CONTEST_CATEGORIES_COUNT] =
 {
-<<<<<<< HEAD
     [TYPE_NORMAL] = 13,
     [TYPE_FIGHTING] = 13,
     [TYPE_FLYING] = 14,
@@ -1022,13 +1018,13 @@ static const u8 sContestCategoryToOamPaletteNum[CONTEST_CATEGORIES_COUNT] =
     [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_CUTE] = 14,
     [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_SMART] = 15,
     [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_TOUGH] = 13,
-=======
+
     [CONTEST_CATEGORY_COOL] = 13,
     [CONTEST_CATEGORY_BEAUTY] = 14,
     [CONTEST_CATEGORY_CUTE] = 14,
     [CONTEST_CATEGORY_SMART] = 15,
     [CONTEST_CATEGORY_TOUGH] = 13,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
+
 };
 static const struct OamData sOamData_MoveSelector =
 {
@@ -4024,7 +4020,7 @@ static void SetMoveTypeIcons(void)
     u16 species = GetMonData(mon, MON_DATA_SPECIES);
     for (i = 0; i < MAX_MON_MOVES; i++)
     {
-<<<<<<< HEAD
+
         if (summary->moves[i] != MOVE_NONE) {
             if (summary->moves[i] == MOVE_HIDDEN_POWER) {
                 u8 typeBits  = ((GetMonData(mon, MON_DATA_HP_IV) & 1) << 0)
@@ -4042,11 +4038,11 @@ static void SetMoveTypeIcons(void)
             } else {
                 SetTypeSpritePosAndPal(gBattleMoves[summary->moves[i]].type, 85, 32 + (i * 16), i + SPRITE_ARR_ID_TYPE);
             }
-=======
+
         if (summary->moves[i] != MOVE_NONE)
         {
             SetTypeSpritePosAndPal(gMovesInfo[summary->moves[i]].type, 85, 32 + (i * 16), i + SPRITE_ARR_ID_TYPE);
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
+
         }
         else
             SetSpriteInvisibility(i + SPRITE_ARR_ID_TYPE, TRUE);
@@ -4078,7 +4074,7 @@ static void SetNewMoveTypeIcon(void)
     else
     {
         if (sMonSummaryScreen->currPageIndex == PSS_PAGE_BATTLE_MOVES)
-<<<<<<< HEAD
+
             if (sMonSummaryScreen->newMove == MOVE_HIDDEN_POWER) {
                 u8 typeBits  = ((GetMonData(mon, MON_DATA_HP_IV) & 1) << 0)
                      | ((GetMonData(mon, MON_DATA_ATK_IV) & 1) << 1)
@@ -4095,9 +4091,12 @@ static void SetNewMoveTypeIcon(void)
             } else {
                 SetTypeSpritePosAndPal(gBattleMoves[sMonSummaryScreen->newMove].type, 85, 96, SPRITE_ARR_ID_TYPE + 4);
             }
-=======
+
             SetTypeSpritePosAndPal(gMovesInfo[sMonSummaryScreen->newMove].type, 85, 96, SPRITE_ARR_ID_TYPE + 4);
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
+
+
+            SetTypeSpritePosAndPal(gMovesInfo[sMonSummaryScreen->newMove].type, 85, 96, SPRITE_ARR_ID_TYPE + 4);
+
         else
             SetTypeSpritePosAndPal(NUMBER_OF_MON_TYPES + gMovesInfo[sMonSummaryScreen->newMove].contestCategory, 85, 96, SPRITE_ARR_ID_TYPE + 4);
     }

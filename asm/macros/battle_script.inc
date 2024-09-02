@@ -2507,6 +2507,7 @@
 	.endm
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	.macro sethptoone
 	various 0, VARIOUS_SET_HP_TO_ONE
 =======
@@ -2514,4 +2515,13 @@
 	printstring STRINGID_EMPTYSTRING3
 	waitmessage 1
 >>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
+=======
+	.macro flushtextbox
+	printstring STRINGID_EMPTYSTRING3
+	waitmessage 1
+>>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
 	.endm
+
+	.macro sethptoone
+	various 0, VARIOUS_SET_HP_TO_ONE
+	.end3

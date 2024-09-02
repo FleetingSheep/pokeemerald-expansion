@@ -49,7 +49,6 @@ const u16 gPokedexOrder_Alphabetical[] =
     NATIONAL_DEX_BASCULIN,
     NATIONAL_DEX_BASTIODON,
     NATIONAL_DEX_BAXCALIBUR,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_BAYLEEF,
     NATIONAL_DEX_BEAUTIFLY,
     NATIONAL_DEX_BEEDRILL,
@@ -70,13 +69,8 @@ const u16 gPokedexOrder_Alphabetical[] =
 =======
     NATIONAL_DEX_BOLTUND,
     NATIONAL_DEX_BOMBIRDIER,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_BONSLY,
     NATIONAL_DEX_BRAIXEN,
-<<<<<<< HEAD
-    NATIONAL_DEX_BRELOOM,
-    NATIONAL_DEX_BRIONNE,
-=======
     NATIONAL_DEX_BRAMBLEGHAST,
     NATIONAL_DEX_BRAMBLIN,
     NATIONAL_DEX_BRAVIARY,
@@ -85,7 +79,6 @@ const u16 gPokedexOrder_Alphabetical[] =
     NATIONAL_DEX_BRONZONG,
     NATIONAL_DEX_BRONZOR,
     NATIONAL_DEX_BRUTE_BONNET,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_BRUXISH,
     NATIONAL_DEX_BUDEW,
     NATIONAL_DEX_BULBASAUR,
@@ -93,8 +86,6 @@ const u16 gPokedexOrder_Alphabetical[] =
     NATIONAL_DEX_CACNEA,
     NATIONAL_DEX_CACTURNE,
     NATIONAL_DEX_CAMERUPT,
-<<<<<<< HEAD
-=======
     NATIONAL_DEX_CAPSAKID,
     NATIONAL_DEX_CARBINK,
     NATIONAL_DEX_CARKOL,
@@ -113,7 +104,6 @@ const u16 gPokedexOrder_Alphabetical[] =
     NATIONAL_DEX_CERULEDGE,
     NATIONAL_DEX_CETITAN,
     NATIONAL_DEX_CETODDLE,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_CHANDELURE,
     NATIONAL_DEX_CHANSEY,
     NATIONAL_DEX_CHARCADET,
@@ -128,7 +118,6 @@ const u16 gPokedexOrder_Alphabetical[] =
     NATIONAL_DEX_CHEWTLE,
     NATIONAL_DEX_CHI_YU,
     NATIONAL_DEX_CHIEN_PAO,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_CHIKORITA,
     NATIONAL_DEX_CHIMCHAR,
     NATIONAL_DEX_CHIMECHO,
@@ -145,7 +134,6 @@ const u16 gPokedexOrder_Alphabetical[] =
 =======
     NATIONAL_DEX_CLOBBOPUS,
     NATIONAL_DEX_CLODSIRE,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_CLOYSTER,
     NATIONAL_DEX_COMBEE,
     NATIONAL_DEX_COMBUSKEN,
@@ -207,7 +195,6 @@ const u16 gPokedexOrder_Alphabetical[] =
     NATIONAL_DEX_DUBWOOL,
     NATIONAL_DEX_DUCKLETT,
     NATIONAL_DEX_DUDUNSPARCE,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_DUGTRIO,
     NATIONAL_DEX_DUNSPARCE,
     NATIONAL_DEX_DUOSION,
@@ -233,7 +220,6 @@ const u16 gPokedexOrder_Alphabetical[] =
     NATIONAL_DEX_ENTEI,
     NATIONAL_DEX_ESCAVALIER,
     NATIONAL_DEX_ESPATHRA,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_ESPEON,
     NATIONAL_DEX_EXEGGCUTE,
     NATIONAL_DEX_EXEGGUTOR,
@@ -266,7 +252,6 @@ const u16 gPokedexOrder_Alphabetical[] =
     NATIONAL_DEX_FLORAGATO,
     NATIONAL_DEX_FLORGES,
     NATIONAL_DEX_FLUTTER_MANE,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_FLYGON,
     NATIONAL_DEX_FORRETRESS,
 <<<<<<< HEAD
@@ -324,11 +309,8 @@ const u16 gPokedexOrder_Alphabetical[] =
     NATIONAL_DEX_GOUGING_FIRE,
     NATIONAL_DEX_GOURGEIST,
     NATIONAL_DEX_GRAFAIAI,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_GRANBULL,
     NATIONAL_DEX_GRAVELER,
-<<<<<<< HEAD
-=======
     NATIONAL_DEX_GREAT_TUSK,
     NATIONAL_DEX_GREAVARD,
     NATIONAL_DEX_GREEDENT,
@@ -383,7 +365,6 @@ const u16 gPokedexOrder_Alphabetical[] =
     NATIONAL_DEX_IRON_THORNS,
     NATIONAL_DEX_IRON_TREADS,
     NATIONAL_DEX_IRON_VALIANT,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_IVYSAUR,
     NATIONAL_DEX_JIGGLYPUFF,
     NATIONAL_DEX_JIRACHI,
@@ -420,7 +401,6 @@ const u16 gPokedexOrder_Alphabetical[] =
     NATIONAL_DEX_KOMALA,
     NATIONAL_DEX_KOMMO_O,
     NATIONAL_DEX_KORAIDON,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_KRABBY,
     NATIONAL_DEX_KRICKETOT,
     NATIONAL_DEX_KRICKETUNE,
@@ -516,9 +496,6 @@ const u16 gPokedexOrder_Alphabetical[] =
     NATIONAL_DEX_MUDKIP,
     NATIONAL_DEX_MUK,
     NATIONAL_DEX_MUNCHLAX,
-<<<<<<< HEAD
-    NATIONAL_DEX_MURKROW,
-=======
     NATIONAL_DEX_MUNKIDORI,
     NATIONAL_DEX_MUNNA,
     NATIONAL_DEX_MURKROW,
@@ -544,8 +521,6 @@ const u16 gPokedexOrder_Alphabetical[] =
     NATIONAL_DEX_NOSEPASS,
     NATIONAL_DEX_NUMEL,
     NATIONAL_DEX_NUZLEAF,
-<<<<<<< HEAD
-=======
     NATIONAL_DEX_NYMBLE,
 
 >>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
@@ -583,7 +558,6 @@ const u16 gPokedexOrder_Alphabetical[] =
     NATIONAL_DEX_PAWMI,
     NATIONAL_DEX_PAWMO,
     NATIONAL_DEX_PAWMOT,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_PAWNIARD,
     NATIONAL_DEX_PECHARUNT,
     NATIONAL_DEX_PELIPPER,
@@ -606,8 +580,6 @@ const u16 gPokedexOrder_Alphabetical[] =
     NATIONAL_DEX_POLIWAG,
     NATIONAL_DEX_POLIWHIRL,
     NATIONAL_DEX_POLIWRATH,
-<<<<<<< HEAD
-=======
     NATIONAL_DEX_POLTCHAGEIST,
     NATIONAL_DEX_POLTEAGEIST,
 >>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
@@ -636,7 +608,6 @@ const u16 gPokedexOrder_Alphabetical[] =
     NATIONAL_DEX_RABOOT,
     NATIONAL_DEX_RABSCA,
     NATIONAL_DEX_RAGING_BOLT,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_RAICHU,
     NATIONAL_DEX_RALTS,
     NATIONAL_DEX_RAPIDASH,
@@ -685,7 +656,6 @@ const u16 gPokedexOrder_Alphabetical[] =
     NATIONAL_DEX_SCRAFTY,
     NATIONAL_DEX_SCRAGGY,
     NATIONAL_DEX_SCREAM_TAIL,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_SCYTHER,
     NATIONAL_DEX_SEADRA,
     NATIONAL_DEX_SEAKING,
@@ -721,8 +691,6 @@ const u16 gPokedexOrder_Alphabetical[] =
 >>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_SIRFETCHD,
     NATIONAL_DEX_SKARMORY,
-<<<<<<< HEAD
-=======
     NATIONAL_DEX_SKELEDIRGE,
     NATIONAL_DEX_SKIDDO,
 >>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
@@ -736,7 +704,6 @@ const u16 gPokedexOrder_Alphabetical[] =
 =======
     NATIONAL_DEX_SLIGGOO,
     NATIONAL_DEX_SLITHER_WING,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_SLOWBRO,
     NATIONAL_DEX_SLOWKING,
     NATIONAL_DEX_SLOWPOKE,
@@ -758,12 +725,9 @@ const u16 gPokedexOrder_Alphabetical[] =
     NATIONAL_DEX_SPINDA,
     NATIONAL_DEX_SPIRITOMB,
     NATIONAL_DEX_SPOINK,
-<<<<<<< HEAD
-=======
     NATIONAL_DEX_SPRIGATITO,
     NATIONAL_DEX_SPRITZEE,
     NATIONAL_DEX_SQUAWKABILLY,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_SQUIRTLE,
     NATIONAL_DEX_STARMIE,
     NATIONAL_DEX_STARYU,
@@ -796,14 +760,11 @@ const u16 gPokedexOrder_Alphabetical[] =
     NATIONAL_DEX_TAPU_LELE,
     NATIONAL_DEX_TAROUNTULA,
     NATIONAL_DEX_TATSUGIRI,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_TAUROS,
     NATIONAL_DEX_TEDDIURSA,
     NATIONAL_DEX_TENTACOOL,
     NATIONAL_DEX_TENTACRUEL,
     NATIONAL_DEX_TEPIG,
-<<<<<<< HEAD
-=======
     NATIONAL_DEX_TERAPAGOS,
     NATIONAL_DEX_TERRAKION,
     NATIONAL_DEX_THIEVUL,
@@ -847,8 +808,6 @@ const u16 gPokedexOrder_Alphabetical[] =
     NATIONAL_DEX_VANILLITE,
     NATIONAL_DEX_VANILLUXE,
     NATIONAL_DEX_VAPOREON,
-<<<<<<< HEAD
-=======
     NATIONAL_DEX_VAROOM,
     NATIONAL_DEX_VELUZA,
     NATIONAL_DEX_VENIPEDE,
@@ -877,7 +836,6 @@ const u16 gPokedexOrder_Alphabetical[] =
 =======
     NATIONAL_DEX_WATCHOG,
     NATIONAL_DEX_WATTREL,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_WEAVILE,
     NATIONAL_DEX_WEEDLE,
     NATIONAL_DEX_WEEPINBELL,
@@ -897,7 +855,6 @@ const u16 gPokedexOrder_Alphabetical[] =
 =======
     NATIONAL_DEX_WORMADAM,
     NATIONAL_DEX_WUGTRIO,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_WURMPLE,
     NATIONAL_DEX_WYNAUT,
     NATIONAL_DEX_XATU,
@@ -916,10 +873,6 @@ const u16 gPokedexOrder_Weight[] =
     // 0.0 - 21.8 lbs / 0.0 - 9.9 kg
     NATIONAL_DEX_GASTLY,
     NATIONAL_DEX_HAUNTER,
-<<<<<<< HEAD
-    NATIONAL_DEX_WISHIWASHI, // Solo Form
-    //NATIONAL_DEX_MINIOR, // Core Form
-=======
     NATIONAL_DEX_FLABEBE,//_RED_FLOWER,
     //NATIONAL_DEX_FLABEBE_YELLOW_FLOWER,
     //NATIONAL_DEX_FLABEBE_ORANGE_FLOWER,
@@ -965,7 +918,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_ALCREMIE,
     //NATIONAL_DEX_CORSOLA_GALARIAN,
     // 1.3 lbs / 0.6 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_CHINGLING,
     NATIONAL_DEX_COTTONEE,
     NATIONAL_DEX_JOLTIK,
@@ -976,10 +928,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_SHROODLE,
     // 1.8 lbs / 0.8 kg
     NATIONAL_DEX_DIGLETT,
-<<<<<<< HEAD
-    NATIONAL_DEX_CASTFORM,
-    //NATIONAL_DEX_DIGLETT, // Alolan Form
-=======
     NATIONAL_DEX_CASTFORM,//_NORMAL,
     //NATIONAL_DEX_CASTFORM_SUNNY,
     //NATIONAL_DEX_CASTFORM_RAINY,
@@ -993,7 +941,6 @@ const u16 gPokedexOrder_Weight[] =
     //NATIONAL_DEX_FLOETTE_ETERNAL_FLOWER,
     // 2.2 lbs / 1.0 kg
     //NATIONAL_DEX_DIGLETT_ALOLAN,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_KOFFING,
     NATIONAL_DEX_IGGLYBUFF,
     NATIONAL_DEX_SKIPLOOM,
@@ -1010,7 +957,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_NYMBLE,
     NATIONAL_DEX_RELLOR,
     // 2.4 lbs / 1.1 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_JIRACHI,
     NATIONAL_DEX_POLTCHAGEIST,
     // 2.6 lbs / 1.2 kg
@@ -1052,17 +998,12 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_BARBOACH,
     NATIONAL_DEX_CHATOT,
     // 4.4 lbs / 2.0 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_SPEAROW,
     NATIONAL_DEX_PICHU,
     NATIONAL_DEX_NATU,
     NATIONAL_DEX_AZURILL,
     NATIONAL_DEX_ROSELIA,
     NATIONAL_DEX_HONEDGE,
-<<<<<<< HEAD
-    NATIONAL_DEX_MURKROW,
-    NATIONAL_DEX_KRICKETOT,
-=======
     //NATIONAL_DEX_RIBOMBEE_TOTEM_SIZED,
     NATIONAL_DEX_DREEPY,
     // 4.6 lbs / 2.1 kg
@@ -1076,7 +1017,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_GOSSIFLEUR,
     NATIONAL_DEX_SINISTCHA,
     // 5.1 lbs / 2.3 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_TAILLOW,
     NATIONAL_DEX_SHUPPET,
     NATIONAL_DEX_MAUSHOLD,//_FAMILY_OF_THREE,
@@ -1104,7 +1044,6 @@ const u16 gPokedexOrder_Weight[] =
     //NATIONAL_DEX_MIMIKYU_TOTEM_SIZED,
     //NATIONAL_DEX_MAUSHOLD_FAMILY_OF_FOUR,
     // 6.4 lbs / 2.9 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_CATERPIE,
     // 6.6 lbs / 3.0 kg
     NATIONAL_DEX_CLEFFA,
@@ -1163,7 +1102,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_PACHIRISU,
     NATIONAL_DEX_GLAMEOW,
     // 8.8 lbs / 4.0 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_BELLSPROUT,
     NATIONAL_DEX_SHELLDER,
     NATIONAL_DEX_DITTO,
@@ -1179,7 +1117,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_LILLIPUP,
     NATIONAL_DEX_SPRIGATITO,
     // 9.3 lbs / 4.2 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_MEOWTH,
     //NATIONAL_DEX_MEOWTH_ALOLAN,
     NATIONAL_DEX_PLUSLE,
@@ -1232,7 +1169,6 @@ const u16 gPokedexOrder_Weight[] =
     //NATIONAL_DEX_UNOWN_Z,
     //NATIONAL_DEX_UNOWN_EMARK,
     //NATIONAL_DEX_UNOWN_QMARK,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_CORSOLA,
     NATIONAL_DEX_TREECKO,
     NATIONAL_DEX_SPINDA,
@@ -1253,7 +1189,6 @@ const u16 gPokedexOrder_Weight[] =
     // 11.7 lbs / 5.3 kg
     NATIONAL_DEX_VENIPEDE,
     // 11.9 lbs / 5.4 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_ODDISH,
     NATIONAL_DEX_PARAS,
     NATIONAL_DEX_WUGTRIO,
@@ -1280,7 +1215,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_OSHAWOTT,
     NATIONAL_DEX_KARRABLAST,
     // 13.2 lbs / 6.0 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_PIKACHU,
     //NATIONAL_DEX_PIKACHU_COSPLAY,
     //NATIONAL_DEX_PIKACHU_ROCK_STAR,
@@ -1315,7 +1249,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_SHELLOS,//_WEST_SEA,
     //NATIONAL_DEX_SHELLOS_EAST_SEA,
     // 14.1 lbs / 6.4 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_WEEPINBELL,
     NATIONAL_DEX_CHIKORITA,
     // 14.3 lbs / 6.5 kg
@@ -1323,10 +1256,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_CUBONE,
     NATIONAL_DEX_EEVEE,
     NATIONAL_DEX_SWINUB,
-<<<<<<< HEAD
-    NATIONAL_DEX_RALTS,
-    NATIONAL_DEX_WHIMSICOTT,
-=======
     NATIONAL_DEX_WORMADAM,//_PLANT_CLOAK,
     //NATIONAL_DEX_WORMADAM_SANDY_CLOAK,
     //NATIONAL_DEX_WORMADAM_TRASH_CLOAK,
@@ -1342,7 +1271,6 @@ const u16 gPokedexOrder_Weight[] =
     // 15.0 lbs / 6.8 kg
     NATIONAL_DEX_STUFFUL,
     // 15.2 lbs / 6.9 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_BULBASAUR,
     NATIONAL_DEX_EKANS,
     // 15.4 lbs / 7.0 kg
@@ -1354,7 +1282,6 @@ const u16 gPokedexOrder_Weight[] =
 =======
     NATIONAL_DEX_CRABRAWLER,
     // 15.9 lbs / 7.2 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_PINECO,
     // 16.1 lbs / 7.3 kg
     NATIONAL_DEX_SWADLOON,
@@ -1370,7 +1297,6 @@ const u16 gPokedexOrder_Weight[] =
 =======
     NATIONAL_DEX_CINCCINO,
     //NATIONAL_DEX_PUMPKABOO_LARGE,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_POPPLIO,
     // 16.8 lbs / 7.6 kg
     NATIONAL_DEX_MUDKIP,
@@ -1381,7 +1307,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_SHELMET,
     NATIONAL_DEX_CALYREX,
     // 17.2 lbs / 7.8 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_MAREEP,
     NATIONAL_DEX_SNUBBULL,
     // 17.4 lbs / 7.9 kg
@@ -1411,7 +1336,6 @@ const u16 gPokedexOrder_Weight[] =
     // 18.5 lbs / 8.4 kg
     NATIONAL_DEX_SPEWPA,
     // 18.7 lbs / 8.5 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_CHARMANDER,
     NATIONAL_DEX_SPINARAK,
     NATIONAL_DEX_MARILL,
@@ -1425,7 +1349,6 @@ const u16 gPokedexOrder_Weight[] =
     //NATIONAL_DEX_MEOWSTIC_FEMALE,
     NATIONAL_DEX_CHEWTLE,
     // 19.0 lbs / 8.6 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_GLOOM,
     // 19.2 lbs / 8.7 kg
     NATIONAL_DEX_LUVDISC,
@@ -1438,15 +1361,11 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_NICKIT,
     NATIONAL_DEX_TINKATINK,
     // 19.8 lbs / 9.0 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_SQUIRTLE,
     NATIONAL_DEX_NIDORAN_M,
     NATIONAL_DEX_ELGYEM,
     NATIONAL_DEX_VULLABY,
     NATIONAL_DEX_CHESPIN,
-<<<<<<< HEAD
-    NATIONAL_DEX_ROCKRUFF,
-=======
     NATIONAL_DEX_HOOPA,//_CONFINED,
     NATIONAL_DEX_RABOOT,
     // 20.3 lbs / 9.2 kg
@@ -1455,7 +1374,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_CHERRIM,//_OVERCAST,
     //NATIONAL_DEX_CHERRIM_SUNSHINE,
     // 20.7 lbs / 9.4 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_FENNEKIN,
     // 20.9 lbs / 9.5 kg
     NATIONAL_DEX_WEEZING,
@@ -1471,7 +1389,6 @@ const u16 gPokedexOrder_Weight[] =
     // 21.6 lbs / 9.8 kg
     NATIONAL_DEX_FUECOCO,
     // 21.8 lbs / 9.9 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_METAPOD,
     NATIONAL_DEX_VULPIX,
     //NATIONAL_DEX_VULPIX_ALOLAN,
@@ -1480,8 +1397,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_KAKUNA,
     NATIONAL_DEX_MAGIKARP,
     NATIONAL_DEX_SILCOON,
-<<<<<<< HEAD
-=======
     NATIONAL_DEX_FLORGES,//_RED_FLOWER,
     //NATIONAL_DEX_FLORGES_YELLOW_FLOWER,
     //NATIONAL_DEX_FLORGES_ORANGE_FLOWER,
@@ -1490,7 +1405,6 @@ const u16 gPokedexOrder_Weight[] =
     // 22.3 lbs / 10.1 kg
     NATIONAL_DEX_PURRLOIN,
     // 22.5 lbs / 10.2 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_TURTWIG,
     NATIONAL_DEX_PAWNIARD,
     NATIONAL_DEX_LECHONK,
@@ -1498,8 +1412,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_GULPIN,
     // 22.9 lbs / 10.4 kg
     NATIONAL_DEX_VOLTORB,
-<<<<<<< HEAD
-=======
     // 23.1 lbs / 10.5 kg
     NATIONAL_DEX_PANSAGE,
     NATIONAL_DEX_SWOOBAT,
@@ -1526,7 +1438,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_DRAKLOAK,
     NATIONAL_DEX_IRON_BUNDLE,
     // 24.7 lbs / 11.2 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_MEDITITE,
     // 25.4 lbs / 11.5 kg
     NATIONAL_DEX_KABUTO,
@@ -1545,7 +1456,6 @@ const u16 gPokedexOrder_Weight[] =
     // 26.2 lbs / 11.9 kg
     NATIONAL_DEX_DOLLIV,
     // 26.5 lbs / 12.0 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_SANDSHREW,
     NATIONAL_DEX_WIGGLYTUFF,
     NATIONAL_DEX_CHINCHOU,
@@ -1561,28 +1471,21 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_FLORAGATO,
     NATIONAL_DEX_MUNKIDORI,
     // 27.3 lbs / 12.4 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_POLIWAG,
     // 27.6 lbs / 12.5 kg
     NATIONAL_DEX_VENOMOTH,
     NATIONAL_DEX_ANORITH,
     NATIONAL_DEX_BANETTE,
     NATIONAL_DEX_ZORUA,
-<<<<<<< HEAD
-=======
     //NATIONAL_DEX_ZORUA_HISUIAN,
     NATIONAL_DEX_GOURGEIST,//_AVERAGE,
     NATIONAL_DEX_MORGREM,
     // 28.7 lbs / 13.0 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_IVYSAUR,
     //NATIONAL_DEX_VOLTORB_HISUIAN,
     //NATIONAL_DEX_BANETTE_MEGA,
     NATIONAL_DEX_MIME_JR,
     NATIONAL_DEX_LAMPENT,
-<<<<<<< HEAD
-    NATIONAL_DEX_FLAAFFY,
-=======
     //NATIONAL_DEX_TOGEDEMARU_TOTEM_SIZED,
     NATIONAL_DEX_BLACEPHALON,
     NATIONAL_DEX_APPLETUN,
@@ -1593,20 +1496,16 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_LITLEO,
     NATIONAL_DEX_YAMPER,
     // 30.0 lbs / 13.6 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_POOCHYENA,
     // 30.9 lbs / 14.0 kg
     NATIONAL_DEX_DUNSPARCE,
     NATIONAL_DEX_WYNAUT,
     NATIONAL_DEX_SIGILYPH,
-<<<<<<< HEAD
-=======
     //NATIONAL_DEX_GOURGEIST_LARGE,
     NATIONAL_DEX_THWACKEY,
     // 31.3 lbs / 14.2 kg
     NATIONAL_DEX_GUMSHOOS,
     // 31.5 lbs / 14.3 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_GALVANTULA,
     // 32.0 lbs / 14.5 kg
     NATIONAL_DEX_ROSERADE,
@@ -1622,7 +1521,6 @@ const u16 gPokedexOrder_Weight[] =
     // 32.8 lbs / 14.9 kg
     NATIONAL_DEX_DACHSBUN,
     // 33.1 lbs / 15.0 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_FARFETCHD,
     NATIONAL_DEX_GOLDEEN,
     NATIONAL_DEX_XATU,
@@ -1637,7 +1535,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_SCOVILLAIN,
     NATIONAL_DEX_HOUNDSTONE,
     // 33.5 lbs / 15.2 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_ELECTRIKE,
     NATIONAL_DEX_SANDILE,
     // 33.7 lbs / 15.3 kg
@@ -1649,7 +1546,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_STARAVIA,
     NATIONAL_DEX_AROMATISSE,
     // 34.8 lbs / 15.8 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_BAYLEEF,
     // 35.3 lbs / 16.0 kg
     //NATIONAL_DEX_WEEZING_GALARIAN,
@@ -1672,12 +1568,9 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_TIRTOUGA,
     NATIONAL_DEX_SPIDOPS,
     // 37.0 lbs / 16.8 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_SNORUNT,
     // 37.5 lbs / 17.0 kg
     NATIONAL_DEX_PALPITOAD,
-<<<<<<< HEAD
-=======
     NATIONAL_DEX_VIVILLON,//_ICY_SNOW,
     //NATIONAL_DEX_VIVILLON_POLAR,
     //NATIONAL_DEX_VIVILLON_TUNDRA,
@@ -1700,13 +1593,9 @@ const u16 gPokedexOrder_Weight[] =
     //NATIONAL_DEX_VIVILLON_POKE_BALL,
     NATIONAL_DEX_FRIGIBAX,
     // 38.1 lbs / 17.3 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_DEINO,
     // 38.6 lbs / 17.5 kg
     NATIONAL_DEX_ZIGZAGOON,
-<<<<<<< HEAD
-    //NATIONAL_DEX_ZIGZAGOON, // Galarian Form
-=======
     //NATIONAL_DEX_ZIGZAGOON_GALARIAN,
     NATIONAL_DEX_SLIGGOO,
 >>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
@@ -1717,10 +1606,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_ILLUMISE,
     // 39.7 lbs / 18.0 kg
     NATIONAL_DEX_ROGGENROLA,
-<<<<<<< HEAD
-    NATIONAL_DEX_RATICATE,
-    NATIONAL_DEX_VILEPLUME,
-=======
     NATIONAL_DEX_BASCULIN,//_RED_STRIPED,
     //NATIONAL_DEX_BASCULIN_BLUE_STRIPED,
     //NATIONAL_DEX_BASCULIN_WHITE_STRIPED,
@@ -1734,56 +1619,41 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_VILEPLUME,
     NATIONAL_DEX_TAPU_LELE,
     // 41.4 lbs / 18.8 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_FERROSEED,
     // 41.9 lbs / 19.0 kg
     NATIONAL_DEX_CHARMELEON,
     NATIONAL_DEX_GROWLITHE,
     NATIONAL_DEX_QUILAVA,
     NATIONAL_DEX_BRUXISH,
-<<<<<<< HEAD
-=======
     // 42.3 lbs / 19.2 kg
     NATIONAL_DEX_STUNKY,
     //NATIONAL_DEX_LILLIGANT_HISUIAN,
     // 43.0 lbs / 19.5 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_NIDORINO,
     NATIONAL_DEX_ABRA,
     NATIONAL_DEX_MACHOP,
     NATIONAL_DEX_COMBUSKEN,
-<<<<<<< HEAD
-=======
     NATIONAL_DEX_DEERLING,//_SPRING,
     //NATIONAL_DEX_DEERLING_SUMMER,
     //NATIONAL_DEX_DEERLING_AUTUMN,
     //NATIONAL_DEX_DEERLING_WINTER,
     NATIONAL_DEX_DOTTLER,
     // 43.2 lbs / 19.6 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_PSYDUCK,
     // 43.7 lbs / 19.8 kg
     NATIONAL_DEX_SWELLOW,
     // 43.9 lbs / 19.9 kg
     NATIONAL_DEX_NINETALES,
-<<<<<<< HEAD
-    //NATIONAL_DEX_NINETALES, // Alolan Form
-=======
     //NATIONAL_DEX_NINETALES_ALOLAN,
     NATIONAL_DEX_KOMALA,
     NATIONAL_DEX_THIEVUL,
     // 44.1 lbs / 20.0 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_NIDORINA,
     NATIONAL_DEX_POLIWHIRL,
     NATIONAL_DEX_GEODUDE,
     NATIONAL_DEX_BIDOOF,
-<<<<<<< HEAD
-    // 44.3 - 54.9 lbs / 20.1 - 24.9 kg
-=======
     NATIONAL_DEX_MIENFOO,
     // 44.3 lbs / 20.1 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_REUNICLUS,
     // 44.5 lbs / 20.2 kg
     NATIONAL_DEX_KIRLIA,
@@ -1800,7 +1670,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_TAPU_KOKO,
     //NATIONAL_DEX_STUNFISK_GALARIAN,
     // 45.4 lbs / 20.6 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_ALTARIA,
     //NATIONAL_DEX_ALTARIA_MEGA,
     // 45.9 lbs / 20.8 kg
@@ -1820,7 +1689,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_MAGBY,
     NATIONAL_DEX_TSAREENA,
     // 47.4 lbs / 21.5 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_BALTOY,
     NATIONAL_DEX_HAWLUCHA,
     NATIONAL_DEX_QUAXWELL,
@@ -1837,7 +1705,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_SALAZZLE,
     NATIONAL_DEX_MARSHADOW,
     // 49.6 lbs / 22.5 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_WARTORTLE,
     NATIONAL_DEX_LANTURN,
     // 49.8 lbs / 22.6 kg
@@ -1847,13 +1714,10 @@ const u16 gPokedexOrder_Weight[] =
     // 50.7 lbs / 23.0 kg
     NATIONAL_DEX_PRINPLUP,
     NATIONAL_DEX_CROAGUNK,
-<<<<<<< HEAD
-=======
     // 51.4 lbs / 23.3 kg
     NATIONAL_DEX_MOTHIM,
     NATIONAL_DEX_MUNNA,
     // 51.6 lbs / 23.4 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_RELICANTH,
     // 51.8 lbs / 23.5 kg
     NATIONAL_DEX_ELEKID,
@@ -1868,12 +1732,9 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_SLAKOTH,
     NATIONAL_DEX_NUMEL,
     NATIONAL_DEX_LUMINEON,
-<<<<<<< HEAD
-=======
     // 53.4 lbs / 24.2 kg
     NATIONAL_DEX_SWANNA,
     // 53.8 lbs / 24.4 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_HAPPINY,
     // 54.0 lbs / 24.5 kg
     NATIONAL_DEX_JOLTEON,
@@ -1885,16 +1746,10 @@ const u16 gPokedexOrder_Weight[] =
     // 54.9 lbs / 24.9 kg
     NATIONAL_DEX_STARAPTOR,
     // 55.1 lbs / 25.0 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_SEADRA,
     NATIONAL_DEX_FLAREON,
     NATIONAL_DEX_CROCONAW,
     NATIONAL_DEX_TORRACAT,
-<<<<<<< HEAD
-    NATIONAL_DEX_LYCANROC, // Midday Form
-    //NATIONAL_DEX_LYCANROC, // Midnight Form
-    //NATIONAL_DEX_LYCANROC, // Dusk Form
-=======
     NATIONAL_DEX_LYCANROC,//_MIDDAY,
     //NATIONAL_DEX_LYCANROC_MIDNIGHT,
     //NATIONAL_DEX_LYCANROC_DUSK,
@@ -1904,19 +1759,15 @@ const u16 gPokedexOrder_Weight[] =
     // 55.8 lbs / 25.3 kg
     NATIONAL_DEX_ACCELGOR,
     // 56.2 lbs / 25.5 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_KRICKETUNE,
     NATIONAL_DEX_LEAFEON,
     //NATIONAL_DEX_RATICATE_ALOLAN,
     // 57.1 lbs / 25.5 kg
     NATIONAL_DEX_GLACEON,
-<<<<<<< HEAD
-=======
     // 57.3 lbs / 26.0 kg
     NATIONAL_DEX_TYRUNT,
     NATIONAL_DEX_TOUCANNON,
     // 58.4 lbs / 26.5 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_ESPEON,
     // 58.6 lbs / 26.6 kg
     NATIONAL_DEX_FROSLASS,
@@ -1936,7 +1787,6 @@ const u16 gPokedexOrder_Weight[] =
     // 61.3 lbs / 27.8 kg
     //NATIONAL_DEX_DIANCIE_MEGA,
     // 61.7 lbs / 28.0 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_MANKEY,
     NATIONAL_DEX_SNEASEL,
     NATIONAL_DEX_MARSHTOMP,
@@ -1963,7 +1813,6 @@ const u16 gPokedexOrder_Weight[] =
     // 62.4 lbs / 28.3 kg
     //NATIONAL_DEX_LOPUNNY_MEGA,
     // 62.6 lbs / 28.4 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_BEAUTIFLY,
     // 62.8 lbs / 28.5 kg
     NATIONAL_DEX_AZUMARILL,
@@ -1989,7 +1838,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_GASTRODON,//_WEST_SEA,
     //NATIONAL_DEX_GASTRODON_EAST_SEA,
     // 66.1 lbs / 30.0 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_PIDGEOTTO,
     NATIONAL_DEX_RAICHU,
     NATIONAL_DEX_VENONAT,
@@ -2044,7 +1892,6 @@ const u16 gPokedexOrder_Weight[] =
     //NATIONAL_DEX_AUDINO_MEGA,
     NATIONAL_DEX_ARCHEOPS,
     // 71.4 lbs / 32.4 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_DROWZEE,
     // 71.7 lbs / 32.5 kg
     NATIONAL_DEX_FURRET,
@@ -2056,10 +1903,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_DELCATTY,
     // 72.3 lbs / 32.8 kg
     NATIONAL_DEX_CRAWDAUNT,
-<<<<<<< HEAD
-    //NATIONAL_DEX_PERSIAN, // Alolan Form
-    NATIONAL_DEX_DUGTRIO,
-=======
     // 72.8 lbs / 33.0 kg
     //NATIONAL_DEX_MEWTWO_MEGA_Y,
     NATIONAL_DEX_ESCAVALIER,
@@ -2072,7 +1915,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_DUGTRIO,
     NATIONAL_DEX_LOPUNNY,
     // 73.6 lbs / 33.4 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_KROKOROK,
     // 73.9 lbs / 33.5 kg
     NATIONAL_DEX_ARIADOS,
@@ -2083,7 +1925,6 @@ const u16 gPokedexOrder_Weight[] =
     //NATIONAL_DEX_ZYGARDE_10,
     //NATIONAL_DEX_ZYGARDE_10_POWER_CONSTRUCT,
     // 74.7 lbs / 33.9 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_POLITOED,
     // 75.0 lbs / 34.0 kg
     //NATIONAL_DEX_MAROWAK_ALOLAN,
@@ -2093,7 +1934,6 @@ const u16 gPokedexOrder_Weight[] =
 =======
     NATIONAL_DEX_BOLTUND,
     // 75.6 lbs / 34.3 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_CHANDELURE,
     // 76.1 lbs / 34.5 kg
     NATIONAL_DEX_STARYU,
@@ -2110,38 +1950,27 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_IRON_VALIANT,
     // 77.8 lbs / 35.3 kg
     NATIONAL_DEX_CLAWITZER,
-<<<<<<< HEAD
-=======
     // 78.3 lbs / 35.5 kg
     NATIONAL_DEX_MIENSHAO,
     // 78.5 lbs / 35.6 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_LEDIAN,
     // 79.4 lbs / 36.0 kg
     NATIONAL_DEX_SLOWPOKE,
-<<<<<<< HEAD
-    //NATIONAL_DEX_SLOWPOKE, // Galarian Form
-=======
     //NATIONAL_DEX_SLOWPOKE_GALARIAN,
     NATIONAL_DEX_FRAXURE,
     NATIONAL_DEX_IRON_MOTH,
     // 80.5 lbs / 36.5 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_PORYGON,
     // 80.7 lbs / 36.6 kg
     NATIONAL_DEX_DECIDUEYE,
     // 81.6 lbs / 37.0 kg
     NATIONAL_DEX_MIGHTYENA,
-<<<<<<< HEAD
-    //NATIONAL_DEX_DECIDUEYE, //Hisuian Form
-=======
     //NATIONAL_DEX_DECIDUEYE_HISUIAN,
     NATIONAL_DEX_FLAMIGO,
     // 82.7 lbs / 37.5 kg
     NATIONAL_DEX_LIEPARD,
     NATIONAL_DEX_DARUMAKA,
     // 83.8 lbs / 38.0 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_FEAROW,
     NATIONAL_DEX_SUDOWOODO,
     NATIONAL_DEX_YANMA,
@@ -2153,12 +1982,9 @@ const u16 gPokedexOrder_Weight[] =
     // 86.0 lbs / 39.0 kg
     NATIONAL_DEX_SEAKING,
     NATIONAL_DEX_DELPHOX,
-<<<<<<< HEAD
-=======
     //NATIONAL_DEX_GOURGEIST_SUPER,
     NATIONAL_DEX_GRAPPLOCT,
     // 86.4 lbs / 39.2 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_DODUO,
     NATIONAL_DEX_BRELOOM,
     NATIONAL_DEX_DUDUNSPARCE,//_TWO_SEGMENT,
@@ -2172,11 +1998,6 @@ const u16 gPokedexOrder_Weight[] =
     //NATIONAL_DEX_SANDSHREW_ALOLAN,
     NATIONAL_DEX_CLEFABLE,
     NATIONAL_DEX_LATIAS,
-<<<<<<< HEAD
-    NATIONAL_DEX_GRENINJA,
-    //NATIONAL_DEX_GRENINJA, // Ash-Greninja
-    NATIONAL_DEX_MINIOR, // Meteor Form
-=======
     NATIONAL_DEX_GURDURR,
     //NATIONAL_DEX_DARUMAKA_GALARIAN,
     NATIONAL_DEX_GRENINJA,
@@ -2193,18 +2014,13 @@ const u16 gPokedexOrder_Weight[] =
     //NATIONAL_DEX_TOXTRICITY_LOW_KEY,
     NATIONAL_DEX_DURALUDON,
     // 88.6 lbs / 40.2 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_MANECTRIC,
     // 88.8 lbs / 40.3 kg
     NATIONAL_DEX_ZANGOOSE,
-<<<<<<< HEAD
-    //NATIONAL_DEX_BEEDRILL, // Mega
-=======
     // 89.1 lbs / 40.4 kg
     NATIONAL_DEX_EXCADRILL,
     // 89.3 lbs / 40.5 kg
     //NATIONAL_DEX_BEEDRILL_MEGA,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_GENGAR,
     NATIONAL_DEX_KABUTOPS,
     NATIONAL_DEX_LOUDRED,
@@ -2221,7 +2037,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_BRAVIARY,
     NATIONAL_DEX_PAWMOT,
     // 91.5 lbs / 41.5 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_GIRAFARIG,
     // 92.6 lbs / 42.0 kg
     //NATIONAL_DEX_FARFETCHD_GALARIAN,
@@ -2275,7 +2090,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_TENTACOOL,
     NATIONAL_DEX_TAPU_BULU,
     // 101.4 lbs / 46.0 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_VOLCARONA,
     NATIONAL_DEX_OBSTAGOON,
     // 102.5 lbs / 46.5 kg
@@ -2284,14 +2098,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_BLISSEY,
     // 103.2 lbs / 46.8 kg
     NATIONAL_DEX_ABSOL,
-<<<<<<< HEAD
-    NATIONAL_DEX_ALAKAZAM,
-    NATIONAL_DEX_HITMONTOP,
-    NATIONAL_DEX_GARDEVOIR,
-    NATIONAL_DEX_GRANBULL,
-    //NATIONAL_DEX_ABSOL, // Mega
-    //NATIONAL_DEX_HOUNDOOM, // Mega
-=======
     NATIONAL_DEX_MALAMAR,
     NATIONAL_DEX_HAKAMO_O,
     // 104.5 lbs / 47.4 kg
@@ -2316,7 +2122,6 @@ const u16 gPokedexOrder_Weight[] =
     //NATIONAL_DEX_HOUNDOOM_MEGA,
     NATIONAL_DEX_HIPPOPOTAS,
     // 109.8 lbs / 49.8 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_HITMONLEE,
     // 110.2 lbs / 50.0 kg
     NATIONAL_DEX_ZWEILOUS,
@@ -2324,7 +2129,6 @@ const u16 gPokedexOrder_Weight[] =
 =======
     NATIONAL_DEX_DRAGAPULT,
     // 110.7 lbs / 50.2 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_HITMONCHAN,
     // 111.3 lbs / 50.5 kg
     //NATIONAL_DEX_PIDGEOT_MEGA,
@@ -2339,7 +2143,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_SAWK,
     NATIONAL_DEX_KLANG,
     // 113.1 lbs / 51.3 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_CACNEA,
     // 113.5 lbs / 51.5 kg
     NATIONAL_DEX_YANMEGA,
@@ -2353,9 +2156,6 @@ const u16 gPokedexOrder_Weight[] =
     // 115.7 lbs / 52.5 kg
     NATIONAL_DEX_SEVIPER,
     NATIONAL_DEX_CLAMPERL,
-<<<<<<< HEAD
-    NATIONAL_DEX_AEGISLASH,
-=======
     // 116.0 lbs / 52.6 kg
     NATIONAL_DEX_ZAPDOS,
     // 116.8 lbs / 53.0 kg
@@ -2364,7 +2164,6 @@ const u16 gPokedexOrder_Weight[] =
     // 118.2 lbs / 53.6 kg
     //NATIONAL_DEX_CALYREX_SHADOW_RIDER,
     // 119.0 lbs / 54.0 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_POLIWRATH,
     NATIONAL_DEX_HERACROSS,
     NATIONAL_DEX_LUCARIO,
@@ -2378,10 +2177,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_MAGCARGO,
     NATIONAL_DEX_LUDICOLO,
     NATIONAL_DEX_INFERNAPE,
-<<<<<<< HEAD
-    //NATIONAL_DEX_SCEPTILE, // Mega
-    NATIONAL_DEX_PIGNITE,
-=======
     // 121.7 lbs / 55.2 kg
     //NATIONAL_DEX_SCEPTILE_MEGA,
     // 122.1 lbs / 55.4 kg
@@ -2391,7 +2186,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_THROH,
     NATIONAL_DEX_NIHILEGO,
     // 123.0 lbs / 55.8 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_PILOSWINE,
     // 123.5 lbs / 56.0 kg
     NATIONAL_DEX_SCYTHER,
@@ -2401,24 +2195,15 @@ const u16 gPokedexOrder_Weight[] =
     //NATIONAL_DEX_GALLADE_MEGA,
     // 124.6 lbs / 56.5 kg
     NATIONAL_DEX_KADABRA,
-<<<<<<< HEAD
-    //NATIONAL_DEX_MR_MIME, // Galarian Form
-    //NATIONAL_DEX_LUCARIO, // Mega
-=======
     // 125.2 lbs / 56.8 kg
     //NATIONAL_DEX_MR_MIME_GALARIAN,
     // 125.7 lbs / 57.0 kg
     NATIONAL_DEX_SHIELDON,
     // 126.8 lbs / 57.5 kg
     //NATIONAL_DEX_LUCARIO_MEGA,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_VANILLUXE,
     // 127.9 lbs / 58.0 kg
     NATIONAL_DEX_SMEARGLE,
-<<<<<<< HEAD
-    //NATIONAL_DEX_SAMUROTT, // Hisuian Form
-    //NATIONAL_DEX_PINSIR, // Mega
-=======
     NATIONAL_DEX_HEATMOR,
     //NATIONAL_DEX_LURANTIS_TOTEM_SIZED,
     NATIONAL_DEX_TOEDSCRUEL,
@@ -2430,7 +2215,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_WHIRLIPEDE,
     // 130.1 lbs / 59.0 kg
     //NATIONAL_DEX_PINSIR_MEGA,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_AERODACTYL,
     // 130.3 lbs / 59.1 kg
     NATIONAL_DEX_TINKATUFF,
@@ -2442,13 +2226,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_KINGLER,
     NATIONAL_DEX_ARON,
     NATIONAL_DEX_LATIOS,
-<<<<<<< HEAD
-    NATIONAL_DEX_CRADILY,
-    NATIONAL_DEX_DEOXYS, // Normal Forme
-    //NATIONAL_DEX_DEOXYS, // Attack Forme
-    //NATIONAL_DEX_DEOXYS, // Defense Forme
-    //NATIONAL_DEX_DEOXYS, // Speed Forme
-=======
     //NATIONAL_DEX_GUMSHOOS_TOTEM_SIZED,
     NATIONAL_DEX_SANDY_SHOCKS,
     NATIONAL_DEX_ARCHALUDON,
@@ -2473,7 +2250,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_GRIMMSNARL,
     NATIONAL_DEX_MABOSSTIFF,
     // 135.6 lbs / 61.5 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_AMPHAROS,
     NATIONAL_DEX_DRAPION,
     // 136.5 lbs / 61.9 kg
@@ -2481,10 +2257,6 @@ const u16 gPokedexOrder_Weight[] =
     // 136.7 lbs / 62.0 kg
     NATIONAL_DEX_NIDOKING,
     NATIONAL_DEX_SEISMITOAD,
-<<<<<<< HEAD
-    //NATIONAL_DEX_HERACROSS, // Mega
-    NATIONAL_DEX_SERPERIOR,
-=======
     NATIONAL_DEX_FALINKS,
     NATIONAL_DEX_CERULEDGE,
     // 137.8 lbs / 62.5 kg
@@ -2495,19 +2267,31 @@ const u16 gPokedexOrder_Weight[] =
     //NATIONAL_DEX_TORNADUS_THERIAN,
     NATIONAL_DEX_CYCLIZAR,
     // 142.9 lbs / 64.8 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_GLIGAR,
     // 143.3 lbs / 65.0 kg
     NATIONAL_DEX_ARBOK,
     NATIONAL_DEX_MANTYKE,
     // 144.4 lbs / 65.5 kg
     NATIONAL_DEX_LICKITUNG,
-<<<<<<< HEAD
+    NATIONAL_DEX_SANDACONDA,
+    // 145.5 lbs / 66.0 kg
+    //NATIONAL_DEX_MOLTRES_GALARIAN,
+    // 146.8 lbs / 66.6 kg
     NATIONAL_DEX_ELECTRODE,
-    //NATIONAL_DEX_DUGTRIO, // Alolan Form
+    NATIONAL_DEX_RUNERIGUS,
+    //NATIONAL_DEX_DUGTRIO_ALOLAN,
+    // 149.9 lbs / 68.0 kg
     NATIONAL_DEX_MAGMORTAR,
+    NATIONAL_DEX_LANDORUS,//_INCARNATE,
+    //NATIONAL_DEX_LANDORUS_THERIAN,
+    // 150.4 lbs / 68.2 kg
     NATIONAL_DEX_ARMALDO,
-    //NATIONAL_DEX_LATIOS, // Mega
+    // 151.0 lbs / 68.5 kg
+    //NATIONAL_DEX_SLIGGOO_HISUIAN,
+    // 153.9 lbs / 69.8 kg
+    //NATIONAL_DEX_TYPHLOSION_HISUIAN,
+    // 154.3 lbs / 70.0 kg
+    //NATIONAL_DEX_LATIOS_MEGA,
     NATIONAL_DEX_BISHARP,
     NATIONAL_DEX_SANDYGAST,
 =======
@@ -2534,18 +2318,14 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_SANDYGAST,
     NATIONAL_DEX_ZARUDE,
     // 155.4 lbs / 70.5 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_MACHOKE,
     //NATIONAL_DEX_SLOWBRO_GALARIAN,
     // 156.5 lbs / 71.0 kg
     //NATIONAL_DEX_ELECTRODE_HISUIAN,
     NATIONAL_DEX_TREVENANT,
-<<<<<<< HEAD
-=======
     // 157.0 lbs / 71.2 kg
     NATIONAL_DEX_STANTLER,
     // 157.6 lbs / 71.5 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_GRUMPIG,
     // 158.7 lbs / 72.0 kg
     NATIONAL_DEX_LARVITAR,
@@ -2560,30 +2340,23 @@ const u16 gPokedexOrder_Weight[] =
 =======
     NATIONAL_DEX_CORVIKNIGHT,
     // 166.4 lbs / 75.5 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_MILTANK,
     // 166.7 lbs / 75.6 kg
     NATIONAL_DEX_HYPNO,
-<<<<<<< HEAD
-=======
     // 167.6 lbs / 76.0 kg
     NATIONAL_DEX_ORANGURU,
     // 168.7 lbs / 76.5 kg
     NATIONAL_DEX_COFAGRIGUS,
     // 168.9 lbs / 76.6 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_GOLDUCK,
     //NATIONAL_DEX_TERAPAGOS_STELLAR
     // 170.6 lbs / 77.4 kg
     NATIONAL_DEX_CACTURNE,
-<<<<<<< HEAD
-=======
     // 172.0 lbs / 78.0 kg
     NATIONAL_DEX_CARKOL,
     // 172.4 lbs / 78.2 kg
     NATIONAL_DEX_KOMMO_O,
     // 173.1 lbs / 78.5 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_SLOWBRO,
     // 173.3 lbs / 78.6 kg
     //NATIONAL_DEX_WISHIWASHI_SCHOOL,
@@ -2593,21 +2366,14 @@ const u16 gPokedexOrder_Weight[] =
     // 175.3 lbs / 79.5 kg
     NATIONAL_DEX_TYPHLOSION,
     NATIONAL_DEX_SLOWKING,
-<<<<<<< HEAD
-    //NATIONAL_DEX_SLOWKING, // Galarian Form
-=======
     //NATIONAL_DEX_SLOWKING_GALARIAN,
     NATIONAL_DEX_ZEBSTRIKA,
     // 176.4 lbs / 80.0 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_KANGASKHAN,
     NATIONAL_DEX_STARMIE,
     NATIONAL_DEX_SWALOT,
     //NATIONAL_DEX_RAPIDASH_GALARIAN,
     NATIONAL_DEX_TORKOAL,
-<<<<<<< HEAD
-    NATIONAL_DEX_ZOROARK,
-=======
     // 177.5 lbs / 80.5 kg
     NATIONAL_DEX_EELEKTROSS,
     NATIONAL_DEX_MAGEARNA,
@@ -2627,14 +2393,11 @@ const u16 gPokedexOrder_Weight[] =
     // 180.8 lbs / 82.0 kg
     NATIONAL_DEX_FLYGON,
     NATIONAL_DEX_ARAQUANID,
-<<<<<<< HEAD
-=======
     // 181.9 lbs / 82.5 kg
     NATIONAL_DEX_GENESECT,
     // 182.5 lbs / 82.8 kg
     NATIONAL_DEX_PASSIMIAN,
     // 183.0 lbs / 83.0 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_INCINEROAR,
     // 185.2 lbs / 84.0 kg
     NATIONAL_DEX_EXPLOUD,
@@ -2648,9 +2411,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_DODRIO,
     // 188.5 lbs / 85.5 kg
     NATIONAL_DEX_BLASTOISE,
-<<<<<<< HEAD
-    NATIONAL_DEX_MAKUHITA,
-=======
     // 188.7 lbs / 85.6 kg
     NATIONAL_DEX_CRESSELIA,
     // 190.5 lbs / 86.4 kg
@@ -2658,20 +2418,12 @@ const u16 gPokedexOrder_Weight[] =
     // 191.8 lbs / 87.0 kg
     NATIONAL_DEX_CONKELDURR,
     // 193.1 lbs / 87.6 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_SEALEO,
     // 194.9 lbs / 88.4 kg
     NATIONAL_DEX_TAUROS,
     // 195.8 lbs / 88.8 kg
     NATIONAL_DEX_FERALIGATR,
     NATIONAL_DEX_SHARPEDO,
-<<<<<<< HEAD
-    NATIONAL_DEX_SEEL,
-    NATIONAL_DEX_CHESNAUGHT,
-    NATIONAL_DEX_CHARIZARD,
-    NATIONAL_DEX_RAPIDASH,
-    NATIONAL_DEX_GOLETT,
-=======
     // 196.2 lbs / 89.0 kg
     NATIONAL_DEX_EISCUE,//_ICE_FACE,
     //NATIONAL_DEX_EISCUE_NOICE_FACE,
@@ -2708,9 +2460,6 @@ const u16 gPokedexOrder_Weight[] =
     // 209.4 lbs / 95.0 kg
     NATIONAL_DEX_RAPIDASH,
     NATIONAL_DEX_GARCHOMP,
-<<<<<<< HEAD
-    NATIONAL_DEX_BELDUM,
-=======
     // 209.7 lbs / 95.1 kg
     NATIONAL_DEX_WYRDEER,
     // 209.9 lbs / 95.2 kg
@@ -2718,7 +2467,6 @@ const u16 gPokedexOrder_Weight[] =
     // 211.6 lbs / 96.0 kg
     NATIONAL_DEX_BARBARACLE,
     // 212.3 lbs / 96.3 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_KROOKODILE,
     // 212.8 lbs / 97.0 kg
     NATIONAL_DEX_NOSEPASS,
@@ -2740,7 +2488,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_CUFANT,
     // 221.6 lbs / 100.5 kg
     //NATIONAL_DEX_CHARIZARD_MEGA_Y,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_MEGANIUM,
     NATIONAL_DEX_SILVALLY,//_NORMAL,
     //NATIONAL_DEX_SILVALLY_FIGHTING,
@@ -2765,20 +2512,13 @@ const u16 gPokedexOrder_Weight[] =
     // 224.9 lbs / 102.0 kg
     //NATIONAL_DEX_SWAMPERT_MEGA,
     NATIONAL_DEX_BOLDORE,
-<<<<<<< HEAD
-    // 225.8 - 330.5 lbs / 102.4 - 149.9 kg
-=======
     // 226.0 lbs / 102.5 kg
     NATIONAL_DEX_RAMPARDOS,
     // 226.2 lbs / 102.6 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_SALAMENCE,
     // 231.5 lbs / 105.0 kg
     NATIONAL_DEX_GRAVELER,
     NATIONAL_DEX_MUNCHLAX,
-<<<<<<< HEAD
-    //NATIONAL_DEX_RATICATE, // Alolan Form, Totem-sized
-=======
     //NATIONAL_DEX_RATICATE_ALOLAN_TOTEM_SIZED,
     NATIONAL_DEX_URSHIFU,//_SINGLE_STRIKE_STYLE,
     //NATIONAL_DEX_URSHIFU_RAPID_STRIKE_STYLE,
@@ -2786,7 +2526,6 @@ const u16 gPokedexOrder_Weight[] =
     // 232.6 lbs / 105.5 kg
     NATIONAL_DEX_HAXORUS,
     // 235.0 lbs / 106.6 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_DUSKNOIR,
     // 236.6 lbs / 107.3 kg
     NATIONAL_DEX_GARBODOR,
@@ -2798,16 +2537,12 @@ const u16 gPokedexOrder_Weight[] =
     //NATIONAL_DEX_GRAVELER_ALOLAN,
     //NATIONAL_DEX_TAUROS_PALDEAN_AQUA_BREED,
     NATIONAL_DEX_FERROTHORN,
-<<<<<<< HEAD
-    //NATIONAL_DEX_CHARIZARD, // Mega X
-=======
     NATIONAL_DEX_MUDBRAY,
     NATIONAL_DEX_ZACIAN,//_HERO_OF_MANY_BATTLES,
     NATIONAL_DEX_BASCULEGION,//_MALE,
     //NATIONAL_DEX_BASCULEGION_FEMALE,
     // 243.6 lbs / 110.5 kg
     //NATIONAL_DEX_CHARIZARD_MEGA_X,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_SHELGON,
     // 244.7 lbs / 111.0 kg
     NATIONAL_DEX_IRON_JUGULIS,
@@ -2819,13 +2554,10 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_BELLIBOLT,
     // 253.5 lbs / 115.0 kg
     NATIONAL_DEX_RHYHORN,
-<<<<<<< HEAD
-=======
     //NATIONAL_DEX_TAUROS_PALDEAN_COMBAT_BREED,
     // 254.6 lbs / 115.5 kg
     NATIONAL_DEX_DREDNAW,
     // 257.9 lbs / 117.0 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_SIRFETCHD,
     // 260.1 lbs / 118.0 kg
     NATIONAL_DEX_SCIZOR,
@@ -2863,7 +2595,6 @@ const u16 gPokedexOrder_Weight[] =
     // 280.0 lbs / 127.0 kg
     //NATIONAL_DEX_MEWTWO_MEGA_X,
     // 283.5 lbs / 128.6 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_TANGROWTH,
     // 286.6 lbs / 130.0 kg
     NATIONAL_DEX_MACHAMP,
@@ -2874,9 +2605,6 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_SLAKING,
     // 292.1 lbs / 132.5 kg
     NATIONAL_DEX_CLOYSTER,
-<<<<<<< HEAD
-    NATIONAL_DEX_ELECTIVIRE,
-=======
     // 297.6 lbs / 135.0 kg
     NATIONAL_DEX_JELLICENT,
     NATIONAL_DEX_BEWEAR,
@@ -2889,7 +2617,6 @@ const u16 gPokedexOrder_Weight[] =
     // 306.4 lbs / 139.0 kg
     NATIONAL_DEX_DRUDDIGON,
     // 308.6 lbs / 140.0 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_LICKILICKY,
     // 319.7 lbs / 145.0 kg
     NATIONAL_DEX_REGIELEKI,
@@ -2897,8 +2624,9 @@ const u16 gPokedexOrder_Weight[] =
     //NATIONAL_DEX_VIKAVOLT_TOTEM_SIZED,
     // 326.3 lbs / 148.0 kg
     NATIONAL_DEX_CRYOGONAL,
-<<<<<<< HEAD
-    // 330.7 - 440.7 lbs / 150.0 - 199.9 kg
+    // 329.6 lbs / 149.5 kg
+    NATIONAL_DEX_BASTIODON,
+    // 330.7 lbs / 150.0 kg
     NATIONAL_DEX_EMBOAR,
 =======
     // 329.6 lbs / 149.5 kg
@@ -2910,7 +2638,6 @@ const u16 gPokedexOrder_Weight[] =
     // 331.8 lbs / 150.5 kg
     NATIONAL_DEX_GOODRA,
     // 332.0 lbs / 150.6 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_WALREIN,
     // 335.1 lbs / 152.0 kg
     NATIONAL_DEX_KINGDRA,
@@ -2964,39 +2691,20 @@ const u16 gPokedexOrder_Weight[] =
     // 438.7 lbs / 199.0 kg
     NATIONAL_DEX_HO_OH,
     // 440.9 lbs / 200.0 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_CRUSTLE,
     NATIONAL_DEX_REGIDRAGO,
-<<<<<<< HEAD
-=======
     // 442.0 lbs / 200.5 kg
     NATIONAL_DEX_SCOLIPEDE,
     // 445.3 lbs / 202.0 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_TYRANITAR,
     // 446.4 lbs / 202.5 kg
     NATIONAL_DEX_METANG,
-<<<<<<< HEAD
-    // 451.5 - 661.2 lbs / 204.8 - 299.9 kg
-=======
     // 447.5 lbs / 203.0 kg
     NATIONAL_DEX_YVELTAL,
     // 451.9 lbs / 205.0 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_REGISTEEL,
     // 455.3 lbs / 206.5 kg
     NATIONAL_DEX_RAYQUAZA,
-<<<<<<< HEAD
-    NATIONAL_DEX_ONIX,
-    NATIONAL_DEX_DRAGONITE,
-    NATIONAL_DEX_DHELMISE,
-    //NATIONAL_DEX_ARAQUANID, // Totem-sized
-    NATIONAL_DEX_LAPRAS,
-    NATIONAL_DEX_MANTINE,
-    NATIONAL_DEX_CAMERUPT,
-    NATIONAL_DEX_REGIROCK,
-    NATIONAL_DEX_GYARADOS,
-=======
     // 457.5 lbs / 207.5 kg
     //NATIONAL_DEX_KOMMO_O_TOTEM_SIZED,
     // 463.0 lbs / 210.0 kg
@@ -3064,22 +2772,9 @@ const u16 gPokedexOrder_Weight[] =
     // 639.3 lbs / 290.0 kg
     NATIONAL_DEX_URSALUNA,
     // 641.5 lbs / 291.0 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_MAMOSWINE,
     // 661.4 lbs / 300.0 kg
     NATIONAL_DEX_GOLEM,
-<<<<<<< HEAD
-    //NATIONAL_DEX_GYARADOS, // Mega
-    // 677.3 - 667.0 lbs / 307.2 - 359.9 kg
-    NATIONAL_DEX_TORTERRA,
-    //NATIONAL_DEX_GOLEM, // Alolan Form
-    //NATIONAL_DEX_CAMERUPT, // Mega
-    NATIONAL_DEX_GOLURK,
-    NATIONAL_DEX_PROBOPASS,
-    //NATIONAL_DEX_GLALIE, // Mega
-    NATIONAL_DEX_KYOGRE,
-    // 793.7 - 902.8 lbs / 360.0 - 409.5 kg
-=======
     NATIONAL_DEX_HIPPOWDON,
     // 668.0 lbs / 303.0 kg
     NATIONAL_DEX_IRON_THORNS,
@@ -3144,7 +2839,6 @@ const u16 gPokedexOrder_Weight[] =
     // 782.6 lbs / 355.0 kg
     //NATIONAL_DEX_ZACIAN_CROWNED_SWORD,
     // 793.7 lbs / 360.0 kg
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_AGGRON,
     // 837.8 lbs / 380.0 kg
     NATIONAL_DEX_ROARING_MOON,
@@ -3162,16 +2856,6 @@ const u16 gPokedexOrder_Weight[] =
     //NATIONAL_DEX_EXEGGUTOR_ALOLAN,
     // 925.9 lbs / 420.0 kg
     NATIONAL_DEX_REGIGIGAS,
-<<<<<<< HEAD
-    //NATIONAL_DEX_KYOGRE, // Primal
-    NATIONAL_DEX_SNORLAX,
-    NATIONAL_DEX_AVALUGG,
-    NATIONAL_DEX_METAGROSS,
-    //NATIONAL_DEX_STEELIX, // Mega
-    //NATIONAL_DEX_METAGROSS, // Mega
-    NATIONAL_DEX_GROUDON,
-    //NATIONAL_DEX_GROUDON, // Primal
-=======
     // 948.0 lbs / 430.0 kg
     //NATIONAL_DEX_KYOGRE_PRIMAL,
     NATIONAL_DEX_HEATRAN,
@@ -3239,8 +2923,6 @@ const u16 gPokedexOrder_Height[] =
 {
     // 0'04" / 0.1m
     NATIONAL_DEX_JOLTIK,
-<<<<<<< HEAD
-=======
     NATIONAL_DEX_FLABEBE,//_RED_FLOWER,
     //NATIONAL_DEX_FLABEBE_YELLOW_FLOWER,
     //NATIONAL_DEX_FLABEBE_ORANGE_FLOWER,
@@ -3253,18 +2935,12 @@ const u16 gPokedexOrder_Height[] =
     //NATIONAL_DEX_SINISTEA_ANTIQUE,
     //NATIONAL_DEX_GIMMIGHOUL_ROAMING,
     NATIONAL_DEX_POLTCHAGEIST,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     // 0'08" / 0.2m
     NATIONAL_DEX_DIGLETT,
     //NATIONAL_DEX_DIGLETT_ALOLAN,
     NATIONAL_DEX_NATU,
     NATIONAL_DEX_AZURILL,
     NATIONAL_DEX_BUDEW,
-<<<<<<< HEAD
-    NATIONAL_DEX_CHINGLING,
-    NATIONAL_DEX_WISHIWASHI, // Solo Form
-    NATIONAL_DEX_MIMIKYU,
-=======
     NATIONAL_DEX_BURMY,//_PLANT_CLOAK,
     //NATIONAL_DEX_BURMY_SANDY_CLOAK,
     //NATIONAL_DEX_BURMY_TRASH_CLOAK,
@@ -3298,7 +2974,6 @@ const u16 gPokedexOrder_Height[] =
     NATIONAL_DEX_FLITTLE,
     NATIONAL_DEX_SINISTCHA,
     NATIONAL_DEX_TERAPAGOS,//_NORMAL
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     // 1'00" / 0.3m
     NATIONAL_DEX_CATERPIE,
     NATIONAL_DEX_WEEDLE,
@@ -3326,8 +3001,6 @@ const u16 gPokedexOrder_Height[] =
     NATIONAL_DEX_JIRACHI,
     NATIONAL_DEX_KRICKETOT,
     NATIONAL_DEX_COMBEE,
-<<<<<<< HEAD
-=======
     NATIONAL_DEX_SHELLOS,//_WEST_SEA,
     //NATIONAL_DEX_SHELLOS_EAST_SEA,
     NATIONAL_DEX_ROTOM,
@@ -3353,7 +3026,6 @@ const u16 gPokedexOrder_Height[] =
     NATIONAL_DEX_CARBINK,
     NATIONAL_DEX_GOOMY,
     //NATIONAL_DEX_PUMPKABOO_SMALL,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_ROWLET,
     NATIONAL_DEX_DEWPIDER,
     NATIONAL_DEX_MINIOR,
@@ -3374,7 +3046,6 @@ const u16 gPokedexOrder_Height[] =
     NATIONAL_DEX_SNOM,
     NATIONAL_DEX_MORPEKO,//_FULL_BELLY,
     //NATIONAL_DEX_MORPEKO_HANGRY,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_PIKACHU,
     NATIONAL_DEX_NIDORAN_F,
     NATIONAL_DEX_MEOWTH,
@@ -3425,15 +3096,10 @@ const u16 gPokedexOrder_Height[] =
     NATIONAL_DEX_CHESPIN,
     NATIONAL_DEX_FENNEKIN,
     NATIONAL_DEX_PHANTUMP,
-<<<<<<< HEAD
-=======
     NATIONAL_DEX_PUMPKABOO,//_AVERAGE,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_LITTEN,
     NATIONAL_DEX_POPPLIO,
     NATIONAL_DEX_GRUBBIN,
-<<<<<<< HEAD
-=======
     //NATIONAL_DEX_RIBOMBEE_TOTEM_SIZED,
     NATIONAL_DEX_MAREANIE,
     NATIONAL_DEX_KOMALA,
@@ -3470,7 +3136,6 @@ const u16 gPokedexOrder_Height[] =
     NATIONAL_DEX_TINKATINK,
     NATIONAL_DEX_CHI_YU,
     NATIONAL_DEX_DIPPLIN,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     // 1'08" / 0.5m
     NATIONAL_DEX_SQUIRTLE,
     NATIONAL_DEX_NIDORAN_M,
@@ -3561,13 +3226,9 @@ const u16 gPokedexOrder_Height[] =
     NATIONAL_DEX_SKRELP,
     NATIONAL_DEX_CLAUNCHER,
     NATIONAL_DEX_HELIOPTILE,
-<<<<<<< HEAD
-    NATIONAL_DEX_NOIBAT,
-=======
     //NATIONAL_DEX_PUMPKABOO_LARGE,
     NATIONAL_DEX_NOIBAT,
     NATIONAL_DEX_HOOPA,//_CONFINED,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_CHARJABUG,
     NATIONAL_DEX_ROCKRUFF,
     NATIONAL_DEX_WIMPOD,
@@ -3582,7 +3243,6 @@ const u16 gPokedexOrder_Height[] =
     NATIONAL_DEX_DACHSBUN,
     NATIONAL_DEX_MASCHIFF,
     NATIONAL_DEX_FRIGIBAX,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     // 2'00" / 0.6m
     NATIONAL_DEX_CHARMANDER,
     NATIONAL_DEX_KAKUNA,
@@ -3630,8 +3290,6 @@ const u16 gPokedexOrder_Height[] =
     NATIONAL_DEX_SNIVY,
     NATIONAL_DEX_TRUBBISH,
     NATIONAL_DEX_DUOSION,
-<<<<<<< HEAD
-=======
     NATIONAL_DEX_DEERLING,//_SPRING,
     //NATIONAL_DEX_DEERLING_SUMMER,
     //NATIONAL_DEX_DEERLING_AUTUMN,
@@ -3681,7 +3339,6 @@ const u16 gPokedexOrder_Height[] =
     NATIONAL_DEX_BRAMBLIN,
     NATIONAL_DEX_GREAVARD,
     NATIONAL_DEX_IRON_BUNDLE,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     // 2'04" / 0.7m
     NATIONAL_DEX_BULBASAUR,
     NATIONAL_DEX_METAPOD,
@@ -3713,13 +3370,6 @@ const u16 gPokedexOrder_Height[] =
     NATIONAL_DEX_CROAGUNK,
     NATIONAL_DEX_WHIMSICOTT,
     NATIONAL_DEX_SANDILE,
-<<<<<<< HEAD
-    NATIONAL_DEX_ZORUA,
-    //NATIONAL_DEX_ZORUA, // Hisuian Form
-    NATIONAL_DEX_QUILLADIN,
-    NATIONAL_DEX_DARTRIX,
-    NATIONAL_DEX_TORRACAT,
-=======
     //NATIONAL_DEX_DARUMAKA_GALARIAN,
     NATIONAL_DEX_TIRTOUGA,
     NATIONAL_DEX_ZORUA,
@@ -3745,7 +3395,6 @@ const u16 gPokedexOrder_Height[] =
     NATIONAL_DEX_TINKATUFF,
     NATIONAL_DEX_TINKATON,
     NATIONAL_DEX_GLIMMET,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     // 2'07" / 0.8m
     NATIONAL_DEX_RAICHU,
     NATIONAL_DEX_NIDORINA,
@@ -3785,10 +3434,6 @@ const u16 gPokedexOrder_Height[] =
     NATIONAL_DEX_HONEDGE,
     NATIONAL_DEX_DOUBLADE,
     NATIONAL_DEX_HAWLUCHA,
-<<<<<<< HEAD
-    NATIONAL_DEX_LYCANROC, // Midday Form
-    //NATIONAL_DEX_LYCANROC, // Dusk Form
-=======
     NATIONAL_DEX_SLIGGOO,
     //NATIONAL_DEX_PUMPKABOO_SUPER,
     NATIONAL_DEX_LYCANROC,//_MIDDAY,
@@ -3828,7 +3473,6 @@ const u16 gPokedexOrder_Height[] =
     NATIONAL_DEX_MOTHIM,
     NATIONAL_DEX_GASTRODON,//_WEST_SEA,
     //NATIONAL_DEX_GASTRODON_EAST_SEA,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_MISMAGIUS,
     NATIONAL_DEX_HONCHKROW,
     NATIONAL_DEX_PORYGON_Z,
@@ -3849,7 +3493,6 @@ const u16 gPokedexOrder_Height[] =
     NATIONAL_DEX_TOEDSCOOL,
     NATIONAL_DEX_SCOVILLAIN,
     NATIONAL_DEX_IRON_TREADS,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     // 3'03" / 1.0m
     NATIONAL_DEX_IVYSAUR,
     NATIONAL_DEX_WARTORTLE,
@@ -3900,7 +3543,6 @@ const u16 gPokedexOrder_Height[] =
     NATIONAL_DEX_BASCULIN,//_RED_STRIPED,
     //NATIONAL_DEX_BASCULIN_BLUE_STRIPED,
     //NATIONAL_DEX_BASCULIN_WHITE_STRIPED,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_KROKOROK,
     NATIONAL_DEX_REUNICLUS,
     NATIONAL_DEX_FERROTHORN,
@@ -3958,9 +3600,6 @@ const u16 gPokedexOrder_Height[] =
     NATIONAL_DEX_VANILLISH,
     NATIONAL_DEX_CRYOGONAL,
     NATIONAL_DEX_LARVESTA,
-<<<<<<< HEAD
-    //NATIONAL_DEX_LYCANROC, // Midnight Form
-=======
     NATIONAL_DEX_FLORGES,//_RED_FLOWER,
     //NATIONAL_DEX_FLORGES_YELLOW_FLOWER,
     //NATIONAL_DEX_FLORGES_ORANGE_FLOWER,
@@ -3973,7 +3612,6 @@ const u16 gPokedexOrder_Height[] =
     NATIONAL_DEX_CARKOL,
     NATIONAL_DEX_CALYREX,
     NATIONAL_DEX_MABOSSTIFF,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     // 3'11" / 1.2m
     NATIONAL_DEX_FEAROW,
     //NATIONAL_DEX_SANDSLASH_ALOLAN,
@@ -4036,7 +3674,6 @@ const u16 gPokedexOrder_Height[] =
     //NATIONAL_DEX_FURFROU_PHARAOH_TRIM,
     //NATIONAL_DEX_ZYGARDE_10,
     //NATIONAL_DEX_ZYGARDE_10_POWER_CONSTRUCT,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_SALAZZLE,
     NATIONAL_DEX_REGIELEKI,
     NATIONAL_DEX_QUAXWELL,
@@ -4103,7 +3740,6 @@ const u16 gPokedexOrder_Height[] =
     NATIONAL_DEX_FINIZEN,
     NATIONAL_DEX_PALAFIN,//_ZERO,
     NATIONAL_DEX_IRON_JUGULIS,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     // 4'07" / 1.4m
     //NATIONAL_DEX_BEEDRILL_MEGA,
     //NATIONAL_DEX_RATICATE_ALOLAN_TOTEM_SIZED,
@@ -4136,12 +3772,9 @@ const u16 gPokedexOrder_Height[] =
     NATIONAL_DEX_SAWK,
     //NATIONAL_DEX_DARMANITAN_GALARIAN_STANDARD_MODE,
     //NATIONAL_DEX_DARMANITAN_GALARIAN_ZEN_MODE,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_CRUSTLE,
     NATIONAL_DEX_SIGILYPH,
     NATIONAL_DEX_ZWEILOUS,
-<<<<<<< HEAD
-=======
     //NATIONAL_DEX_TORNADUS_THERIAN,
     NATIONAL_DEX_KELDEO,//_ORDINARY,
     //NATIONAL_DEX_KELDEO_RESOLUTE,
@@ -4156,7 +3789,6 @@ const u16 gPokedexOrder_Height[] =
     NATIONAL_DEX_FLUTTER_MANE,
     NATIONAL_DEX_IRON_VALIANT,
     NATIONAL_DEX_FEZANDIPITI,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     // 4'11" / 1.5m
     NATIONAL_DEX_PIDGEOT,
     NATIONAL_DEX_VENOMOTH,
@@ -4167,10 +3799,7 @@ const u16 gPokedexOrder_Height[] =
     NATIONAL_DEX_HITMONLEE,
     NATIONAL_DEX_SCYTHER,
     NATIONAL_DEX_PINSIR,
-<<<<<<< HEAD
-=======
     //NATIONAL_DEX_MEWTWO_MEGA_Y,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_XATU,
     NATIONAL_DEX_GIRAFARIG,
     NATIONAL_DEX_DUNSPARCE,
@@ -4188,17 +3817,6 @@ const u16 gPokedexOrder_Height[] =
     NATIONAL_DEX_SALAMENCE,
     NATIONAL_DEX_TOGEKISS,
     NATIONAL_DEX_SAMUROTT,
-<<<<<<< HEAD
-    //NATIONAL_DEX_SAMUROTT, // Hisuian Form
-    NATIONAL_DEX_SEISMITOAD,
-    NATIONAL_DEX_KROOKODILE,
-    NATIONAL_DEX_DELPHOX,
-    NATIONAL_DEX_GRENINJA,
-    //NATIONAL_DEX_GRENINJA, // Ash-Greninja
-    NATIONAL_DEX_TREVENANT,
-    NATIONAL_DEX_NOIVERN,
-    NATIONAL_DEX_VIKAVOLT,
-=======
     //NATIONAL_DEX_SAMUROTT_HISUIAN,
     //NATIONAL_DEX_AUDINO_MEGA,
     NATIONAL_DEX_CONKELDURR,
@@ -4230,7 +3848,6 @@ const u16 gPokedexOrder_Height[] =
     NATIONAL_DEX_WO_CHIEN,
     NATIONAL_DEX_IRON_LEAVES,
     NATIONAL_DEX_IRON_BOULDER,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     // 5'03" / 1.6m
     NATIONAL_DEX_BLASTOISE,
     //NATIONAL_DEX_BLASTOISE_MEGA,
@@ -4241,13 +3858,9 @@ const u16 gPokedexOrder_Height[] =
     //NATIONAL_DEX_SLOWBRO_GALARIAN,
     NATIONAL_DEX_HAUNTER,
     NATIONAL_DEX_HYPNO,
-<<<<<<< HEAD
-    //NATIONAL_DEX_TYPHLOSION, // Hisuian Form
-=======
     NATIONAL_DEX_ZAPDOS,
     //NATIONAL_DEX_ZAPDOS_GALARIAN,
     //NATIONAL_DEX_TYPHLOSION_HISUIAN,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_NOCTOWL,
     NATIONAL_DEX_GARDEVOIR,
     //NATIONAL_DEX_GARDEVOIR_MEGA,
@@ -4258,15 +3871,6 @@ const u16 gPokedexOrder_Height[] =
     //NATIONAL_DEX_GALLADE_MEGA,
     NATIONAL_DEX_EMBOAR,
     NATIONAL_DEX_ZOROARK,
-<<<<<<< HEAD
-    //NATIONAL_DEX_ZOROARK, // Hisuian Form
-    NATIONAL_DEX_BISHARP,
-    NATIONAL_DEX_VOLCARONA,
-    NATIONAL_DEX_CHESNAUGHT,
-    NATIONAL_DEX_DECIDUEYE,
-    //NATIONAL_DEX_DECIDUEYE, // Hisuian Form
-    NATIONAL_DEX_OBSTAGOON,
-=======
     //NATIONAL_DEX_ZOROARK_HISUIAN,
     NATIONAL_DEX_DRUDDIGON,
     NATIONAL_DEX_BISHARP,
@@ -4301,15 +3905,10 @@ const u16 gPokedexOrder_Height[] =
     NATIONAL_DEX_RAPIDASH,
     //NATIONAL_DEX_RAPIDASH_GALARIAN,
     NATIONAL_DEX_DEWGONG,
-<<<<<<< HEAD
-    //NATIONAL_DEX_MAROWAK, // Alolan Form, Totem-sized
-    //NATIONAL_DEX_PINSIR, // Mega
-=======
     //NATIONAL_DEX_MAROWAK_ALOLAN_TOTEM_SIZED,
     //NATIONAL_DEX_PINSIR_MEGA,
     NATIONAL_DEX_ARTICUNO,
     //NATIONAL_DEX_ARTICUNO_GALARIAN,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_TYPHLOSION,
     //NATIONAL_DEX_HERACROSS_MEGA,
     NATIONAL_DEX_SKARMORY,
@@ -4336,7 +3935,6 @@ const u16 gPokedexOrder_Height[] =
     NATIONAL_DEX_VOLCANION,
     NATIONAL_DEX_CRABOMINABLE,
     //NATIONAL_DEX_TERAPAGOS_STELLAR
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     // 5'11" / 1.8m
     NATIONAL_DEX_DODRIO,
     NATIONAL_DEX_AERODACTYL,
@@ -4388,7 +3986,6 @@ const u16 gPokedexOrder_Height[] =
     //NATIONAL_DEX_HOUNDOOM_MEGA,
     NATIONAL_DEX_RAIKOU,
     //NATIONAL_DEX_SCEPTILE_MEGA,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     NATIONAL_DEX_BLAZIKEN,
     //NATIONAL_DEX_BLAZIKEN_MEGA,
     //NATIONAL_DEX_SWAMPERT_MEGA,
@@ -4398,9 +3995,6 @@ const u16 gPokedexOrder_Height[] =
     //NATIONAL_DEX_GARCHOMP_MEGA,
     NATIONAL_DEX_YANMEGA,
     NATIONAL_DEX_GARBODOR,
-<<<<<<< HEAD
-    NATIONAL_DEX_TYPE_NULL,
-=======
     NATIONAL_DEX_SAWSBUCK,//_SPRING,
     //NATIONAL_DEX_SAWSBUCK_SUMMER,
     //NATIONAL_DEX_SAWSBUCK_AUTUMN,
@@ -4414,7 +4008,6 @@ const u16 gPokedexOrder_Height[] =
     NATIONAL_DEX_TOEDSCRUEL,
     NATIONAL_DEX_ESPATHRA,
     NATIONAL_DEX_CHIEN_PAO,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     // 6'07" / 2.0m
     NATIONAL_DEX_VENUSAUR,
     NATIONAL_DEX_EKANS,
@@ -4451,15 +4044,11 @@ const u16 gPokedexOrder_Height[] =
     NATIONAL_DEX_KINGAMBIT,
     NATIONAL_DEX_ROARING_MOON,
     NATIONAL_DEX_ARCHALUDON,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     // 6'11" / 2.1m
     //NATIONAL_DEX_AERODACTYL_MEGA,
     NATIONAL_DEX_SNORLAX,
     NATIONAL_DEX_MANTINE,
     NATIONAL_DEX_AGGRON,
-<<<<<<< HEAD
-    //NATIONAL_DEX_GLALIE, // Mega
-=======
     //NATIONAL_DEX_GLALIE_MEGA,
     NATIONAL_DEX_EELEKTROSS,
     NATIONAL_DEX_COBALION,
@@ -4518,7 +4107,6 @@ const u16 gPokedexOrder_Height[] =
     NATIONAL_DEX_DRACOVISH,
     NATIONAL_DEX_GARGANACL,
     NATIONAL_DEX_SANDY_SHOCKS,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     // 7'10" / 2.4m
     //NATIONAL_DEX_VENUSAUR_MEGA,
     NATIONAL_DEX_RHYPERIOR,
@@ -4616,7 +4204,6 @@ const u16 gPokedexOrder_Height[] =
     // 10'10" / 3.3m
     NATIONAL_DEX_SERPERIOR,
     //NATIONAL_DEX_KYUREM_BLACK,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     // 11'02" / 3.4m
     // 11'06" / 3.5m
     NATIONAL_DEX_ARBOK,
@@ -4625,11 +4212,6 @@ const u16 gPokedexOrder_Height[] =
     NATIONAL_DEX_WALKING_WAKE,
     NATIONAL_DEX_GOUGING_FIRE,
     // 11'10" / 3.6m
-<<<<<<< HEAD
-    // 12'02" / 3.7m
-    NATIONAL_DEX_REGIGIGAS,
-    // 12'06" / 3.8m
-=======
     //NATIONAL_DEX_KYUREM_WHITE,
     NATIONAL_DEX_NAGANADEL,
     NATIONAL_DEX_DUDUNSPARCE,//_TWO_SEGMENT,
@@ -4666,20 +4248,10 @@ const u16 gPokedexOrder_Height[] =
     // 17'01" / 5.2m
     NATIONAL_DEX_LUGIA,
     NATIONAL_DEX_RAGING_BOLT,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     // 17'09" / 5.4m
     // 18'01" / 5.5m
     // 20'04" / 6.2m
     NATIONAL_DEX_MILOTIC,
-<<<<<<< HEAD
-    // 21'04" / 6.5m
-    NATIONAL_DEX_GYARADOS,
-    //NATIONAL_DEX_GYARADOS, // Mega
-    // 22'08" / 6.9m
-    // 23'00" / 7.0m
-    NATIONAL_DEX_RAYQUAZA,
-    // 24'07" / 7.5m
-=======
     //NATIONAL_DEX_PALKIA_ORIGIN,
     // 21'04" / 6.5m
     NATIONAL_DEX_GYARADOS,
@@ -4692,7 +4264,6 @@ const u16 gPokedexOrder_Height[] =
     //NATIONAL_DEX_DIALGA_ORIGIN,
     // 24'07" / 7.5m
     //NATIONAL_DEX_NECROZMA_ULTRA,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
     // 26'11" / 8.2m
     //NATIONAL_DEX_WISHIWASHI_SCHOOL,
     // 28'10" / 8.8m
@@ -4713,8 +4284,5 @@ const u16 gPokedexOrder_Height[] =
     NATIONAL_DEX_WAILORD,
     // 65'07" / 20m
     // 328'01" / 100m
-<<<<<<< HEAD
-=======
     //NATIONAL_DEX_ETERNATUS_ETERNAMAX,
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
 };
