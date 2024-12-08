@@ -1629,8 +1629,38 @@
 #define SPECIES_URSHIFU_RAPID_STRIKE_STYLE_GIGANTAMAX   1522
 #define SPECIES_MIMIKYU_TOTEM_BUSTED                    1523
 #define SPECIES_FLYGON_MEGA                             1524
+#define SPECIES_REGICLIPSE                              1525
+#define SPECIES_EQUIROCK                                1526
+#define SPECIES_MISSINGNO                               1527
+#define SPECIES_SWABLU_COSMIC                           1528
+#define SPECIES_ALTARIA_COSMIC                          1529
+#define SPECIES_ALTARIA_COSMIC_MEGA                     1530
+#define SPECIES_RALTS_COSMIC                            1530 //fairy/space angelic being, either starry cloak/hat or go full on blue/yellow/white color scheme
+#define SPECIES_KIRLIA_COSMIC                           1531
+#define SPECIES_GARDEVOIR_COSMIC                        1532
+#define SPECIES_GARDEVOIR_COSMIC_MEGA                   1533
+#define SPECIES_GALLADE_COSMIC                          1533
+#define SPECIES_GALLADE_COSMIC_MEGA                     1534
+#define SPECIES_BELDUM_COSMIC                           1534 //based on sputnik
+#define SPECIES_METANG_COSMIC                           1535
+#define SPECIES_METAGROSS_COSMIC                        1536 //based on ISS
+#define SPECIES_METAGROSS_COSMIC_MEGA                   1537
+#define SPECIES_DUSKULL_COSMIC                          1538 //
+#define SPECIES_DUSCLOPS_COSMIC                         1539 // mummy wraps surrounding a black hole underneath, use regiclipse base
+#define SPECIES_DUSKNOIR_COSMIC                         1540 //eldritch horror, giant eyeball in stomach with body kind of limply hanging over it, consult source image
+#define SPECIES_SHEDINJA_COSMIC                         1541 //biblically accurate space/ghost type
+#define SPECIES_TRAPINCH_COSMIC                         1542 //small rover shaped like trapinch
+#define SPECIES_VIBRAVA_COSMIC                          1543 //rover drone like on mars?? otherwise make a satellite tail
+#define SPECIES_FLYGON_COSMIC                           1544 //idk man consult the source image
+#define SPECIES_FLYGON_COSMIC_MEGA                      1545 //holy mackerel how am i gonna make this? also this whole line should be ground/space
+#define SPECIES_FEEBAS_COSMIC                           1546 //cracked asteroid like figure, water/space
+#define SPECIES_MILOTIC_COSMIC                          1547 //tail extend into a nebula-like spiral, pulsar design? water/space
+#define SPECIES_PLUSLE_COSMIC                           1548 // space/electric transmitter satellite, dish in ear
+#define SPECIES_MINUN_COSMIC                            1549 // space/electric receiver satellite
+#define SPECIIES_COSMEON                                1550 // space type eeveelution
+#define SPECIES_CASTFORM_SANDY                          1551
 
-#define SPECIES_EGG (SPECIES_FLYGON_MEGA + 1)
+#define SPECIES_EGG (SPECIES_CASTFORM_SANDY + 1)
 
 #define NUM_SPECIES SPECIES_EGG
 

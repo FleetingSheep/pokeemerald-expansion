@@ -1683,7 +1683,7 @@
 	.macro cancelmultiturnmoves battler:req
 	various \battler, VARIOUS_CANCEL_MULTI_TURN_MOVES
 	.endm
-
+	
 	@ Stores Healing Wish effect.
 	.macro storehealingwish battler:req
 	various \battler, VARIOUS_STORE_HEALING_WISH
@@ -2297,6 +2297,10 @@
 	various \battler, VARIOUS_ACTIVATE_TERRAIN_CHANGE_ABILITIES
 	.endm
 
+	.macro sethptoone
+	various 0, VARIOUS_SET_HP_TO_ONE
+	.endm
+
 @ helpful macros
 	.macro setstatchanger stat:req, stages:req, down:req
 	setbyte sSTATCHANGER, \stat | \stages << 3 | \down << 7
@@ -2506,22 +2510,7 @@
 	jumpifbyte CMP_EQUAL, gBattleCommunication, \value, \ptr
 	.endm
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-	.macro sethptoone
-	various 0, VARIOUS_SET_HP_TO_ONE
-=======
 	.macro flushtextbox
 	printstring STRINGID_EMPTYSTRING3
 	waitmessage 1
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
-=======
-	.macro flushtextbox
-	printstring STRINGID_EMPTYSTRING3
-	waitmessage 1
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
 	.endm
-
-	.macro sethptoone
-	various 0, VARIOUS_SET_HP_TO_ONE
-	.end3

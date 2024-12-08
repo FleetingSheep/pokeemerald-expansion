@@ -449,6 +449,10 @@ bool32 IsDamageMoveUnusable(u32 move, u32 battlerAtk, u32 battlerDef)
         if (moveType == TYPE_GRASS)
             return TRUE;
         break;
+    case ABILITY_ASTEROID_BELT:
+        if (moveType == TYPE_ROCK)
+            return TRUE;
+        break;
     case ABILITY_EARTH_EATER:
         if (moveType == TYPE_GROUND)
             return TRUE;

@@ -2734,7 +2734,6 @@ BattleScript_GravityLoopEnd:
 	jumpifnexttargetvalid BattleScript_GravityLoop
 	end
 
-<<<<<<< HEAD
 BattleScript_EffectPeriapsis:
 	setgravity BattleScript_ButItFailed
 	printstring STRINGID_GRAVITYINTENSIFIED
@@ -2743,7 +2742,6 @@ BattleScript_EffectContinue:
 	end3
 	
 BattleScript_EffectRoost::
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
 	attackcanceler
 	attackstring
 	ppreduce
@@ -10070,7 +10068,6 @@ BattleScript_EffectSnow::
 
 BattleScript_EffectSupernova_AnimDmgRet:
 	jumpifbyte CMP_NO_COMMON_BITS, gMoveResultFlags, MOVE_RESULT_MISSED, BattleScript_SupernovaAnimRet
-	call BattleScript_PreserveMissedBitDoMoveAnim
 	goto BattleScript_SupernovaDmgRet
 BattleScript_SupernovaAnimRet:
 	attackanimation
@@ -10113,7 +10110,6 @@ BattleScript_EffectSupernova_AnimDmgFaintAttacker:
 	end
 
 BattleScript_EffectSolarFlare::
-	setmoveeffect MOVE_EFFECT_BURN
 	goto BattleScript_EffectHit
 
 BattleScript_EffectLuminosity::

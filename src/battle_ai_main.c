@@ -995,6 +995,10 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                 if (moveType == TYPE_GROUND)
                     RETURN_SCORE_MINUS(20);
                 break;
+            case ABILITY_ASTEROID_BELT:
+                if (moveType == TYPE_ROCK)
+                    RETURN_SCORE_MINUS(20);
+                break;
             } // def ability checks
 
             // target partner ability checks & not attacking partner
@@ -2961,6 +2965,13 @@ static s32 AI_DoubleBattle(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                 if (IsStatLoweringEffect(effect))
                 {
                     RETURN_SCORE_PLUS(DECENT_EFFECT);
+                }
+                break;
+            case ABILITY_ASTEROID_BELT:
+                if (moveType == TYPE_ROCK
+                    && BattlerStatCanRise(battlerAtkPartner, atkPartnerAbility, STAT_DEF))
+                {
+                    RETURN_SCORE_PLUS(WEAK_EFFECT);
                 }
                 break;
             }

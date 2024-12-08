@@ -2255,4 +2255,29 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
         .battleScript = BattleScript_EffectHit,
         .battleTvScore = 0, // TODO: Assign points
     },
+    [EFFECT_SUPERNOVA] =
+    {
+        .battleScript = BattleScript_EffectSupernova,
+        .battleTvScore = 0, // TODO: Assign points
+    },
+    [EFFECT_LUMINOSITY] =
+    {
+        .battleScript = BattleScript_EffectLuminosity,
+        .battleTvScore = 0, // TODO: Assign points
+    },
+    [EFFECT_RED_SHIFT] =
+    {
+        .battleScript = BattleScript_EffectRedShift,
+        .battleTvScore = 0, // TODO: Assign points
+    },
+    [EFFECT_RELATIVITY] =
+    {
+        .battleScript = BattleScript_EffectRelativity,
+        .battleTvScore = 0, // TODO: Assign points
+    },
+    [EFFECT_SOLAR_FLARE] =
+    {
+        .battleScript = BattleScript_EffectSolarFlare,
+        .battleTvScore = 0, // TODO: Assign points
+    }
 };

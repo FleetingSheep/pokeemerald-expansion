@@ -355,6 +355,10 @@ static bool32 FindMonThatAbsorbsOpponentsMove(u32 battler, bool32 emitResult)
     {
         absorbingTypeAbilities[numAbsorbingAbilities++] = ABILITY_SAP_SIPPER;
     }
+    else if (gMovesInfo[gLastLandedMoves[battler]].type == TYPE_ROCK)
+    {
+        absorbingTypeAbilities[numAbsorbingAbilities++] = ABILITY_ASTEROID_BELT;
+    }
     else if (gMovesInfo[gLastLandedMoves[battler]].type == TYPE_GROUND)
     {
         absorbingTypeAbilities[numAbsorbingAbilities++] = ABILITY_EARTH_EATER;
@@ -1774,6 +1778,8 @@ static bool32 CanAbilityTrapOpponent(u16 ability, u32 opponent)
     else if (ability == ABILITY_ARENA_TRAP && IsBattlerGrounded(opponent))
         return TRUE;
     else if (ability == ABILITY_MAGNET_PULL && IS_BATTLER_OF_TYPE(opponent, TYPE_STEEL))
+        return TRUE;
+    else if (ability == ABILITY_EVENT_HORIZON)
         return TRUE;
     else
         return FALSE;

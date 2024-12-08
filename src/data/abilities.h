@@ -2607,4 +2607,55 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeSwapped = TRUE,
         .cantBeTraced = TRUE,
     },
+
+    [ABILITY_EVENT_HORIZON] =
+    {
+    #if B_EXPANDED_ABILITY_NAMES == TRUE
+        .name = _("Event Horizon"),
+    #else
+        .name = _("EvntHorizon"),
+    #endif
+        .description = COMPOUND_STRING("Prevents all escape."), //change should be absorbs all attempts at pivoting but not switching out or after contact is made
+        .aiRating = 8,
+    },
+
+    [ABILITY_ASTEROID_BELT] =
+    {
+    #if B_EXPANDED_ABILITY_NAMES == TRUE
+        .name = _("Asteroid Belt"),
+    #else
+        .name = _("AstrdBelt"),
+    #endif
+        .description = COMPOUND_STRING("Turns earth moves into defense."),
+        .aiRating = 6,
+    },
+
+    [ABILITY_FASTER_THAN_LIGHT] =
+    {
+        .name = _("FTL"),
+        .description = COMPOUND_STRING("Moves faster on switch-in."),
+        .aiRating = 1, //change
+    },
+
+    [ABILITY_ANOMALY] =
+    {
+        .name = _("Anomaly"),
+        .description = COMPOUND_STRING("May confuse foe on contact."),
+        .aiRating = 4,
+    },
+
+    [ABILITY_PERIAPSIS] =
+    {
+        .name = _("Periapsis"),
+        .description = COMPOUND_STRING("Induces gravity upon entry."),
+        .aiRating = 1,
+    },
+
+    [ABILITY_HYPERDENSITY] =
+    {
+        .name = _("Hyperdensity"),
+        .description = COMPOUND_STRING("Moves twice as fast in gravity."),
+        .aiRating = 5,
+    },
+    
 };

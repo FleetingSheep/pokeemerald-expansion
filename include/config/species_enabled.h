@@ -133,6 +133,7 @@
 #define P_FAMILY_DRATINI                 P_GEN_1_POKEMON
 #define P_FAMILY_MEWTWO                  P_GEN_1_POKEMON
 #define P_FAMILY_MEW                     P_GEN_1_POKEMON
+#define P_FAMILY_MISSINGNO               P_GEN_1_POKEMON
 
 #define P_FAMILY_CHIKORITA               P_GEN_2_POKEMON
 #define P_FAMILY_CYNDAQUIL               P_GEN_2_POKEMON
@@ -228,6 +229,7 @@
 #define P_FAMILY_SEVIPER                 P_GEN_3_POKEMON
 #define P_FAMILY_LUNATONE                P_GEN_3_POKEMON
 #define P_FAMILY_SOLROCK                 P_GEN_3_POKEMON
+#define P_FAMILY_EQUIROCK                P_GEN_3_POKEMON
 #define P_FAMILY_BARBOACH                P_GEN_3_POKEMON
 #define P_FAMILY_CORPHISH                P_GEN_3_POKEMON
 #define P_FAMILY_BALTOY                  P_GEN_3_POKEMON
@@ -251,6 +253,7 @@
 #define P_FAMILY_REGIROCK                P_GEN_3_POKEMON
 #define P_FAMILY_REGICE                  P_GEN_3_POKEMON
 #define P_FAMILY_REGISTEEL               P_GEN_3_POKEMON
+#define P_FAMILY_REGICLIPSE              P_GEN_3_POKEMON
 #define P_FAMILY_LATIAS                  P_GEN_3_POKEMON
 #define P_FAMILY_LATIOS                  P_GEN_3_POKEMON
 #define P_FAMILY_KYOGRE                  P_GEN_3_POKEMON

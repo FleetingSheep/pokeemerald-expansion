@@ -10981,13 +10981,11 @@ static void Cmd_various(void)
     }
     case VARIOUS_SET_HP_TO_ONE:
     {
-        int battler_hp = gBattleMons[gBattlerAttacker].hp;
         
         VARIOUS_ARGS();
         if (gBattleControllerExecFlags)
             return;
 
-        gBattleMons[gBattlerAttacker].statStages[STAT_ATK] = MAX_STAT_STAGE;
         gBattleMoveDamage = gBattleMons[gBattlerAttacker].hp - 1;
         
         gBattlescriptCurrInstr = cmd->nextInstr;

@@ -514,9 +514,7 @@ extern const u8 BattleScript_Terastallization[];
 extern const u8 BattleScript_BoosterEnergyEnd2[];
 extern const u8 BattleScript_TeraShellDistortingTypeMatchups[];
 extern const u8 BattleScript_TeraFormChange[];
-<<<<<<< HEAD
 extern const u8 BattleScript_PeriapsisActivates[];
-=======
 extern const u8 BattleScript_SyrupBombEndTurn[];
 extern const u8 BattleScript_SyrupBombActivates[];
 extern const u8 BattleScript_EffectCombinedPledge_Water[];
@@ -533,7 +531,6 @@ extern const u8 BattleScript_Terastallization[];
 extern const u8 BattleScript_BoosterEnergyEnd2[];
 extern const u8 BattleScript_TeraShellDistortingTypeMatchups[];
 extern const u8 BattleScript_TeraFormChange[];
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
 
 // zmoves
 extern const u8 BattleScript_ZMoveActivateDamaging[];
@@ -864,5 +861,10 @@ extern const u8 BattleScript_EffectSpicyExtract[];
 extern const u8 BattleScript_DamageToQuarterTargetHP[];
 extern const u8 BattleScript_EffectFickleBeam[];
 extern const u8 BattleScript_FickleBeamDoubled[];
+extern const u8 BattleScript_EffectSupernova[];
+extern const u8 BattleScript_EffectLuminosity[];
+extern const u8 BattleScript_EffectRedShift[];
+extern const u8 BattleScript_EffectRelativity[];
+extern const u8 BattleScript_EffectSolarFlare[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H

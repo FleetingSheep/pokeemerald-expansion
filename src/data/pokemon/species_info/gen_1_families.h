@@ -4228,9 +4228,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 
 #if P_FAMILY_CLEFAIRY
 #if P_UPDATED_TYPES >= GEN_6
-    #define CLEFAIRY_FAMILY_TYPES { TYPE_FAIRY, TYPE_FAIRY }
+    #define CLEFAIRY_FAMILY_TYPES { TYPE_FAIRY, TYPE_SPACE }
 #else
-    #define CLEFAIRY_FAMILY_TYPES { TYPE_NORMAL, TYPE_NORMAL }
+    #define CLEFAIRY_FAMILY_TYPES { TYPE_NORMAL, TYPE_SPACE }
 #endif
 
 #if P_GEN_2_CROSS_EVOS
@@ -7344,10 +7344,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 13,
         .weight = 565,
         .description = COMPOUND_STRING(
-            "It is rumored that a boy with psychic\n"
-            "abilities suddenly transformed into\n"
-            "Kadabra while he was assisting research\n"
-            "into extrasensory powers."),
+            "Kadabra has supposedly decoded the\n"
+            "workings of the Pokéball, allowing it\n"
+            "to escape whenever it pleases."),
         .pokemonScale = 256,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -7421,10 +7420,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 15,
         .weight = 480,
         .description = COMPOUND_STRING(
-            "While it has strong psychic abilities and\n"
-            "high intelligence, an Alakazam's muscles\n"
-            "are very weak. It uses psychic power to\n"
-            "move its body."),
+            "Despite its incredible intelligence, it\n"
+            "mostly enjoys watching romance movies and\n"
+            "eating ice cream."),
         .pokemonScale = 256,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -7701,10 +7699,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 16,
         .weight = 1300,
         .description = COMPOUND_STRING(
-            "It is impossible to defend against punches\n"
-            "and chops doled out by its four arms.\n"
-            "Its fighting spirit flares up when it faces\n"
-            "a tough opponent."),
+            "Many Machamp are banned from home gyms for\n"
+            "breaking the equipment with their raw power.\n"
+            "Instead, they pull trains and curl boulders\n"
+            "for their training."),
         .pokemonScale = 280,
         .pokemonOffset = 1,
         .trainerScale = 269,
@@ -13517,7 +13515,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = 115,
         .baseSpAttack  = 100,
         .baseSpDefense = 85,
-        .types = MON_TYPES(TYPE_WATER, TYPE_PSYCHIC),
+        .types = MON_TYPES(TYPE_WATER, TYPE_SPACE),
         .catchRate = 60,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 182 : 207,
         .evYield_Speed = 2,
@@ -17725,6 +17723,78 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .teachableLearnset = sMewTeachableLearnset,
     },
 #endif //P_FAMILY_MEW
+
+#if P_FAMILY_MISSINGNO
+    [SPECIES_MISSINGNO] =
+    {
+        .baseHP        = 33,
+        .baseAttack    = 136,
+        .baseDefense   = 0,
+        .baseSpeed     = 29,
+        .baseSpAttack  = 6,
+        .baseSpDefense = 6,
+        .types = MON_TYPES(TYPE_NORMAL),
+        .catchRate = 100, //change
+    #if P_UPDATED_EXP_YIELDS >= GEN_8
+        .expYield = 300,
+    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+        .expYield = 270,
+    #else
+        .expYield = 64,
+    #endif
+        .evYield_HP = 3,
+        .itemCommon = ITEM_LUM_BERRY, //change
+        .itemRare = ITEM_LUM_BERRY, //change
+        .genderRatio = MON_GENDERLESS,
+        .eggCycles = 120,
+        .friendship = 100,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
+        .abilities = { ABILITY_ANOMALY, ABILITY_NONE, ABILITY_NONE }, //change
+        .bodyColor = BODY_COLOR_PINK,
+        .speciesName = _("MissingNo."),
+        .cryId = CRY_MEW,
+        .natDexNum = NATIONAL_DEX_MEW,
+        .categoryName = _("Glitch"),
+        .height = 1,
+        .weight = 1,
+        .description = COMPOUND_STRING(
+            "A strange entity that defies logic.\n"
+            "Its fragmented existence is a reminder\n"
+            "that not all things in this world can be\n"
+            "explained. Approach with caution."),
+        .pokemonScale = 457,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_Missingno,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 11,
+        .frontAnimFrames = sAnims_Mew,
+        .frontAnimId = ANIM_ZIGZAG_SLOW,
+        .enemyMonElevation = 10,
+        .backPic = gMonBackPic_Missingno,
+        .backPicSize = MON_COORDS_SIZE(64, 40),
+        .backPicYOffset = 0,
+        .backAnimId = BACK_ANIM_CONCAVE_ARC_SMALL,
+        .palette = gMonPalette_Missingno,
+        .shinyPalette = gMonShinyPalette_Missingno,
+        .iconSprite = gMonIcon_Missingno,
+        .iconPalIndex = 2,
+        FOOTPRINT(Bulbasaur)
+        OVERWORLD(
+            sPicTable_Bulbasaur,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_NONE,
+            gOverworldPalette_Bulbasaur,
+            gShinyOverworldPalette_Bulbasaur
+        )
+        .isFrontierBanned = TRUE,
+        .levelUpLearnset = sMissingnoLevelUpLearnset,
+        .teachableLearnset = sMissingnoTeachableLearnset,
+    },
+#endif //P_FAMILY_MISSINGNO
 
 #ifdef __INTELLISENSE__
 };

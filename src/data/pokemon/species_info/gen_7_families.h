@@ -4106,7 +4106,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
 
 #if P_FAMILY_MINIOR
 #define MINIOR_MISC_INFO(color)                                             \
-        .types = MON_TYPES(TYPE_ROCK, TYPE_FLYING),                         \
+        .types = MON_TYPES(TYPE_SPACE, TYPE_ROCK),                          \
         .catchRate = 30,                                                    \
         .expYield = 154,                                                    \
         .evYield_Defense = 1,                                               \
@@ -5385,7 +5385,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .baseSpeed     = 37,
         .baseSpAttack  = 29,
         .baseSpDefense = 31,
-        .types = MON_TYPES(TYPE_PSYCHIC),
+        .types = MON_TYPES(TYPE_SPACE),
         .catchRate = 45,
         .expYield = 40,
         .evYield_HP = 1,
@@ -5450,7 +5450,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .baseSpeed     = 37,
         .baseSpAttack  = 29,
         .baseSpDefense = 131,
-        .types = MON_TYPES(TYPE_PSYCHIC),
+        .types = MON_TYPES(TYPE_SPACE),
         .catchRate = 45,
         .expYield = 140,
         .evYield_Defense = 1,
@@ -5579,7 +5579,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .baseSpeed     = 97,
         .baseSpAttack  = 137,
         .baseSpDefense = 107,
-        .types = MON_TYPES(TYPE_PSYCHIC, TYPE_GHOST),
+        .types = MON_TYPES(TYPE_SPACE, TYPE_GHOST),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 340 : 306,
         .evYield_SpAttack = 3,
@@ -6090,7 +6090,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .baseSpeed     = 79,
         .baseSpAttack  = 127,
         .baseSpDefense = 89,
-        .types = MON_TYPES(TYPE_PSYCHIC),
+        .types = MON_TYPES(TYPE_SPACE),
         .catchRate = 255,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 300 : 270,
         .evYield_Attack = 1,
@@ -6157,7 +6157,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .baseSpeed     = 77,
         .baseSpAttack  = 113,
         .baseSpDefense = 109,
-        .types = MON_TYPES(TYPE_PSYCHIC, TYPE_STEEL),
+        .types = MON_TYPES(TYPE_SPACE, TYPE_STEEL),
         .catchRate = 255,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 340 : 306,
         .evYield_Attack = 3,
@@ -6223,7 +6223,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .baseSpeed     = 77,
         .baseSpAttack  = 157,
         .baseSpDefense = 127,
-        .types = MON_TYPES(TYPE_PSYCHIC, TYPE_GHOST),
+        .types = MON_TYPES(TYPE_SPACE, TYPE_GHOST),
         .catchRate = 255,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 340 : 306,
         .evYield_SpAttack = 3,
@@ -6541,7 +6541,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .baseSpeed     = 73,
         .baseSpAttack  = 73,
         .baseSpDefense = 67,
-        .types = MON_TYPES(TYPE_POISON),
+        .types = MON_TYPES(TYPE_POISON, TYPE_SPACE),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 210 : 189,
         .evYield_Speed = 1,
@@ -6592,7 +6592,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .isUltraBeast = TRUE,
         .levelUpLearnset = sPoipoleLevelUpLearnset,
         .teachableLearnset = sPoipoleTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_MOVE, MOVE_DRAGON_PULSE, SPECIES_NAGANADEL}),
+        .evolutions = EVOLUTION({EVO_MOVE, MOVE_DRAGON_PULSE, SPECIES_NAGANADEL}), //change
     },
 
     [SPECIES_NAGANADEL] =
@@ -6603,7 +6603,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .baseSpeed     = 121,
         .baseSpAttack  = 127,
         .baseSpDefense = 73,
-        .types = MON_TYPES(TYPE_POISON, TYPE_DRAGON),
+        .types = MON_TYPES(TYPE_POISON, TYPE_SPACE),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 270 : 243,
         .evYield_SpAttack = 3,

@@ -110,8 +110,6 @@ static const struct CombinedMove sCombinedMoves[2] =
 
 #define HOENN_TO_NATIONAL(name)     [HOENN_DEX_##name - 1] = NATIONAL_DEX_##name
 
-=======
->>>>>>> 33d5cbd7a284dce2234de8bb6bff615accbf5049
 // Assigns all Hoenn Dex Indexes to a National Dex Index
 static const u16 sHoennToNationalOrder[HOENN_DEX_COUNT - 1] =
 {
@@ -259,6 +257,7 @@ static const u16 sHoennToNationalOrder[HOENN_DEX_COUNT - 1] =
     HOENN_TO_NATIONAL(SEVIPER),
     HOENN_TO_NATIONAL(LUNATONE),
     HOENN_TO_NATIONAL(SOLROCK),
+    HOENN_TO_NATIONAL(EQUIROCK),
     HOENN_TO_NATIONAL(BARBOACH),
     HOENN_TO_NATIONAL(WHISCASH),
     HOENN_TO_NATIONAL(CORPHISH),
@@ -346,6 +345,7 @@ static const u16 sHoennToNationalOrder[HOENN_DEX_COUNT - 1] =
     HOENN_TO_NATIONAL(REGIROCK),
     HOENN_TO_NATIONAL(REGICE),
     HOENN_TO_NATIONAL(REGISTEEL),
+    HOENN_TO_NATIONAL(REGICLIPSE),
     HOENN_TO_NATIONAL(LATIAS),
     HOENN_TO_NATIONAL(LATIOS),
     HOENN_TO_NATIONAL(KYOGRE),

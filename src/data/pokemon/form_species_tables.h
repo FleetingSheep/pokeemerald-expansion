@@ -860,10 +860,16 @@ static const u16 sCameruptFormSpeciesIdTable[] = {
 #endif //P_FAMILY_NUMEL
 
 #if P_FAMILY_SWABLU
+static const u16 sSwabluFormSpeciesIdTable[] = {
+    SPECIES_SWABLU,
+    SPECIES_SWABLU_COSMIC,
+};
 static const u16 sAltariaFormSpeciesIdTable[] = {
     SPECIES_ALTARIA,
+    SPECIES_ALTARIA_COSMIC,
 #if P_MEGA_EVOLUTIONS
     SPECIES_ALTARIA_MEGA,
+    SPECIES_ALTARIA_COSMIC_MEGA,
 #endif
     FORM_SPECIES_END,
 };
@@ -875,6 +881,7 @@ static const u16 sCastformFormSpeciesIdTable[] = {
     SPECIES_CASTFORM_SUNNY,
     SPECIES_CASTFORM_RAINY,
     SPECIES_CASTFORM_SNOWY,
+    SPECIES_CASTFORM_SANDY,
     FORM_SPECIES_END,
 };
 #endif //P_FAMILY_CASTFORM
@@ -1562,6 +1569,16 @@ static const u16 sDiancieFormSpeciesIdTable[] = {
     FORM_SPECIES_END,
 };
 #endif //P_FAMILY_DIANCIE
+
+#if P_FAMILY_TRAPINCH
+static const u16 sFlygonFormSpeciesIdTable[] = {
+    SPECIES_FLYGON,
+#if P_MEGA_EVOLUTIONS
+    SPECIES_FLYGON_MEGA,
+#endif
+    FORM_SPECIES_END,
+};
+#endif //P_FAMILY_TRAPINCH
 
 #if P_FAMILY_HOOPA
 static const u16 sHoopaFormSpeciesIdTable[] = {

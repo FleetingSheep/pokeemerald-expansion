@@ -936,5 +936,15 @@ extern const u8 Move_G_MAX_STEELSURGE[];
 extern const u8 Move_G_MAX_DEPLETION[];
 extern const u8 Move_G_MAX_ONE_BLOW[];
 extern const u8 Move_G_MAX_RAPID_FLOW[];
+extern const u8 Move_BLACK_HOLE[];
+extern const u8 Move_RELATIVITY[];
+extern const u8 Move_SOLAR_FLARE[];
+extern const u8 Move_WORMHOLE[];
+extern const u8 Move_GLIMMER[];
+extern const u8 Move_ASTEROID_TOSS[];
+extern const u8 Move_IMPACT_EVENT[];
+extern const u8 Move_RED_SHIFT[];
+extern const u8 Move_LUMINOSITY[];
+extern const u8 Move_SUPERNOVA[];
 
 #endif // GUARD_BATTLE_ANIM_SCRIPTS_H
