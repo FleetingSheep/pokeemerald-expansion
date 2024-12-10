@@ -63,7 +63,8 @@ static const u16 sUnusedUnknownPal[] = INCBIN_U16("graphics/title_screen/unused.
 static const u32 sTitleScreenRayquazaGfx[] = INCBIN_U32("graphics/title_screen/deoxys_tiles.4bpp.lz");
 static const u32 sTitleScreenRayquazaTilemap[] = INCBIN_U32("graphics/title_screen/deoxys_tiles.bin.lz");
 static const u32 sTitleScreenLogoShineGfx[] = INCBIN_U32("graphics/title_screen/logo_shine.4bpp.lz");
-static const u32 sTitleScreenCloudsGfx[] = INCBIN_U32("graphics/title_screen/clouds.4bpp.lz");
+//static const u32 sTitleScreenCloudsGfx[] = INCBIN_U32("graphics/title_screen/clouds.4bpp.lz");
+static const u32 sTitleScreenStarsGfx[] = INCBIN_U32("graphics/title_screen/stars.4bpp.lz");
 
 
 
@@ -605,6 +606,8 @@ void CB2_InitTitleScreen(void)
         // bg1
         //LZ77UnCompVram(sTitleScreenCloudsGfx, (void *)(BG_CHAR_ADDR(3)));
         //LZ77UnCompVram(gTitleScreenCloudsTilemap, (void *)(BG_SCREEN_ADDR(27)));
+        LZ77UnCompVram(sTitleScreenStarsGfx, (void *)(BG_CHAR_ADDR(3)));
+        LZ77UnCompVram(gTitleScreenStarsTilemap, (void *)(BG_SCREEN_ADDR(27)));
         ScanlineEffect_Stop();
         ResetTasks();
         ResetSpriteData();
@@ -856,15 +859,13 @@ static void CB2_GoToBerryFixScreen(void)
 
 static void UpdateLegendaryMarkingColor(u8 frameNum)
 {
-    return;
     if ((frameNum % 4) == 0) // Change color every 4th frame
     {
         s32 intensity = Cos(frameNum, 128) + 128;
-        s32 r = 31 - ((intensity * 32 - intensity) / 256);
-        s32 g = 31 - (intensity * 22 / 256);
-        s32 b = 12;
+         s32 grayValue = intensity * 31 / 255; // 31 is the maximum value for each RGB channel in 5-bit format
 
-        u16 color = RGB(r, g, b);
-        LoadPalette(&color, BG_PLTT_ID(14) + 15, sizeof(color));
+        // Use grayValue for r, g, and b to create a grayscale effect
+        u16 color = RGB(grayValue, grayValue, grayValue);
+        LoadPalette(&color, BG_PLTT_ID(14) + 5, sizeof(color));
    }
 }

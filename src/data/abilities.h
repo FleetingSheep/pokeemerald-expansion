@@ -2615,7 +2615,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
     #else
         .name = _("EvntHorizon"),
     #endif
-        .description = COMPOUND_STRING("Prevents all escape."), //change should be absorbs all attempts at pivoting but not switching out or after contact is made
+        .description = COMPOUND_STRING("Prevents all escape once contacted."),
         .aiRating = 8,
     },
 
@@ -2634,7 +2634,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
     {
         .name = _("FTL"),
         .description = COMPOUND_STRING("Moves faster on switch-in."),
-        .aiRating = 1, //change
+        .aiRating = 8,
     },
 
     [ABILITY_ANOMALY] =

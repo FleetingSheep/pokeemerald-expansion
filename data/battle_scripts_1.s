@@ -10165,3 +10165,11 @@ BattleScript_RedShiftTryConfuse:
 	setmoveeffect MOVE_EFFECT_CONFUSION
 	seteffectprimary
 	goto BattleScript_MoveEnd
+
+BattleScript_EventHorizonContactMade::
+	waitstate
+	call BattleScript_AbilityPopUp
+	waitstate
+	printstring STRINGID_EVENTHORIZONCONTACTMADE
+	waitmessage B_WAIT_TIME_LONG
+	return

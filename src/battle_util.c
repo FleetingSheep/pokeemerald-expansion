@@ -5796,6 +5796,23 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 effect++;
             }
             break;
+        case ABILITY_EVENT_HORIZON:
+            if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+             && IsBattlerAlive(gBattlerAttacker)
+             && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
+             && GetBattlerHoldEffect(gBattlerAttacker, TRUE) != HOLD_EFFECT_PROTECTIVE_PADS
+             && (IsMoveMakingContact(move, gBattlerAttacker))
+             && !(gBattleMons[gBattlerAttacker].status2 & STATUS2_ESCAPE_PREVENTION)
+             && !(IS_BATTLER_OF_TYPE(battler, TYPE_GHOST))
+             && TARGET_TURN_DAMAGED)
+            {
+                gBattleMons[gBattlerAttacker].status2 |= STATUS2_ESCAPE_PREVENTION;
+                BattleScriptPushCursor();
+                gBattlescriptCurrInstr = BattleScript_EventHorizonContactMade;
+                gHitMarker |= HITMARKER_STATUS_ABILITY_EFFECT;
+                effect++;
+            }
+            break;
         case ABILITY_CUTE_CHARM:
             if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
              && IsBattlerAlive(gBattlerAttacker)
@@ -6524,8 +6541,6 @@ u32 IsAbilityPreventingEscape(u32 battler)
     if ((id = IsAbilityOnOpposingSide(battler, ABILITY_ARENA_TRAP)) && IsBattlerGrounded(battler))
         return id;
     if ((id = IsAbilityOnOpposingSide(battler, ABILITY_MAGNET_PULL)) && IS_BATTLER_OF_TYPE(battler, TYPE_STEEL))
-        return id;
-    if ((id = IsAbilityOnOpposingSide(battler, ABILITY_EVENT_HORIZON)))
         return id;
 
     return 0;

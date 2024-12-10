@@ -85,22 +85,22 @@
               {
                 "min_level": 2,
                 "max_level": 2,
-                "species": "SPECIES_CASTFORM"
+                "species": "SPECIES_REGICLIPSE"
               },
               {
                 "min_level": 2,
                 "max_level": 2,
-                "species": "SPECIES_ALTARIA_COSMIC"
+                "species": "SPECIES_REGICLIPSE"
               },
               {
                 "min_level": 2,
                 "max_level": 2,
-                "species": "SPECIES_SWABLU_COSMIC"
+                "species": "SPECIES_REGICLIPSE"
               },
               {
                 "min_level": 3,
                 "max_level": 3,
-                "species": "SPECIES_EQUIROCK"
+                "species": "SPECIES_REGICLIPSE"
               },
               {
                 "min_level": 3,
@@ -115,7 +115,7 @@
               {
                 "min_level": 3,
                 "max_level": 3,
-                "species": "SPECIES_WURMPLE"
+                "species": "SPECIES_REGICLIPSE"
               },
               {
                 "min_level": 3,
