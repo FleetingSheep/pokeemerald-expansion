@@ -20,6 +20,8 @@
 
 #define TREASURE_FACTOR ((I_SELL_VALUE_FRACTION >= GEN_9) ? 2 : 1)
 
+const u32 gItemIcon_Calculator[] = INCBIN_U32("graphics/items/icons/calculator.4bpp.lz"); //dumb workaround
+
 // Shared Item Description entries
 
 static const u8 sFullHealDesc[]       = _("Heals all the\n"
@@ -13018,6 +13020,23 @@ const struct Item gItemsInfo[] =
 
 // GEN 9 ITEMS
 
+    [ITEM_CALCULATOR] = 
+    {
+        .name = _("Calculator"),
+        .price = 5000,
+        .holdEffect= HOLD_EFFECT_CALCULATOR,
+        .description = COMPOUND_STRING(
+            "The holder's two\n"
+            "attacking stats\n"
+            "are averaged."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 30,
+        .iconPic = gItemIcon_Calculator, 
+        .iconPalette = gItemIconPalette_CardKey,
+    },
+    
     [ITEM_CLEAR_AMULET] =
     {
         .name = _("Clear Amulet"),

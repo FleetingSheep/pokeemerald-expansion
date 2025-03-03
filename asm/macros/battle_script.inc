@@ -1458,6 +1458,11 @@
 	.4byte \sidestatus
 	.endm
 
+	.macro setshift jumpInstr:req
+	callnative BS_SetShift
+	.4byte \jumpInstr
+	.endm
+	
 	.macro trycopycat failInstr:req
 	callnative BS_TryCopycat
 	.4byte \failInstr

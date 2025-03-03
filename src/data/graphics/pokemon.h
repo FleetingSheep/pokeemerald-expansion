@@ -8302,6 +8302,12 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u32 gMonBackPic_AltariaMega[] = INCBIN_U32("graphics/pokemon/altaria/mega/back.4bpp.lz");
     const u32 gMonShinyPalette_AltariaMega[] = INCBIN_U32("graphics/pokemon/altaria/mega/shiny.gbapal.lz");
     const u8 gMonIcon_AltariaMega[] = INCBIN_U8("graphics/pokemon/altaria/mega/icon.4bpp");
+
+    const u32 gMonFrontPic_AltariaCosmicMega[] = INCBIN_U32("graphics/pokemon/altaria/cosmic/mega/front.4bpp.lz");
+    const u32 gMonPalette_AltariaCosmicMega[] = INCBIN_U32("graphics/pokemon/altaria/cosmic/mega/normal.gbapal.lz");
+    const u32 gMonBackPic_AltariaCosmicMega[] = INCBIN_U32("graphics/pokemon/altaria/cosmic/mega/back.4bpp.lz");
+    const u32 gMonShinyPalette_AltariaCosmicMega[] = INCBIN_U32("graphics/pokemon/altaria/cosmic/mega/shiny.gbapal.lz");
+    const u8 gMonIcon_AltariaCosmicMega[] = INCBIN_U8("graphics/pokemon/altaria/cosmic/mega/icon.4bpp");
 #if OW_POKEMON_OBJECT_EVENTS
     // const u32 gObjectEventPic_AltariaMega[] = INCBIN_COMP("graphics/pokemon/altaria/mega/overworld.4bpp");
 #if OW_PKMN_OBJECTS_SHARE_PALETTES == FALSE

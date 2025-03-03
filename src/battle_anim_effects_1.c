@@ -2395,6 +2395,7 @@ const union AffineAnimCmd gMetronomeFingerAffineAnimCmds1[] =
     AFFINEANIMCMD_END,
 };
 
+
 const union AffineAnimCmd gMetronomeFingerAffineAnimCmds2[] =
 {
     AFFINEANIMCMD_FRAME(0x0, 0x0, 4, 11),
@@ -2423,6 +2424,51 @@ const union AffineAnimCmd *const gMetronomeFingerAffineAnimTable[] =
     gMetronomeFingerAffineAnimCmds2,
 };
 
+const union AffineAnimCmd gReversalRedLineAffineAnimCmds[] =
+{
+    AFFINEANIMCMD_FRAME(0x100, 0x200, 0, 0),
+    AFFINEANIMCMD_FRAME(0x0, 0x0, 3, 80),
+    AFFINEANIMCMD_FRAME(0x0, 0x0, 6, 20),
+
+    AFFINEANIMCMD_FRAME(0x0, 0x0, 3, 80),
+    AFFINEANIMCMD_FRAME(0x0, 0x0, 6, 20),
+
+    AFFINEANIMCMD_END,
+};
+
+const union AffineAnimCmd g2ReversalRedLineAffineAnimCmds[] =
+{
+    AFFINEANIMCMD_FRAME(0x100, 0x200, 0, 0),
+    AFFINEANIMCMD_FRAME(0x0, 0x0, -3, 130),
+    AFFINEANIMCMD_FRAME(0x0, 0x0, -6, 20),
+
+    AFFINEANIMCMD_END,
+};
+
+const union AffineAnimCmd g3ReversalRedLineAffineAnimCmds[] =
+{
+    AFFINEANIMCMD_FRAME(0x100, 0x200, 0, 0),
+    AFFINEANIMCMD_FRAME(0x0, 0x0, 3, 100),
+    AFFINEANIMCMD_FRAME(0x0, 0x0, 6, 20),
+
+    AFFINEANIMCMD_END,
+};
+
+const union AffineAnimCmd *const gReversalRedLineAffineAnimTable[] =
+{
+    gReversalRedLineAffineAnimCmds,
+};
+
+const union AffineAnimCmd *const g2ReversalRedLineAffineAnimTable[] =
+{
+    g2ReversalRedLineAffineAnimCmds,
+};
+
+const union AffineAnimCmd *const g3ReversalRedLineAffineAnimTable[] =
+{
+    g3ReversalRedLineAffineAnimCmds,
+};
+
 const struct SpriteTemplate gMetronomeFingerSpriteTemplate =
 {
     .tileTag = ANIM_TAG_FINGER,
@@ -2432,6 +2478,85 @@ const struct SpriteTemplate gMetronomeFingerSpriteTemplate =
     .images = NULL,
     .affineAnims = gMetronomeFingerAffineAnimTable,
     .callback = AnimMetronomeFinger,
+};
+
+const struct SpriteTemplate gReversalRedLineSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_REVERSAL_RED_LINE,
+    .paletteTag = ANIM_TAG_REVERSAL_RED_LINE,
+    .oam = &gOamData_AffineDouble_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gReversalRedLineAffineAnimTable,
+    .callback = AnimSpriteOnMonPos,
+
+};
+
+const struct SpriteTemplate gReversalRedLineSpriteTemplate2 =
+{
+    .tileTag = ANIM_TAG_REVERSAL_RED_LINE,
+    .paletteTag = ANIM_TAG_REVERSAL_RED_LINE,
+    .oam = &gOamData_AffineDouble_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = g2ReversalRedLineAffineAnimTable,
+    .callback = AnimSpriteOnMonPos,
+
+};
+
+const struct SpriteTemplate gReversalRedLineSpriteTemplate3 =
+{
+    .tileTag = ANIM_TAG_REVERSAL_RED_LINE,
+    .paletteTag = ANIM_TAG_REVERSAL_RED_LINE,
+    .oam = &gOamData_AffineDouble_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = g3ReversalRedLineAffineAnimTable,
+    .callback = AnimSpriteOnMonPos,
+
+};
+
+const struct SpriteTemplate gReversalRedRingSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_REVERSAL_RED_RING,
+    .paletteTag = ANIM_TAG_REVERSAL_RED_RING,
+    .oam = &gOamData_AffineDouble_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gThinRingShrinkingAffineAnimTable,
+    .callback = AnimSpriteOnMonPos,
+
+};
+
+const union AffineAnimCmd gReversalRedBallAffineAnimCmds[] = {
+
+    AFFINEANIMCMD_FRAME(0x100, 0x100, 0, 0),
+
+
+    AFFINEANIMCMD_FRAME(0x10, 0x10, 5, 5), 
+    AFFINEANIMCMD_FRAME(-0x10, -0x10, 5, 5),
+    AFFINEANIMCMD_LOOP(4),
+
+
+    AFFINEANIMCMD_FRAME(0, 0, 15, 5), 
+    AFFINEANIMCMD_JUMP(4),
+
+};
+
+const union AffineAnimCmd *const gReversalRedBallAffineAnimTable[] = 
+{
+    gReversalRedBallAffineAnimCmds,
+};
+const struct SpriteTemplate gReversalRedBallSpriteTemplate = 
+{
+    .tileTag = ANIM_TAG_REVERSAL_RED_BALL,
+    .paletteTag = ANIM_TAG_REVERSAL_RED_BALL,
+    .oam = &gOamData_AffineDouble_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gReversalRedBallAffineAnimTable,
+    .callback = AnimSpriteOnMonPos,
+
 };
 
 const struct SpriteTemplate gFollowMeFingerSpriteTemplate =
@@ -7060,7 +7185,7 @@ void AnimMetronomeFinger(struct Sprite *sprite)
     else
         battler = gBattleAnimTarget;
 
-    SetSpriteNextToMonHead(battler, sprite);
+    SetSpriteNextToMonHead(battler, sprite); //mark this is useful for positioning
     sprite->data[0] = 0;
     StoreSpriteCallbackInData6(sprite, AnimMetronomeFinger_Step);
     sprite->callback = RunStoredCallbackWhenAffineAnimEnds;

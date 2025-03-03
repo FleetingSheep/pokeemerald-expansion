@@ -5277,6 +5277,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
         .battleAnimScript = Move_SWAGGER,
+        .soundMove = TRUE,
     },
 
     [MOVE_MILK_DRINK] =
@@ -5464,6 +5465,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .contestComboStarterId = 0,
         .contestComboMoves = {COMBO_STARTER_REST},
         .battleAnimScript = Move_SLEEP_TALK,
+        .soundMove = TRUE,
     },
 
     [MOVE_HEAL_BELL] =
@@ -6619,6 +6621,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .contestComboStarterId = 0,
         .contestComboMoves = {COMBO_STARTER_CHARM},
         .battleAnimScript = Move_FLATTER,
+        .soundMove = TRUE,
     },
 
     [MOVE_WILL_O_WISP] =
@@ -7146,6 +7149,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .contestComboStarterId = COMBO_STARTER_YAWN,
         .contestComboMoves = {0},
         .battleAnimScript = Move_YAWN,
+        .soundMove = TRUE,
     },
 
     [MOVE_KNOCK_OFF] =
@@ -22039,7 +22043,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     {
         .name = COMPOUND_STRING("Supernova"),
         .description = COMPOUND_STRING(
-            "Leaves the user on death;s\n"
+            "Leaves the user on death's\n"
             "door."),
         .effect = EFFECT_SUPERNOVA,
         .power = 125,
@@ -22073,7 +22077,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_SPECIAL,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_BURN,
-            .chance = 20,
+            .chance = 15,
         }),
         .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
@@ -22114,7 +22118,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "with high critical-hit ratio."),
         .effect = EFFECT_HIT,
         .power = 85,
-        .type = TYPE_GROUND,
+        .type = TYPE_SPACE,
         .accuracy = 95,
         .pp = 10,
         .target = MOVE_TARGET_FOES_AND_ALLY,
@@ -22164,7 +22168,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "Flings rare unearthly\n"
             "elements at the target."),
         .effect = EFFECT_HIT,
-        .power = 60,
+        .power = 50,
         .type = TYPE_SPACE,
         .accuracy = 100,
         .pp = 30,
@@ -22185,14 +22189,13 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "Hurls space debris with\n"
             "surprising force."),
         .effect = EFFECT_HIT,
-        .power = 70,
+        .power = 85,
         .type = TYPE_SPACE,
         .accuracy = 90,
         .pp = 20,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
-        .makesContact = TRUE,
         .minimizeDoubleDamage = TRUE,
         .skyBattleBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
@@ -22232,14 +22235,14 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     {
         .name = COMPOUND_STRING("Impact Event"),
         .description = COMPOUND_STRING(
-            "A life-risking tackle that\n"
-            "also hurts the user."),
-        .effect = EFFECT_HIT,
-        .power = 120,
-        .type = TYPE_NORMAL,
+            "A cataclysmic slam that\n"
+            "gravely hurts its user."),
+        .effect = EFFECT_IMPACT_EVENT,
+        .power = 135,
+        .type = TYPE_SPACE,
         .accuracy = 100,
-        .recoil = 33,
-        .pp = 15,
+        .recoil = 50,
+        .pp = 10,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
@@ -22272,4 +22275,66 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .contestComboMoves = {0},
         .battleAnimScript = Move_RED_SHIFT,
     },
+    [MOVE_BLUE_SHIFT] =
+    {
+        .name = COMPOUND_STRING("Blue Shift"),
+        .description = COMPOUND_STRING(
+            "Alters perception of space,\n"
+            "boosting the user."),
+        .effect = EFFECT_BLUE_SHIFT,
+        .power = 0,
+        .type = TYPE_SPACE,
+        .accuracy = 100,
+        .pp = 10,
+        .target = MOVE_TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .zMove = { .effect = Z_EFFECT_SPATK_UP_1 },
+        .magicCoatAffected = TRUE,
+        .contestEffect = CONTEST_EFFECT_SCRAMBLE_NEXT_TURN_ORDER,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = Move_BLUE_SHIFT,
+    },
+    [MOVE_STARBURST] = 
+    {
+        .name = COMPOUND_STRING("Starburst"),
+        .description = COMPOUND_STRING(
+            "placeholder\n"
+            "placeholder"),
+        .effect = EFFECT_HIT,
+        .power = 50,
+        .type = TYPE_SPACE,
+        .accuracy = 100,
+        .pp = 30,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .contestEffect = CONTEST_EFFECT_BETTER_IF_SAME_TYPE,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = COMBO_STARTER_ROCK_THROW,
+        .contestComboMoves = {0},
+        .battleAnimScript = Move_STARBURST, //todo
+    },
+    [MOVE_HOLLOW_PURPLE] = 
+    {
+        .name = COMPOUND_STRING("Hollow Purple"),
+        .description = COMPOUND_STRING(
+            "Imaginary Technique:\n"
+            "Hollow Purple."),
+        .effect = EFFECT_HIT,
+        .power = 200,
+        .type = TYPE_SPACE,
+        .accuracy = 100,
+        .pp = 40,
+        .target = MOVE_TARGET_BOTH,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .contestEffect = CONTEST_EFFECT_BETTER_IF_SAME_TYPE,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = COMBO_STARTER_ROCK_THROW,
+        .contestComboMoves = {0},
+        .battleAnimScript = Move_HOLLOW_PURPLE, //todo 
+        }
 };

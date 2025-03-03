@@ -944,7 +944,10 @@ extern const u8 Move_GLIMMER[];
 extern const u8 Move_ASTEROID_TOSS[];
 extern const u8 Move_IMPACT_EVENT[];
 extern const u8 Move_RED_SHIFT[];
+extern const u8 Move_BLUE_SHIFT[];
 extern const u8 Move_LUMINOSITY[];
 extern const u8 Move_SUPERNOVA[];
+extern const u8 Move_STARBURST[];
+extern const u8 Move_HOLLOW_PURPLE[];
 
 #endif // GUARD_BATTLE_ANIM_SCRIPTS_H

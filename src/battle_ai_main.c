@@ -2352,6 +2352,20 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                 }
             }
             break;
+        case EFFECT_RED_SHIFT:
+        case EFFECT_BLUE_SHIFT:
+            if (isDoubleBattle && gBattleMons[BATTLE_PARTNER(battlerAtk)].hp > 0) // partner alive?
+            {
+                if (aiData->partnerMove != MOVE_NONE
+                  && gMovesInfo[aiData->partnerMove].effect == EFFECT_PLEDGE
+                  && move != aiData->partnerMove) // Different shift moves
+                {
+                    if (gBattleMons[BATTLE_PARTNER(battlerAtk)].status1 & (STATUS1_SLEEP | STATUS1_FREEZE))
+                    // && gBattleMons[BATTLE_PARTNER(battlerAtk)].status1 != 1) // Will wake up this turn - how would AI know
+                        ADJUST_SCORE(-10); // Don't use combo move if your partner will cause failure
+                }
+            }
+            break;
         case EFFECT_TRICK_ROOM:
             if (PartnerMoveIs(BATTLE_PARTNER(battlerAtk), aiData->partnerMove, MOVE_TRICK_ROOM))
             {
@@ -4333,6 +4347,14 @@ static u32 AI_CalcMoveEffectScore(u32 battlerAtk, u32 battlerDef, u32 move)
     case EFFECT_PLEDGE:
         if (isDoubleBattle && HasMoveEffect(BATTLE_PARTNER(battlerAtk), EFFECT_PLEDGE))
             ADJUST_SCORE(GOOD_EFFECT); // Partner might use pledge move
+        break;
+    case EFFECT_RED_SHIFT:
+        if (isDoubleBattle && HasMoveEffect(BATTLE_PARTNER(battlerAtk), EFFECT_BLUE_SHIFT))
+            ADJUST_SCORE(GOOD_EFFECT); // Partner might use opposite shift
+        break;
+    case EFFECT_BLUE_SHIFT:
+        if (isDoubleBattle && HasMoveEffect(BATTLE_PARTNER(battlerAtk), EFFECT_RED_SHIFT))
+            ADJUST_SCORE(GOOD_EFFECT); // Partner might use opposite shift
         break;
     case EFFECT_TRICK_ROOM:
         if (!(AI_THINKING_STRUCT->aiFlags[battlerAtk] & AI_FLAG_POWERFUL_STATUS))

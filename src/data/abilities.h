@@ -2615,7 +2615,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
     #else
         .name = _("EvntHorizon"),
     #endif
-        .description = COMPOUND_STRING("Prevents all escape once contacted."),
+        .description = COMPOUND_STRING("Prevents escape on contact."),
         .aiRating = 8,
     },
 
@@ -2626,7 +2626,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
     #else
         .name = _("AstrdBelt"),
     #endif
-        .description = COMPOUND_STRING("Turns earth moves into defense."),
+        .description = COMPOUND_STRING("Turns rock into defense."),
         .aiRating = 6,
     },
 
@@ -2647,15 +2647,34 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_PERIAPSIS] =
     {
         .name = _("Periapsis"),
-        .description = COMPOUND_STRING("Induces gravity upon entry."),
+        .description = COMPOUND_STRING("Induces gravity on entry."),
         .aiRating = 1,
     },
 
     [ABILITY_HYPERDENSITY] =
     {
         .name = _("Hyperdensity"),
-        .description = COMPOUND_STRING("Moves twice as fast in gravity."),
+        .description = COMPOUND_STRING("Doubles speed in gravity."),
         .aiRating = 5,
     },
-    
+
+    [ABILITY_STRATEGIST] =
+    {
+        .name = _("Strategist"),
+        .description = COMPOUND_STRING("Allows two statuses."),
+        .aiRating = 5,
+    }, 
+
+    [ABILITY_COMEDIAN] =
+    {
+        .name = _("Comedian"),
+        .description = COMPOUND_STRING("Sounds may flinch."),
+        .aiRating = 5,
+    },
+    [ABILITY_LIMITLESS] =
+    {
+        .name = _("Limitless"),
+        .description = COMPOUND_STRING("May boost stats forever."),
+        .aiRating = 5,
+    }, 
 };

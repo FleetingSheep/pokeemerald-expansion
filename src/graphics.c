@@ -76,6 +76,9 @@ const u32 gBattleAnimSpritePal_AssuranceHand[] = INCBIN_U32("graphics/battle_ani
 const u32 gBattleAnimSpriteGfx_AuraSphere[] = INCBIN_U32("graphics/battle_anims/sprites/aura_sphere.4bpp.lz");
 const u32 gBattleAnimSpritePal_AuraSphere[] = INCBIN_U32("graphics/battle_anims/sprites/aura_sphere.gbapal.lz");
 
+const u32 gBattleAnimSpriteGfx_ReversalRedBall[] = INCBIN_U32("graphics/battle_anims/sprites/reversal_red.4bpp.lz");
+const u32 gBattleAnimSpritePal_ReversalRedBall[] = INCBIN_U32("graphics/battle_anims/sprites/reversal_red.gbapal.lz");
+
 const u32 gBattleAnimSpritePal_AvalancheRocks[] = INCBIN_U32("graphics/battle_anims/sprites/avalanche_rocks.gbapal.lz");
 
 const u32 gBattleAnimSpriteGfx_NewPokeball[] = INCBIN_U32("graphics/battle_anims/sprites/baton_pass_ball.4bpp.lz");
@@ -1063,6 +1066,12 @@ const u32 gBattleAnimSpritePal_ThoughtBubble[] = INCBIN_U32("graphics/battle_ani
 const u32 gBattleAnimSpriteGfx_Finger[] = INCBIN_U32("graphics/battle_anims/sprites/finger.4bpp.lz");
 const u32 gBattleAnimSpritePal_Finger[] = INCBIN_U32("graphics/battle_anims/sprites/finger.gbapal.lz");
 
+const u32 gBattleAnimSpriteGfx_ReversalRedLine[] = INCBIN_U32("graphics/battle_anims/sprites/possible_red.4bpp.lz");
+const u32 gBattleAnimSpritePal_ReversalRedLine[] = INCBIN_U32("graphics/battle_anims/sprites/possible_red.gbapal.lz");
+
+const u32 gBattleAnimSpriteGfx_ReversalRedRing[] = INCBIN_U32("graphics/battle_anims/sprites/reversal_red_ring.4bpp.lz");
+const u32 gBattleAnimSpritePal_ReversalRedRing[] = INCBIN_U32("graphics/battle_anims/sprites/reversal_red_ring.gbapal.lz");
+
 const u32 gBattleAnimSpriteGfx_MagentaHeart[] = INCBIN_U32("graphics/battle_anims/sprites/magenta_heart.4bpp.lz");
 
 const u32 gBattleAnimSpritePal_PinkHeart[] = INCBIN_U32("graphics/battle_anims/sprites/pink_heart.gbapal.lz");
@@ -1121,6 +1130,8 @@ const u32 gBattleAnimSpritePal_LetterZ[] = INCBIN_U32("graphics/battle_anims/spr
 const u32 gBattleAnimSpriteGfx_LetterZ[] = INCBIN_U32("graphics/battle_anims/sprites/letter_z.4bpp.lz");
 
 const u32 gBattleAnimBgPalette_Impact[] = INCBIN_U32("graphics/battle_anims/backgrounds/impact.gbapal.lz");
+const u32 gBattleAnimBgPalette_ImpactAlt[] = INCBIN_U32("graphics/battle_anims/backgrounds/impact_alt.gbapal.lz");
+
 const u32 gBattleAnimBgImage_Impact[] = INCBIN_U32("graphics/battle_anims/backgrounds/impact.4bpp.lz");
 const u32 gBattleAnimBgTilemap_ImpactOpponent[] = INCBIN_U32("graphics/battle_anims/backgrounds/impact_opponent.bin.lz");
 

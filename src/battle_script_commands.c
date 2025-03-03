@@ -1883,7 +1883,7 @@ static void Cmd_ppreduce(void)
 
 // The chance is 1/N for each stage.
 #if B_CRIT_CHANCE >= GEN_7
-    static const u8 sCriticalHitOdds[] = {24, 8, 2, 1, 1};
+    static const u8 sCriticalHitOdds[] = {24, 8, 2, 1, 1}; //c has 0 based indexing, so 1/24 is actually stage 0, 1/8 is stage 1, and so on
 #elif B_CRIT_CHANCE == GEN_6
     static const u8 sCriticalHitOdds[] = {16, 8, 2, 1, 1};
 #else
@@ -1897,13 +1897,13 @@ s32 CalcCritChanceStageArgs(u32 battlerAtk, u32 battlerDef, u32 move, bool32 rec
 
     if (gSideStatuses[battlerDef] & SIDE_STATUS_LUCKY_CHANT)
     {
-        critChance = -1;
+        critChance = -1; //impossible
     }
     else if (gStatuses3[battlerAtk] & STATUS3_LASER_FOCUS
         || gMovesInfo[move].alwaysCriticalHit
         || (abilityAtk == ABILITY_MERCILESS && gBattleMons[battlerDef].status1 & STATUS1_PSN_ANY))
     {
-        critChance = -2;
+        critChance = -2; //guaranteed
     }
     else
     {
@@ -1926,9 +1926,9 @@ s32 CalcCritChanceStageArgs(u32 battlerAtk, u32 battlerDef, u32 move, bool32 rec
         // Record ability only if move had 100% chance to get a crit
         if (recordAbility)
         {
-            if (critChance == -2)
+            if (critChance == -2) //if crit guaranteed by ability or move
                 RecordAbilityBattle(battlerDef, abilityDef);
-            else if (sCriticalHitOdds[critChance] == 1)
+            else if (sCriticalHitOdds[critChance] == 1) //if crit guaranteed due to crit stage of 4 or 5
                 RecordAbilityBattle(battlerDef, abilityDef);
         }
         critChance = -1;
@@ -12561,19 +12561,19 @@ static void Cmd_setfocusenergy(void)
     u8 battler = GetBattlerForBattleScript(cmd->battler);
 
     if ((gMovesInfo[gCurrentMove].effect == EFFECT_DRAGON_CHEER && (!(gBattleTypeFlags & BATTLE_TYPE_DOUBLE) || (gAbsentBattlerFlags & gBitTable[battler])))
-     || gBattleMons[battler].status2 & STATUS2_FOCUS_ENERGY_ANY)
+     || gBattleMons[battler].status2 & STATUS2_FOCUS_ENERGY_ANY) //if trying to give ally dragon cheer bonus in a single battle where the ally does not exist, or if they already have focus energy
     {
         gMoveResultFlags |= MOVE_RESULT_FAILED;
         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_FOCUS_ENERGY_FAILED;
     }
-    else if (gMovesInfo[gCurrentMove].effect == EFFECT_DRAGON_CHEER && !IS_BATTLER_OF_TYPE(battler, TYPE_DRAGON))
+    else if ((gMovesInfo[gCurrentMove].effect == EFFECT_DRAGON_CHEER && !IS_BATTLER_OF_TYPE(battler, TYPE_DRAGON)) || (gMovesInfo[gCurrentMove].effect == EFFECT_BLUE_SHIFT)) //only increase by 1 stage if not a dragon type, or if blue shift is used
     {
         gBattleMons[battler].status2 |= STATUS2_DRAGON_CHEER;
         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_GETTING_PUMPED;
     }
     else
     {
-        gBattleMons[battler].status2 |= STATUS2_FOCUS_ENERGY;
+        gBattleMons[battler].status2 |= STATUS2_FOCUS_ENERGY; //if focus energy 
         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_GETTING_PUMPED;
     }
     gBattlescriptCurrInstr = cmd->nextInstr;
@@ -15418,6 +15418,11 @@ static void Cmd_trysetcaughtmondexflags(void)
     {
         gBattlescriptCurrInstr = cmd->failInstr;
     }
+    else if (!FlagGet(FLAG_SYS_POKEDEX_GET))
+    {
+        HandleSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_SET_CAUGHT, personality);  
+        gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
+    }
     else
     {
         HandleSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_SET_CAUGHT, personality);
@@ -16655,6 +16660,73 @@ void BS_TryRelicSong(void)
     else
     {
         gBattlescriptCurrInstr = cmd->nextInstr;
+    }
+}
+void BS_SetShift(void) // this is a redundant copy of BS_SetPledge but I'm making a copy so that I don't disturb the powers that be and make unintended changes to the behavior. this sort of wasteful spending of my memory will bite me in the butt eventually but whatever
+{
+    NATIVE_ARGS(const u8 *jumpInstr);
+
+    u32 partner = BATTLE_PARTNER(gBattlerAttacker);
+    u32 partnerMove = gBattleMons[partner].moves[gBattleStruct->chosenMovePositions[partner]];
+    u32 i = 0;
+    u32 k = 0;
+
+    if (gBattleStruct->pledgeMove)
+    {
+        PrepareStringBattle(STRINGID_USEDMOVE, gBattlerAttacker);
+        gHitMarker |= HITMARKER_ATTACKSTRING_PRINTED;
+
+        if ((gCurrentMove == MOVE_RED_SHIFT && partnerMove == MOVE_BLUE_SHIFT)
+         || (gCurrentMove == MOVE_BLUE_SHIFT && partnerMove == MOVE_RED_SHIFT))
+        {
+            gCurrentMove = MOVE_HOLLOW_PURPLE; //this currently breaks to where if blue shift is used by the slower pokemon, it will target the user and both foes
+            gBattlescriptCurrInstr = BattleScript_EffectCombinedRedAndBlueShift;
+        }
+        gBattleCommunication[MSG_DISPLAY] = 0;
+    }
+    else if ((gChosenActionByBattler[partner] == B_ACTION_USE_MOVE)
+          && gBattleTypeFlags & BATTLE_TYPE_DOUBLE
+          && IsBattlerAlive(partner)
+          && gCurrentMove != partnerMove
+          && ((gMovesInfo[partnerMove].effect == EFFECT_RED_SHIFT) | (gMovesInfo[partnerMove].effect == EFFECT_BLUE_SHIFT)))
+    {
+        u32 currPledgeUser = 0;
+        u32 newTurnOrder[] = {0xFF, 0xFF};
+
+        for (i = 0; i < gBattlersCount; i++)
+        {
+            if (gBattlerByTurnOrder[i] == gBattlerAttacker)
+            {
+                currPledgeUser = i + 1; // Current battler going after attacker
+                break;
+            }
+        }
+        for (i = currPledgeUser; i < gBattlersCount; i++)
+        {
+            if (gBattlerByTurnOrder[i] != partner)
+            {
+                newTurnOrder[k] = gBattlerByTurnOrder[i];
+                k++;
+            }
+        }
+
+        gBattlerByTurnOrder[currPledgeUser] = partner;
+        currPledgeUser++;
+
+        for (i = 0; newTurnOrder[i] != 0xFF && i < 2; i++)
+        {
+            gBattlerByTurnOrder[currPledgeUser] = newTurnOrder[i];
+            currPledgeUser++;
+        }
+
+        gBattleStruct->pledgeMove = TRUE;
+        gBattleScripting.battler = partner;
+        gBattlescriptCurrInstr = cmd->nextInstr;
+    }
+    else
+    {
+        gBattlescriptCurrInstr = cmd->jumpInstr;
+
     }
 }
 

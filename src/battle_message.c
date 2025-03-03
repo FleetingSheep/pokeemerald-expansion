@@ -832,6 +832,7 @@ static const u8 sText_TargetCoveredInStickyCandySyrup[] = _("{B_DEF_NAME_WITH_PR
 static const u8 sText_PkmnTellChillingReceptionJoke[] = _("{B_ATK_NAME_WITH_PREFIX} is preparing to tell a\nchillingly bad joke!");
 static const u8 sText_ZeroToHeroTransformation[] = _("{B_ATK_NAME_WITH_PREFIX} underwent a heroic\ntransformation!");
 static const u8 sText_TheTwoMovesBecomeOne[] = _("The two moves become one!\nIt's a combined move!{PAUSE 16}");
+static const u8 sText_HollowPurpleUsed[] = _("Red and blue become one! {B_ATK_NAME_WITH_PREFIX}\nunleashed Hollow Purple!\n");
 static const u8 sText_ARainbowAppearedOnSide[] = _("A rainbow appeared in the sky\non {B_ATK_TEAM2} team's side!");
 static const u8 sText_TheRainbowDisappeared[] = _("The rainbow on {B_ATK_TEAM2}\nside disappeared!");
 static const u8 sText_WaitingForPartnersMove[] = _("{B_ATK_NAME_WITH_PREFIX} is waiting\nfor {B_ATK_PARTNER_NAME}'s move…{PAUSE 16}");
@@ -1555,6 +1556,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_ITEMWASUSEDUP - BATTLESTRINGS_TABLE_START] = sText_ItemWasUsedUp,
     [STRINGID_ATTACKERLOSTITSTYPE - BATTLESTRINGS_TABLE_START] = sText_AttackerLostItsType,
     [STRINGID_CLOAKEDINAHARSHLIGHT - BATTLESTRINGS_TABLE_START] = sText_PkmnIsCloakedInAHarshLight,
+    [STRINGID_HOLLOWPURPLEUSED - BATTLESTRINGS_TABLE_START] = sText_HollowPurpleUsed,
 };
 
 const u16 gTrainerUsedItemStringIds[] =

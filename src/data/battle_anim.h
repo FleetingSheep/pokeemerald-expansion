@@ -1465,6 +1465,9 @@ const struct CompressedSpriteSheet gBattleAnimPicTable[] =
     {gBattleAnimSpriteGfx_RedExplosion, 0x0800, ANIM_TAG_RED_EXPLOSION},
     {gBattleAnimSpriteGfx_Beam, 0x0800, ANIM_TAG_BEAM},
     {gBattleAnimSpriteGfx_PurpleChain, 0x1000, ANIM_TAG_PURPLE_CHAIN},
+    {gBattleAnimSpriteGfx_ReversalRedLine, 0x0200, ANIM_TAG_REVERSAL_RED_LINE},
+    {gBattleAnimSpriteGfx_ReversalRedRing, 0x0200, ANIM_TAG_REVERSAL_RED_RING},
+    {gBattleAnimSpriteGfx_ReversalRedBall, 0x0200, ANIM_TAG_REVERSAL_RED_BALL},
 };
 
 const struct CompressedSpritePalette gBattleAnimPaletteTable[] =
@@ -1931,6 +1934,9 @@ const struct CompressedSpritePalette gBattleAnimPaletteTable[] =
     {gBattleAnimSpritePal_RedExplosion, ANIM_TAG_RED_EXPLOSION},
     {gBattleAnimSpritePal_Beam, ANIM_TAG_BEAM},
     {gBattleAnimSpritePal_PurpleChain, ANIM_TAG_PURPLE_CHAIN},
+    {gBattleAnimSpritePal_ReversalRedLine, ANIM_TAG_REVERSAL_RED_LINE},
+    {gBattleAnimSpritePal_ReversalRedRing, ANIM_TAG_REVERSAL_RED_RING},
+    {gBattleAnimSpritePal_ReversalRedBall, ANIM_TAG_REVERSAL_RED_BALL},
 };
 
 const struct BattleAnimBackground gBattleAnimBackgroundTable[] =
@@ -2018,4 +2024,6 @@ const struct BattleAnimBackground gBattleAnimBackgroundTable[] =
     [BG_STEEL_BEAM_PLAYER]         = {gBattleAnimBgImage_Highspeed,               gBattleAnimBgPalette_SteelBeam,               gBattleAnimBgTilemap_HighspeedPlayer},
     [BG_CHLOROBLAST]               = {gBattleAnimBgImage_HydroCannon,             gBattleAnimBgPalette_Chloroblast,             gBattleAnimBgTilemap_HydroCannon},
     [BG_RAINBOW]                   = {gBattleAnimBgImage_Rainbow,                 gBattleAnimBGPalette_Rainbow,                 gBattleAnimBgTilemap_Rainbow},
+    [BG_HOLLOW_PURPLE_OPPONENT]    = {gBattleAnimBgImage_Impact,                  gBattleAnimBgPalette_ImpactAlt,               gBattleAnimBgTilemap_ImpactOpponent},
+    [BG_HOLLOW_PURPLE_PLAYER]      = {gBattleAnimBgImage_Impact,                  gBattleAnimBgPalette_ImpactAlt,               gBattleAnimBgTilemap_ImpactPlayer},
 };

@@ -864,8 +864,10 @@ extern const u8 BattleScript_FickleBeamDoubled[];
 extern const u8 BattleScript_EffectSupernova[];
 extern const u8 BattleScript_EffectLuminosity[];
 extern const u8 BattleScript_EffectRedShift[];
-extern const u8 BattleScript_EffectRelativity[];
+extern const u8 BattleScript_EffectBlueShift[];
 extern const u8 BattleScript_EffectSolarFlare[];
 extern const u8 BattleScript_EventHorizonContactMade[];
+extern const u8 BattleScript_EffectImpactEvent[];
+extern const u8 BattleScript_EffectCombinedRedAndBlueShift[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H

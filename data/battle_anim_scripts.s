@@ -34339,12 +34339,18 @@ Move_SUPERNOVA:: @anim done
 	restorebg
 	end
 
-Move_SOLAR_FLARE:: @turn mon into the sun, have flamethrower particles form an arc between attacker and opponent? cross reference other fire moves
+Move_SOLAR_FLARE:: @turn mon into the sun, then have flamethrower play as usual
+	loadspritegfx ANIM_TAG_WHITE_CIRCLE_OF_LIGHT
 	loadspritegfx ANIM_TAG_SMALL_EMBER
 	monbg ANIM_DEF_PARTNER
 	splitbgprio ANIM_TARGET
 	setalpha 12, 8
-	createvisualtask AnimTask_ShakeMon, 5, ANIM_ATTACKER, 0, 2, 46, 1
+	
+	createvisualtask AnimTask_BlendBattleAnimPalExclude, 5, 5, 2, 0, 16, -1
+	createvisualtask AnimTask_BlendParticle, 5, ANIM_TAG_WHITE_CIRCLE_OF_LIGHT, 2, 0, 16, -1
+	waitforvisualfinish
+	waitforvisualfinish
+
 	delay 6
 	createvisualtask AnimTask_StartSinAnimTimer, 5, 100
 	panse SE_M_FLAMETHROWER, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, +2, 0
@@ -34360,8 +34366,13 @@ Move_SOLAR_FLARE:: @turn mon into the sun, have flamethrower particles form an a
 	call FlamethrowerCreateFlames
 	call FlamethrowerCreateFlames
 	call FlamethrowerCreateFlames
+
+	waitforvisualfinish
+	createvisualtask AnimTask_BlendBattleAnimPalExclude, 5, 5, 2, 16, 0, -1
+
 	waitforvisualfinish
 	clearmonbg ANIM_DEF_PARTNER
+	clearmonbg ANIM_ATTACKER
 	blendoff
 	end
 
@@ -34421,7 +34432,7 @@ Move_WORMHOLE:: @anim done
 	waitforvisualfinish
 	end
 
-Move_GLIMMER::
+Move_GLIMMER:: @not done at all
 	loadspritegfx ANIM_TAG_SPARKLE_2
 	loadspritegfx ANIM_TAG_BLUE_STAR
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 0x1, 0x2, 0x0, 0xd, 0x7fff
@@ -34440,7 +34451,7 @@ Move_GLIMMER::
 	blendoff
 	end
 
-Move_ASTEROID_TOSS::
+Move_ASTEROID_TOSS:: @anim is placeholder
 	loadspritegfx ANIM_TAG_ROCKS
 	createsprite gShakeMonOrTerrainSpriteTemplate, ANIM_TARGET, 2, 6, 1, 15, 1
 	createsprite gFallingRockSpriteTemplate, ANIM_TARGET, 2, 0, 1, 0, 0
@@ -34461,7 +34472,7 @@ Move_ASTEROID_TOSS::
 	waitforvisualfinish
 	end
 
-Move_RELATIVITY:: @anim done, mostly?
+Move_RELATIVITY:: @anim is placeholder
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_RAPID_SPIN
 	loopsewithpan SE_M_HARDEN, SOUND_PAN_ATTACKER, 28, 2
@@ -34501,10 +34512,19 @@ Move_RED_SHIFT:: @anim done
 	fadetobg BG_COSMIC
 	waitbgfadein
 	createvisualtask AnimTask_BlendMonInAndOut, 3, ANIM_TARGET, RGB_RED, 12, 1, 1
+	delay 40
 	restorebg
 	end
 
-Move_BLACK_HOLE:: @anim done
+Move_BLUE_SHIFT:: @needs testing
+	fadetobg BG_COSMIC
+	waitbgfadein
+	createvisualtask AnimTask_BlendMonInAndOut, 3, ANIM_TARGET, RGB_BLUE, 12, 1, 1
+	delay 40
+	restorebg
+	end
+
+Move_BLACK_HOLE:: @anim done, but could be beter...
 	loadspritegfx ANIM_TAG_PURPLE_FLAME
 	loadspritegfx ANIM_TAG_GHOSTLY_SPIRIT
 	loadspritegfx ANIM_TAG_CIRCLE_OF_LIGHT @shock wave
@@ -34555,5 +34575,58 @@ Move_BLACK_HOLE:: @anim done
 	invisible ANIM_TARGET
 	delay 0x1
 	waitforvisualfinish
+	call ResetFromWhiteScreen
+	end
+
+Move_STARBURST:: @anim in progress
+
+Move_HOLLOW_PURPLE:: @anim in progress
+	loadspritegfx ANIM_TAG_SPARK_2
+	loadspritegfx ANIM_TAG_FINGER
+	loadspritegfx ANIM_TAG_ORBS
+	loadspritegfx ANIM_TAG_WATER_DROPLET
+	loadspritegfx ANIM_TAG_REVERSAL_RED_LINE
+	loadspritegfx ANIM_TAG_REVERSAL_RED_RING
+	loadspritegfx ANIM_TAG_AURA_SPHERE
+	loadspritegfx ANIM_TAG_REVERSAL_RED_BALL
+	
+	invisible ANIM_TARGET
+	createvisualtask AnimTask_AllBattlersInvisible, 0xA
+	createvisualtask AnimTask_BlendBattleAnimPal, 0xa, F_PAL_BATTLERS_2, 3, 0, 0, 0 	@Remove fading on everyone
+	waitforvisualfinish
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_BG, 4, 0, 16, RGB_BLACK
+	waitforvisualfinish
+
+	@reversal red setup
+
+	delay 50
+
+	createsprite gReversalRedLineSpriteTemplate, ANIM_ATTACKER, 40, 0, -25, 0, 0
+	playsewithpan SE_M_SUPERSONIC, SOUND_PAN_ATTACKER @placeholder sound i might even add my own hollow-purple related one
+	createsprite gReversalRedRingSpriteTemplate, ANIM_ATTACKER, 40, 0, -25, 0, 0 @40 might be size
+
+	delay 50
+
+	createsprite gReversalRedLineSpriteTemplate2, ANIM_ATTACKER, 40, 0, -25, 0, 0
+	createsprite gReversalRedRingSpriteTemplate, ANIM_ATTACKER, 40, 0, -25, 0, 0
+	playsewithpan SE_M_SUPERSONIC, SOUND_PAN_ATTACKER
+	
+	delay 35
+
+	createsprite gReversalRedLineSpriteTemplate3, ANIM_ATTACKER, 40, 0, -25, 0, 0
+	delay 15
+	createsprite gReversalRedRingSpriteTemplate, ANIM_ATTACKER, 40, 0, -25, 0, 0
+	playsewithpan SE_M_SUPERSONIC, SOUND_PAN_ATTACKER
+	delay 25
+
+	@spawn reversal red ball 
+
+	createsprite gReversalRedBallSpriteTemplate, ANIM_ATTACKER, 40, 0, -25, 0, 0
+
+	waitforvisualfinish
+	fadetobg BG_HOLLOW_PURPLE_OPPONENT
+	waitbgfadein
+	delay 40
+	restorebg
 	call ResetFromWhiteScreen
 	end

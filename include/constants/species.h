@@ -1657,8 +1657,9 @@
 #define SPECIES_MILOTIC_COSMIC                          1547 //tail extend into a nebula-like spiral, pulsar design? water/space
 #define SPECIES_PLUSLE_COSMIC                           1548 // space/electric transmitter satellite, dish in ear
 #define SPECIES_MINUN_COSMIC                            1549 // space/electric receiver satellite
-#define SPECIIES_COSMEON                                1550 // space type eeveelution
-#define SPECIES_CASTFORM_SANDY                          1551
+#define SPECIES_COSMEON                                 1550 // space type eeveelution
+#define SPECIES_SPINDA_COSMIC                           1551 //death spiral, demented looking/tentacles probably
+#define SPECIES_CASTFORM_SANDY                          1552
 
 #define SPECIES_EGG (SPECIES_CASTFORM_SANDY + 1)
 

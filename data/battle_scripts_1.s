@@ -326,7 +326,7 @@ BattleScript_MoveSwitchEnd:
 
 BattleScript_EffectPledge::
 	attackcanceler
-	setpledge BattleScript_HitFromAccCheck
+	setpledge BattleScript_HitFromAccCheck 
 	attackstring
 	pause B_WAIT_TIME_MED
 	ppreduce
@@ -7340,10 +7340,21 @@ BattleScript_PowderMoveNoEffectWaitMsg:
 BattleScript_MoveUsedFlinched::
 	printstring STRINGID_PKMNFLINCHED
 	waitmessage B_WAIT_TIME_LONG
-	jumpifability BS_ATTACKER ABILITY_STEADFAST BattleScript_TryActivateSteadFast
+	jumpifability BS_ATTACKER ABILITY_STEADFAST BattleScript_TryActivateSteadfastAttack
 BattleScript_MoveUsedFlinchedEnd:
 	goto BattleScript_MoveEnd
-BattleScript_TryActivateSteadFast:
+BattleScript_TryActivateSteadfastAttack:
+	setstatchanger STAT_SPEED, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_TryActivateSteadfastSpeed
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_TryActivateSteadfastSpeed
+	call BattleScript_AbilityPopUp
+	setgraphicalstatchangevalues
+	playanimation BS_ATTACKER, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	setbyte gBattleCommunication STAT_ATK
+	stattextbuffer BS_ATTACKER
+	printstring STRINGID_ATTACKERABILITYSTATRAISE
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_TryActivateSteadfastSpeed:
 	setstatchanger STAT_SPEED, 1, FALSE
 	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_MoveUsedFlinchedEnd
 	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_MoveUsedFlinchedEnd
@@ -10050,6 +10061,7 @@ BattleScript_BerserkGeneRet_End:
 
 BattleScript_BoosterEnergyEnd2::
 	playanimation BS_SCRIPTING, B_ANIM_HELD_ITEM_EFFECT, sB_ANIM_ARG1
+	waitanimation
 	call BattleScript_AbilityPopUpTarget
 	printstring STRINGID_BOOSTERENERGYACTIVATES
 	waitmessage B_WAIT_TIME_MED
@@ -10140,21 +10152,28 @@ BattleScript_LuminosityDoBurn:
 	seteffectprimary
 	goto BattleScript_MoveEnd
 
-BattleScript_EffectRelativity::
-
 
 BattleScript_EffectRedShift::
 	attackcanceler
+	setshift BattleScript_EffectRedShiftBusinessAsUsual
+	attackstring
+	pause B_WAIT_TIME_MED
+	ppreduce
+	printstring STRINGID_WAITINGFORPARTNERSMOVE
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+
+BattleScript_EffectRedShiftBusinessAsUsual:
 	jumpifsubstituteblocks BattleScript_MakeMoveMissed
 	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
 	attackstring
 	ppreduce
-	jumpifstatus2 BS_TARGET, STATUS2_CONFUSION, BattleScript_ButItFailed
 	attackanimation
 	waitanimation
-	setstatchanger STAT_SPEED, 1, TRUE
+	setstatchanger STAT_SPEED, 2, TRUE
 	statbuffchange STAT_CHANGE_ALLOW_PTR, BattleScript_RedShiftTryConfuse
-	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_RedShiftTryConfuse
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_DECREASE, BattleScript_RedShiftTryConfuse
 	setgraphicalstatchangevalues
 	playanimation BS_TARGET, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
 	printfromtable gStatDownStringIds
@@ -10172,4 +10191,49 @@ BattleScript_EventHorizonContactMade::
 	waitstate
 	printstring STRINGID_EVENTHORIZONCONTACTMADE
 	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_EffectBlueShift::
+	attackcanceler
+	setshift BattleScript_EffectBlueShiftBusinessAsUsual
+	attackstring
+	pause B_WAIT_TIME_MED
+	ppreduce
+	printstring STRINGID_WAITINGFORPARTNERSMOVE
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+
+BattleScript_EffectBlueShiftBusinessAsUsual:
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	jumpifstatus2 BS_ATTACKER, STATUS2_FOCUS_ENERGY_ANY, BattleScript_ButItFailed
+	setstatchanger STAT_SPEED, 2, FALSE
+	statbuffchange STAT_CHANGE_ALLOW_PTR, BattleScript_BlueShiftTryFocus
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_BlueShiftTryFocus
+	setgraphicalstatchangevalues
+	playanimation BS_TARGET, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_BlueShiftTryFocus:
+	jumpifstatus2 BS_ATTACKER, STATUS2_FOCUS_ENERGY_ANY, BattleScript_ButItFailed
+	jumpifstatus2 BS_ATTACKER, STATUS2_DRAGON_CHEER, BattleScript_ButItFailed
+	setfocusenergy BS_TARGET
+	printfromtable gFocusEnergyUsedStringIds
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectCombinedRedAndBlueShift::
+	getmovetarget BS_ATTACKER
+	pause B_WAIT_TIME_MED
+	printstring STRINGID_HOLLOWPURPLEUSED
+	waitmessage B_WAIT_TIME_LONG
+	call BattleScript_EffectHit_RetFromAccCheck
+	tryfaintmon BS_TARGET
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectImpactEvent::
+	call BattleScript_EffectHit
 	return

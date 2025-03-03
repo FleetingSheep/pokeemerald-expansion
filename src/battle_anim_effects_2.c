@@ -771,7 +771,7 @@ const struct SpriteTemplate gThinRingShrinkingSpriteTemplate =
     .oam = &gOamData_AffineDouble_ObjBlend_64x64,
     .anims = gDummySpriteAnimTable,
     .images = NULL,
-    .affineAnims = gThinRingShrinkingAffineAnimTable,
+    .affineAnims = gThinRingShrinkingAffineAnimTable, //mark
     .callback = AnimSpriteOnMonPos,
 };
 

@@ -49,6 +49,7 @@
 #include "constants/weather.h"
 #include "constants/pokemon.h"
 
+#include <math.h>
 /*
 NOTE: The data and functions in this file up until (but not including) sSoundMovesTable
 are actually part of battle_main.c. They needed to be moved to this file in order to
@@ -913,7 +914,7 @@ u8 GetBattlerForBattleScript(u8 caseId)
     u8 ret = 0;
     switch (caseId)
     {
-    case BS_TARGET:
+    case BS_TARGET: //mark
         ret = gBattlerTarget;
         break;
     case BS_ATTACKER:
@@ -5787,7 +5788,7 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
              && (IsMoveMakingContact(move, gBattlerAttacker))
              && TARGET_TURN_DAMAGED
              && CanBeConfused(gBattlerAttacker)
-             && (B_ABILITY_TRIGGER_CHANCE >= GEN_4 ? RandomPercentage(RNG_FLAME_BODY, 30) : RandomChance(RNG_FLAME_BODY, 1, 3)))
+             && (B_ABILITY_TRIGGER_CHANCE >= GEN_4 ? RandomPercentage(RNG_FLAME_BODY, 50) : RandomChance(RNG_FLAME_BODY, 1, 5)))
             {
                 gBattleScripting.moveEffect = MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CONFUSION;
                 BattleScriptPushCursor();
@@ -6054,6 +6055,21 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
              && IsBattlerAlive(gBattlerTarget)
              && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
              && RandomChance(RNG_STENCH, 1, 10)
+             && TARGET_TURN_DAMAGED
+             && !MoveHasAdditionalEffect(gCurrentMove, MOVE_EFFECT_FLINCH))
+            {
+                gBattleScripting.moveEffect = MOVE_EFFECT_FLINCH;
+                BattleScriptPushCursor();
+                SetMoveEffect(FALSE, FALSE);
+                BattleScriptPop();
+                effect++;
+            }
+            break;
+        case ABILITY_COMEDIAN:
+            if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+             && IsBattlerAlive(gBattlerTarget)
+             && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
+             && RandomChance(RNG_FLAME_BODY, 2, 10)
              && TARGET_TURN_DAMAGED
              && !MoveHasAdditionalEffect(gCurrentMove, MOVE_EFFECT_FLINCH))
             {
@@ -7618,6 +7634,11 @@ u8 ItemBattleEffects(u8 caseID, u32 battler, bool32 moveTurn)
                 BattleScriptPushCursorAndCallback(BattleScript_BerserkGeneRet);
                 effect = ITEM_STATS_CHANGE;
                 break;
+            case HOLD_EFFECT_CALCULATOR:
+                u32 monId = gBattlerPartyIndexes[battler];
+                struct Pokemon *party = GetBattlerParty(battler);
+                RecalcBattlerStats(battler, &party[monId]);
+                break;
             case HOLD_EFFECT_MIRROR_HERB:
                 effect = TryConsumeMirrorHerb(battler, TRUE);
                 break;
@@ -8780,7 +8801,7 @@ static const u8 sTrumpCardPowerTable[] = {200, 80, 60, 50, 40};
 
 const struct TypePower gNaturalGiftTable[] =
 {
-    [ITEM_TO_BERRY(ITEM_CHERI_BERRY)] = {TYPE_FIRE, 80},
+    [ITEM_TO_BERRY(ITEM_CHERI_BERRY)] = {TYPE_FIRE, 80}, //mark, this is important for space-type development
     [ITEM_TO_BERRY(ITEM_CHESTO_BERRY)] = {TYPE_WATER, 80},
     [ITEM_TO_BERRY(ITEM_PECHA_BERRY)] = {TYPE_ELECTRIC, 80},
     [ITEM_TO_BERRY(ITEM_RAWST_BERRY)] = {TYPE_GRASS, 80},
@@ -9002,7 +9023,7 @@ static inline u32 CalcMoveBasePower(u32 move, u32 battlerAtk, u32 battlerDef, u3
         break;
     case EFFECT_ELECTRO_BALL:
         speed = GetBattlerTotalSpeedStat(battlerAtk) / GetBattlerTotalSpeedStat(battlerDef);
-        if (speed >= ARRAY_COUNT(sSpeedDiffPowerTable))
+        if (speed >= ARRAY_COUNT(sSpeedDiffPowerTable)) //if the speed ratio is so high it breaks the table, just default to the maximum of 4x as fast (150bp)
             speed = ARRAY_COUNT(sSpeedDiffPowerTable) - 1;
         basePower = sSpeedDiffPowerTable[speed];
         break;
@@ -9012,9 +9033,9 @@ static inline u32 CalcMoveBasePower(u32 move, u32 battlerAtk, u32 battlerDef, u3
             basePower = 150;
         break;
     case EFFECT_RELATIVITY:
-        speed = GetBattlerTotalSpeedStat(battlerAtk) / GetBattlerTotalSpeedStat(battlerDef); //if user's speed is higher use electro ball logic, if user's speed is lower, reverse the electro ball table and calculate it that way
-        if (speed == 1)
-            speed = GetBattlerTotalSpeedStat(battlerDef) / GetBattlerTotalSpeedStat(battlerAtk);
+        speed = GetBattlerTotalSpeedStat(battlerAtk) / GetBattlerTotalSpeedStat(battlerDef); //if user's speed is higher use electro ball logic, if user's speed is lower, find the reciprocal and calculate it that way
+        if (speed < 1)  //user's speed is lower than target
+            speed = 1 / speed;
         if (speed >= ARRAY_COUNT(sSpeedDiffPowerTable))
             speed = ARRAY_COUNT(sSpeedDiffPowerTable) - 1;
         basePower = sSpeedDiffPowerTable[(int)speed];
@@ -9079,6 +9100,7 @@ static inline u32 CalcMoveBasePower(u32 move, u32 battlerAtk, u32 battlerDef, u3
         }
         break;
     }
+    case EFFECT_IMPACT_EVENT:
     case EFFECT_GRAV_APPLE:
         if (gFieldStatuses & STATUS_FIELD_GRAVITY)
             basePower = uq4_12_multiply(basePower, UQ_4_12(1.5));
@@ -11507,6 +11529,8 @@ u32 GetBattlerMoveTargetType(u32 battler, u32 move)
     else if (gMovesInfo[move].effect == EFFECT_TERA_STARSTORM
         && gBattleMons[battler].species == SPECIES_TERAPAGOS_STELLAR)
         return MOVE_TARGET_BOTH;
+    else if (move == MOVE_HOLLOW_PURPLE)
+        return MOVE_TARGET_BOTH;
 
     return gMovesInfo[move].target;
 }
@@ -11535,14 +11559,21 @@ static void SetRandomMultiHitCounter()
 
 void CopyMonLevelAndBaseStatsToBattleMon(u32 battler, struct Pokemon *mon)
 {
+    
     gBattleMons[battler].level = GetMonData(mon, MON_DATA_LEVEL);
     gBattleMons[battler].hp = GetMonData(mon, MON_DATA_HP);
     gBattleMons[battler].maxHP = GetMonData(mon, MON_DATA_MAX_HP);
     gBattleMons[battler].attack = GetMonData(mon, MON_DATA_ATK);
+    gBattleMons[battler].spAttack = GetMonData(mon, MON_DATA_SPATK);
     gBattleMons[battler].defense = GetMonData(mon, MON_DATA_DEF);
     gBattleMons[battler].speed = GetMonData(mon, MON_DATA_SPEED);
-    gBattleMons[battler].spAttack = GetMonData(mon, MON_DATA_SPATK);
     gBattleMons[battler].spDefense = GetMonData(mon, MON_DATA_SPDEF);
+
+    if (GetBattlerHoldEffect(battler, TRUE) == HOLD_EFFECT_CALCULATOR) {
+        u32 avgatk = round((gBattleMons[battler].attack + gBattleMons[battler].spAttack) / 2);
+        gBattleMons[battler].attack = avgatk;
+        gBattleMons[battler].spAttack = avgatk;
+    }
 }
 
 void CopyMonAbilityAndTypesToBattleMon(u32 battler, struct Pokemon *mon)
@@ -11560,6 +11591,7 @@ void RecalcBattlerStats(u32 battler, struct Pokemon *mon)
         ApplyDynamaxHPMultiplier(battler, mon);
     CopyMonLevelAndBaseStatsToBattleMon(battler, mon);
     CopyMonAbilityAndTypesToBattleMon(battler, mon);
+    return;
 }
 
 void RemoveConfusionStatus(u32 battler)
