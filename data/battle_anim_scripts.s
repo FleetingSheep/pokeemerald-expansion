@@ -34580,53 +34580,181 @@ Move_BLACK_HOLE:: @anim done, but could be beter...
 
 Move_STARBURST:: @anim in progress
 
+HollowPurpleAftermath: @bubbles, lightning, fire
+
+	createsprite gPurpleBubbleSpriteTemplate, ANIM_ATTACKER, 2, 10, 10, 0
+	playsewithpan SE_M_BUBBLE3, SOUND_PAN_ATTACKER
+	delay 6
+	createsprite gPurpleBubbleSpriteTemplate, ANIM_ATTACKER, 2, -28, -10, 0
+	playsewithpan SE_M_BUBBLE3, SOUND_PAN_ATTACKER
+	delay 6
+	createsprite gPurpleBubbleSpriteTemplate, ANIM_ATTACKER, 2, 20, -20, 0
+	playsewithpan SE_M_BUBBLE3, SOUND_PAN_ATTACKER
+	delay 6
+	createsprite gPurpleBubbleSpriteTemplate, ANIM_ATTACKER, 2, -20, 15, 0
+	playsewithpan SE_M_BUBBLE3, SOUND_PAN_ATTACKER
+	delay 6
+	createsprite gPurpleBubbleSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, 0
+	playsewithpan SE_M_BUBBLE3, SOUND_PAN_ATTACKER
+	delay 6
+	createsprite gPurpleBubbleSpriteTemplate, ANIM_ATTACKER, 2, 27, 8, 0
+	playsewithpan SE_M_BUBBLE3, SOUND_PAN_ATTACKER
+	delay 6
+	createsprite gPurpleBubbleSpriteTemplate, ANIM_ATTACKER, 2, -20, -20, 0
+	playsewithpan SE_M_BUBBLE3, SOUND_PAN_ATTACKER
+	delay 6
+	createsprite gPurpleBubbleSpriteTemplate, ANIM_ATTACKER, 2, 16, -8, 0
+	playsewithpan SE_M_BUBBLE3, SOUND_PAN_ATTACKER
+	return
+
+
 Move_HOLLOW_PURPLE:: @anim in progress
-	loadspritegfx ANIM_TAG_SPARK_2
-	loadspritegfx ANIM_TAG_FINGER
-	loadspritegfx ANIM_TAG_ORBS
-	loadspritegfx ANIM_TAG_WATER_DROPLET
+
 	loadspritegfx ANIM_TAG_REVERSAL_RED_LINE
 	loadspritegfx ANIM_TAG_REVERSAL_RED_RING
-	loadspritegfx ANIM_TAG_AURA_SPHERE
 	loadspritegfx ANIM_TAG_REVERSAL_RED_BALL
-	
-	invisible ANIM_TARGET
-	createvisualtask AnimTask_AllBattlersInvisible, 0xA
-	createvisualtask AnimTask_BlendBattleAnimPal, 0xa, F_PAL_BATTLERS_2, 3, 0, 0, 0 	@Remove fading on everyone
+	loadspritegfx ANIM_TAG_LAPSE_BLUE_RING
+	loadspritegfx ANIM_TAG_LAPSE_BLUE_LINE
+	loadspritegfx ANIM_TAG_LAPSE_BLUE_BALL
+
+	invisible ANIM_ATTACKER
+
+	@createvisualtask AnimTask_AllBattlersInvisible, 0xA
+	@createvisualtask AnimTask_BlendBattleAnimPal, 0xa, F_PAL_BATTLERS_2, 3, 0, 0, 0
+
 	waitforvisualfinish
-	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_BG, 4, 0, 16, RGB_BLACK
+	fadetobg BG_NONE
 	waitforvisualfinish
 
 	@reversal red setup
 
-	delay 50
+	delay 40
 
-	createsprite gReversalRedLineSpriteTemplate, ANIM_ATTACKER, 40, 0, -25, 0, 0
-	playsewithpan SE_M_SUPERSONIC, SOUND_PAN_ATTACKER @placeholder sound i might even add my own hollow-purple related one
-	createsprite gReversalRedRingSpriteTemplate, ANIM_ATTACKER, 40, 0, -25, 0, 0 @40 might be size
+	createsprite gReversalRedLineSpriteTemplate, ANIM_ATTACKER, 40, -10, -25, 0, 0
+	delay 10
+	createsprite gReversalRedRingSpriteTemplate, ANIM_ATTACKER, 40, -10, -25, 0, 0
+	playsewithpan SE_M_DETECT, SOUND_PAN_ATTACKER
 
-	delay 50
+	delay 40
 
-	createsprite gReversalRedLineSpriteTemplate2, ANIM_ATTACKER, 40, 0, -25, 0, 0
-	createsprite gReversalRedRingSpriteTemplate, ANIM_ATTACKER, 40, 0, -25, 0, 0
-	playsewithpan SE_M_SUPERSONIC, SOUND_PAN_ATTACKER
+	createsprite gReversalRedLineSpriteTemplate2, ANIM_ATTACKER, 40, -10, -25, 0, 0
+	delay 10
+	createsprite gReversalRedRingSpriteTemplate, ANIM_ATTACKER, 40, -10, -25, 0, 0
+	playsewithpan SE_M_DETECT, SOUND_PAN_ATTACKER
+
 	
-	delay 35
+	delay 40
 
-	createsprite gReversalRedLineSpriteTemplate3, ANIM_ATTACKER, 40, 0, -25, 0, 0
-	delay 15
-	createsprite gReversalRedRingSpriteTemplate, ANIM_ATTACKER, 40, 0, -25, 0, 0
-	playsewithpan SE_M_SUPERSONIC, SOUND_PAN_ATTACKER
-	delay 25
+	createsprite gReversalRedLineSpriteTemplate3, ANIM_ATTACKER, 40, -10, -25, 0, 0
+	delay 10
+	createsprite gReversalRedRingSpriteTemplate, ANIM_ATTACKER, 40, -10, -25, 0, 0
+	playsewithpan SE_M_DETECT, SOUND_PAN_ATTACKER
+
+	delay 5
 
 	@spawn reversal red ball 
 
-	createsprite gReversalRedBallSpriteTemplate, ANIM_ATTACKER, 40, 0, -25, 0, 0
+	createvisualtask AnimTask_BlendBattleAnimPal, 5, F_PAL_BG, 1, 0, 8, 0x0058
+
+	delay 5
+
+	createsprite gReversalRedBallSpriteTemplate, ANIM_ATTACKER, 40, -10, -25, 0, 0
+
+	delay 5
+
+	createvisualtask AnimTask_BlendBattleAnimPal, 5, F_PAL_BG, 1, 8, 0, 0x0058
+
+	unloadspritegfx ANIM_TAG_REVERSAL_RED_LINE
+	unloadspritegfx ANIM_TAG_REVERSAL_RED_RING
+
+	@lapse blue setup
+
+	delay 35
+
+	createsprite gLapseBlueLineSpriteTemplate, ANIM_ATTACKER, 40, 50, -25, 0, 0
+	delay 10
+	createsprite gLapseBlueRingSpriteTemplate, ANIM_ATTACKER, 40, 50, -25, 0, 0
+	playsewithpan SE_M_DETECT, SOUND_PAN_ATTACKER
+
+	delay 40
+
+	createsprite gLapseBlueLineSpriteTemplate2, ANIM_ATTACKER, 40, 50, -25, 0, 0
+	delay 10
+	createsprite gLapseBlueRingSpriteTemplate, ANIM_ATTACKER, 40, 50, -25, 0, 0
+	playsewithpan SE_M_DETECT, SOUND_PAN_ATTACKER
+
+	
+	delay 40
+
+	createsprite gLapseBlueLineSpriteTemplate3, ANIM_ATTACKER, 40, 50, -25, 0, 0
+	delay 10
+	createsprite gLapseBlueRingSpriteTemplate, ANIM_ATTACKER, 40, 50, -25, 0, 0
+	playsewithpan SE_M_DETECT, SOUND_PAN_ATTACKER
+
+	delay 5
+
+	createvisualtask AnimTask_BlendBattleAnimPal, 5, F_PAL_BG, 1, 0, 8, 0x5800 @glow screen blue
+	
+	delay 5
+
+	createsprite gLapseBlueBallSpriteTemplate, ANIM_ATTACKER, 40, 50, -25, 0, 0
+
+	delay 5
+
+	createvisualtask AnimTask_BlendBattleAnimPal, 5, F_PAL_BG, 1, 8, 0, 0x5800 @glow screen blue
+
+	unloadspritegfx ANIM_TAG_LAPSE_BLUE_LINE
+	unloadspritegfx ANIM_TAG_LAPSE_BLUE_RING
+
+	delay 20
+
+	loadspritegfx ANIM_TAG_SMALL_BUBBLES_PURPLE
+	call HollowPurpleAftermath
+
+	delay 5
+
+	loadspritegfx ANIM_TAG_HOLLOW_PURPLE
+
+
+	createsprite gHollowPurpleSpriteTemplate, ANIM_ATTACKER, 40, 20, 100, 0, 0
+
+	delay 5
+
+	
+
+	createvisualtask AnimTask_BlendBattleAnimPal, 5, F_PAL_BG, 1, 8, 0, 0x340F @glow screen purple
+
+
+	delay 20
+
+
+
+
+	@createvisualtask AnimTask_BlendBattleAnimPalExclude, 5, 5, 2, 16, 0, RGB_WHITEALPHA
+	@createvisualtask AnimTask_HorizontalShake, 5, ANIM_TARGET, 5, 14
 
 	waitforvisualfinish
-	fadetobg BG_HOLLOW_PURPLE_OPPONENT
+
 	waitbgfadein
 	delay 40
 	restorebg
 	call ResetFromWhiteScreen
+	end
+
+Move_PETRIFY:: @might need tweaking so that ANIM_ATK_PARTNER appears to turn to stone as well
+
+	loadspritegfx ANIM_TAG_MEDUSA
+	loadspritegfx ANIM_TAG_MEDUSA_ORB
+
+	createsprite gMedusaSpriteTemplate, ANIM_TARGET, 2, 25, 0, 40, 1, 0, 0, TRUE
+	createsprite gMedusaOrbSpriteTemplate, ANIM_TARGET, 2, 25, 0, 40, 1, 0, 0, TRUE
+	delay 60
+	createvisualtask AnimTask_SetGrayscaleOrOriginalPal, 5, ANIM_TARGET, FALSE
+	waitforvisualfinish
+	playsewithpan SE_M_CONFUSE_RAY, SOUND_PAN_TARGET
+	delay 40
+	createvisualtask AnimTask_SetGrayscaleOrOriginalPal, 5, ANIM_TARGET, TRUE
+	clearmonbg ANIM_TARGET
+	blendoff
+	waitforvisualfinish
 	end

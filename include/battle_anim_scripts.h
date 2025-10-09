@@ -949,5 +949,6 @@ extern const u8 Move_LUMINOSITY[];
 extern const u8 Move_SUPERNOVA[];
 extern const u8 Move_STARBURST[];
 extern const u8 Move_HOLLOW_PURPLE[];
+extern const u8 Move_PETRIFY[];
 
 #endif // GUARD_BATTLE_ANIM_SCRIPTS_H

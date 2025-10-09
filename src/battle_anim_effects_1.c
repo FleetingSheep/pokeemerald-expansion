@@ -154,6 +154,10 @@ static void AnimPoisonJabProjectile(struct Sprite *);
 static void AnimNightSlash(struct Sprite *);
 static void AnimPluck(struct Sprite *);
 static void AnimAcrobaticsSlashes(struct Sprite *);
+static void AnimMergeReversalRed(struct Sprite *);
+static void AnimMergeReversalRed_Step(struct Sprite *);
+static void AnimMergeLapseBlue(struct Sprite *);
+static void AnimMergeLapseBlue_Step(struct Sprite *);
 
 const union AnimCmd gPowderParticlesAnimCmds[] =
 {
@@ -2424,14 +2428,80 @@ const union AffineAnimCmd *const gMetronomeFingerAffineAnimTable[] =
     gMetronomeFingerAffineAnimCmds2,
 };
 
+static void AnimMergeReversalRed(struct Sprite *sprite)
+{
+    InitSpritePosToAnimAttacker(sprite, TRUE);
+
+    sprite->data[0] = 0; //stage of animation
+    sprite->data[1] = 0; //total frame count
+    sprite->data[2] = 0; //odd or even frame checker
+    sprite->callback = AnimMergeReversalRed_Step;
+};
+
+static void AnimMergeReversalRed_Step(struct Sprite *sprite)
+{
+    switch (sprite->data[0])
+    {
+    case 0:
+        if (++sprite->data[1] == 217) // delay of 187 frames after red ball is first called until blue appears, plus 40
+            sprite->data[0]++;
+        break;
+    case 1:
+        sprite->x += 1;
+        if (++sprite->data[1] == 222) //5 frames of moving closer at speed 1px/frame
+            sprite->data[0]++;
+
+        break;
+    case 2:
+        if (sprite->data[1]++ == 242) //20 frames of moving closer at slower speed
+            DestroyAnimSprite(sprite);
+        else
+            if (++sprite->data[2] % 2 == 1) //if on an odd frame, such that speed is 1px/2frames
+                sprite->x += 1;
+                break;
+    }
+};
+
+static void AnimMergeLapseBlue(struct Sprite *sprite)
+{
+    InitSpritePosToAnimAttacker(sprite, TRUE);
+
+    sprite->data[0] = 0; //stage of animation
+    sprite->data[1] = 0; //total frame count
+    sprite->data[2] = 0; //odd or even frame checker
+    sprite->callback = AnimMergeLapseBlue_Step;
+};
+
+static void AnimMergeLapseBlue_Step(struct Sprite *sprite) //mark
+{
+    switch (sprite->data[0])
+    {
+    case 0:
+        if (++sprite->data[1] == 35) // 40 frames of base delay shared with reversal red
+            sprite->data[0]++;
+        break;
+    case 1:
+        sprite->x -= 1;
+        if (++sprite->data[1] == 40) //5 frames of moving closer at speed 1px/frame
+            sprite->data[0]++;
+
+        break;
+    case 2:
+        if (sprite->data[1]++ == 60) //20 frames of moving closer at slower speed
+            DestroyAnimSprite(sprite);
+        else
+            if (++sprite->data[2] % 2 == 1) //if on an odd frame, such that speed is 1px/2frames
+                sprite->x -= 1;
+                break;
+    }
+};
+
 const union AffineAnimCmd gReversalRedLineAffineAnimCmds[] =
 {
     AFFINEANIMCMD_FRAME(0x100, 0x200, 0, 0),
-    AFFINEANIMCMD_FRAME(0x0, 0x0, 3, 80),
+    AFFINEANIMCMD_FRAME(0x0, 0x0, 3, 100),
     AFFINEANIMCMD_FRAME(0x0, 0x0, 6, 20),
-
-    AFFINEANIMCMD_FRAME(0x0, 0x0, 3, 80),
-    AFFINEANIMCMD_FRAME(0x0, 0x0, 6, 20),
+    AFFINEANIMCMD_FRAME(-30, -30, 0, 8),
 
     AFFINEANIMCMD_END,
 };
@@ -2439,8 +2509,9 @@ const union AffineAnimCmd gReversalRedLineAffineAnimCmds[] =
 const union AffineAnimCmd g2ReversalRedLineAffineAnimCmds[] =
 {
     AFFINEANIMCMD_FRAME(0x100, 0x200, 0, 0),
-    AFFINEANIMCMD_FRAME(0x0, 0x0, -3, 130),
+    AFFINEANIMCMD_FRAME(0x0, 0x0, -3, 50),
     AFFINEANIMCMD_FRAME(0x0, 0x0, -6, 20),
+    AFFINEANIMCMD_FRAME(-30, -30, 0, 8),
 
     AFFINEANIMCMD_END,
 };
@@ -2448,8 +2519,8 @@ const union AffineAnimCmd g2ReversalRedLineAffineAnimCmds[] =
 const union AffineAnimCmd g3ReversalRedLineAffineAnimCmds[] =
 {
     AFFINEANIMCMD_FRAME(0x100, 0x200, 0, 0),
-    AFFINEANIMCMD_FRAME(0x0, 0x0, 3, 100),
     AFFINEANIMCMD_FRAME(0x0, 0x0, 6, 20),
+    AFFINEANIMCMD_FRAME(-30, -30, 0, 8),
 
     AFFINEANIMCMD_END,
 };
@@ -2530,16 +2601,11 @@ const struct SpriteTemplate gReversalRedRingSpriteTemplate =
 
 const union AffineAnimCmd gReversalRedBallAffineAnimCmds[] = {
 
-    AFFINEANIMCMD_FRAME(0x100, 0x100, 0, 0),
-
-
-    AFFINEANIMCMD_FRAME(0x10, 0x10, 5, 5), 
-    AFFINEANIMCMD_FRAME(-0x10, -0x10, 5, 5),
-    AFFINEANIMCMD_LOOP(4),
-
-
-    AFFINEANIMCMD_FRAME(0, 0, 15, 5), 
-    AFFINEANIMCMD_JUMP(4),
+    AFFINEANIMCMD_FRAME(0x50, 0x50, 0, 0),
+    AFFINEANIMCMD_FRAME(0x8, 0x8, 5, 10),
+    AFFINEANIMCMD_FRAME(-0x8, -0x8, 5, 10),
+    AFFINEANIMCMD_JUMP(1),
+    AFFINEANIMCMD_END,
 
 };
 
@@ -2547,6 +2613,7 @@ const union AffineAnimCmd *const gReversalRedBallAffineAnimTable[] =
 {
     gReversalRedBallAffineAnimCmds,
 };
+
 const struct SpriteTemplate gReversalRedBallSpriteTemplate = 
 {
     .tileTag = ANIM_TAG_REVERSAL_RED_BALL,
@@ -2555,8 +2622,151 @@ const struct SpriteTemplate gReversalRedBallSpriteTemplate =
     .anims = gDummySpriteAnimTable,
     .images = NULL,
     .affineAnims = gReversalRedBallAffineAnimTable,
+    .callback = AnimMergeReversalRed,
+
+};
+
+//
+
+const union AffineAnimCmd gLapseBlueLineAffineAnimCmds[] =
+{
+    AFFINEANIMCMD_FRAME(0x100, 0x200, 0, 0),
+    AFFINEANIMCMD_FRAME(0x0, 0x0, 3, 110),
+    AFFINEANIMCMD_FRAME(0x0, 0x0, 6, 20),
+    AFFINEANIMCMD_FRAME(-30, -30, 0, 8),
+
+    AFFINEANIMCMD_END,
+};
+
+const union AffineAnimCmd g2LapseBlueLineAffineAnimCmds[] =
+{
+    AFFINEANIMCMD_FRAME(0x100, 0x200, 0, 0),
+    AFFINEANIMCMD_FRAME(0x0, 0x0, -3, 60),
+    AFFINEANIMCMD_FRAME(0x0, 0x0, -6, 20),
+    AFFINEANIMCMD_FRAME(-30, -30, 0, 8),
+
+    AFFINEANIMCMD_END,
+};
+
+const union AffineAnimCmd g3LapseBlueLineAffineAnimCmds[] =
+{
+    AFFINEANIMCMD_FRAME(0x100, 0x200, 0, 0),
+    AFFINEANIMCMD_FRAME(0x0, 0x0, 6, 20),
+    AFFINEANIMCMD_FRAME(-30, -30, 0, 8),
+
+    AFFINEANIMCMD_END,
+};
+
+const union AffineAnimCmd *const gLapseBlueLineAffineAnimTable[] =
+{
+    gLapseBlueLineAffineAnimCmds,
+};
+
+const union AffineAnimCmd *const g2LapseBlueLineAffineAnimTable[] =
+{
+    g2LapseBlueLineAffineAnimCmds,
+};
+
+const union AffineAnimCmd *const g3LapseBlueLineAffineAnimTable[] =
+{
+    g3LapseBlueLineAffineAnimCmds,
+};
+
+const struct SpriteTemplate gLapseBlueLineSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_LAPSE_BLUE_LINE,
+    .paletteTag = ANIM_TAG_LAPSE_BLUE_LINE,
+    .oam = &gOamData_AffineDouble_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gLapseBlueLineAffineAnimTable,
     .callback = AnimSpriteOnMonPos,
 
+};
+
+const struct SpriteTemplate gLapseBlueLineSpriteTemplate2 =
+{
+    .tileTag = ANIM_TAG_LAPSE_BLUE_LINE,
+    .paletteTag = ANIM_TAG_LAPSE_BLUE_LINE,
+    .oam = &gOamData_AffineDouble_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = g2LapseBlueLineAffineAnimTable,
+    .callback = AnimSpriteOnMonPos,
+
+};
+
+const struct SpriteTemplate gLapseBlueLineSpriteTemplate3 =
+{
+    .tileTag = ANIM_TAG_LAPSE_BLUE_LINE,
+    .paletteTag = ANIM_TAG_LAPSE_BLUE_LINE,
+    .oam = &gOamData_AffineDouble_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = g3LapseBlueLineAffineAnimTable,
+    .callback = AnimSpriteOnMonPos,
+
+};
+
+const struct SpriteTemplate gLapseBlueRingSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_LAPSE_BLUE_RING,
+    .paletteTag = ANIM_TAG_LAPSE_BLUE_RING,
+    .oam = &gOamData_AffineDouble_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gThinRingShrinkingAffineAnimTable,
+    .callback = AnimSpriteOnMonPos,
+
+};
+
+const union AffineAnimCmd gLapseBlueBallAffineAnimCmds[] = {
+
+    AFFINEANIMCMD_FRAME(0x50, 0x50, 0, 0),
+    AFFINEANIMCMD_FRAME(0x8, 0x8, 5, 10),
+    AFFINEANIMCMD_FRAME(-0x8, -0x8, 5, 10),
+    AFFINEANIMCMD_JUMP(1),
+    AFFINEANIMCMD_END,
+};
+
+const union AffineAnimCmd *const gLapseBlueBallAffineAnimTable[] = 
+{
+    gLapseBlueBallAffineAnimCmds,
+};
+
+const struct SpriteTemplate gLapseBlueBallSpriteTemplate = 
+{
+    .tileTag = ANIM_TAG_LAPSE_BLUE_BALL,
+    .paletteTag = ANIM_TAG_LAPSE_BLUE_BALL,
+    .oam = &gOamData_AffineDouble_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gLapseBlueBallAffineAnimTable,
+    .callback = AnimMergeLapseBlue,
+
+};
+
+const struct SpriteTemplate gHollowPurpleSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_HOLLOW_PURPLE,
+    .paletteTag = ANIM_TAG_HOLLOW_PURPLE,
+    .oam = &gOamData_AffineDouble_ObjNormal_64x64,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimSolarBeamBigOrb,
+
+};
+
+const struct SpriteTemplate gPurpleBubbleSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_SMALL_BUBBLES_PURPLE,
+    .paletteTag = ANIM_TAG_SMALL_BUBBLES_PURPLE,
+    .oam = &gOamData_AffineNormal_ObjBlend_16x16,
+    .anims = gAnims_WaterBubble,
+    .images = NULL,
+    .affineAnims = gAffineAnims_Bubble,
+    .callback = AnimBubbleEffect,
 };
 
 const struct SpriteTemplate gFollowMeFingerSpriteTemplate =
@@ -3435,7 +3645,7 @@ void AnimPowerAbsorptionOrb(struct Sprite *sprite)
 void AnimSolarBeamBigOrb(struct Sprite *sprite)
 {
     InitSpritePosToAnimAttacker(sprite, TRUE);
-    StartSpriteAnim(sprite, gBattleAnimArgs[3]);
+    StartSpriteAnim(sprite, gBattleAnimArgs[3]); //mark
     sprite->data[0] = gBattleAnimArgs[2];
     sprite->data[2] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_X_2);
     sprite->data[4] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_Y_PIC_OFFSET);
@@ -3516,7 +3726,7 @@ void AnimTask_CreateSmallSolarBeamOrbs(u8 taskId)
 // arg 1: initial y pixel offset
 // arg 2: wave amplitude
 // arg 3: wave period (lower means faster wave)
-void AnimAbsorptionOrb(struct Sprite *sprite)
+void AnimAbsorptionOrb(struct Sprite *sprite) //IMPORTANT
 {
     InitSpritePosToAnimTarget(sprite, TRUE);
     sprite->data[0] = gBattleAnimArgs[3];
@@ -7185,7 +7395,7 @@ void AnimMetronomeFinger(struct Sprite *sprite)
     else
         battler = gBattleAnimTarget;
 
-    SetSpriteNextToMonHead(battler, sprite); //mark this is useful for positioning
+    SetSpriteNextToMonHead(battler, sprite);
     sprite->data[0] = 0;
     StoreSpriteCallbackInData6(sprite, AnimMetronomeFinger_Step);
     sprite->callback = RunStoredCallbackWhenAffineAnimEnds;

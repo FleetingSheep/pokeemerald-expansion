@@ -543,6 +543,7 @@
 #define PH_NURSE_BLEND              607
 #define PH_NURSE_HELD               608
 #define PH_NURSE_SOLO               609
+#define SE_HOLLOW_PURPLE            610 //tba...trying to reverse engineer move sounds has not worked thus far
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 

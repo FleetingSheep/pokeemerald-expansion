@@ -15,6 +15,8 @@ static void AnimGunkShotParticlesStep(struct Sprite *sprite);
 static void AnimGunkShotParticles(struct Sprite *sprite);
 static void AnimGunkShotImpact(struct Sprite *sprite);
 static void AnimAnimSyrupBomb(struct Sprite *);
+static void AnimMedusaOrb(struct Sprite *);
+static void AnimMedusaOrb_Step(struct Sprite *);
 
 static const union AnimCmd sAnim_ToxicBubble[] =
 {
@@ -110,6 +112,63 @@ const struct SpriteTemplate gAcidPoisonBubbleSpriteTemplate =
     .images = NULL,
     .affineAnims = gAffineAnims_PoisonProjectile,
     .callback = AnimAcidPoisonBubble,
+};
+
+
+const union AffineAnimCmd gMedusaAffineAnimCmds[] = {
+
+    AFFINEANIMCMD_FRAME(0x100, 0x100, 0, 0),
+    AFFINEANIMCMD_FRAME(0x0, 0x0, 5, 10), //rotate and loop until manually deleted by callback (release of petrification orb)
+    AFFINEANIMCMD_JUMP(1),
+    AFFINEANIMCMD_END,
+
+};
+
+const union AffineAnimCmd gMedusaOrbAffineAnimCmds[] = {
+
+    AFFINEANIMCMD_FRAME(0x10, 0x10, 0, 0),
+    AFFINEANIMCMD_FRAME(0x0, 0x0, 0, 40),
+    AFFINEANIMCMD_FRAME(0x6, 0x6, 0, 40),
+
+    AFFINEANIMCMD_END,
+
+};
+
+const union AffineAnimCmd *const gMedusaOrbAffineAnimTable[] = 
+{
+    gMedusaOrbAffineAnimCmds,
+};
+
+
+
+const union AffineAnimCmd *const gMedusaAffineAnimTable[] = 
+{
+    gMedusaAffineAnimCmds,
+};
+
+
+const struct SpriteTemplate gMedusaSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_MEDUSA,
+    .paletteTag = ANIM_TAG_MEDUSA,
+    .oam = &gOamData_AffineDouble_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gMedusaAffineAnimTable,
+    .callback = AnimAcidPoisonBubble,
+
+};
+
+const struct SpriteTemplate gMedusaOrbSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_MEDUSA_ORB,
+    .paletteTag = ANIM_TAG_MEDUSA_ORB,
+    .oam = &gOamData_AffineDouble_ObjNormal_64x64,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gMedusaOrbAffineAnimTable, //todo
+    .callback = AnimMedusaOrb,
+
 };
 
 const struct SpriteTemplate gSludgeBombHitParticleSpriteTemplate =
@@ -531,7 +590,7 @@ static void AnimSludgeProjectile_Step(struct Sprite *sprite)
         DestroyAnimSprite(sprite);
 }
 
-static void AnimAcidPoisonBubble(struct Sprite *sprite)
+static void AnimAcidPoisonBubble(struct Sprite *sprite) //arg 2 is duration, 4 is target x offset, 5 is target y offset
 {
     s16 l1 = 0, l2 = 0;
     if (!gBattleAnimArgs[3])
@@ -560,6 +619,49 @@ void AnimAcidPoisonBubble_Step(struct Sprite *sprite)
 {
     if (TranslateAnimHorizontalArc(sprite))
         DestroyAnimSprite(sprite);
+}
+
+static void AnimMedusaOrb(struct Sprite *sprite)
+{
+    s16 l1 = 0, l2 = 0;
+    if (!gBattleAnimArgs[3])
+        StartSpriteAnim(sprite, 2);
+
+    InitSpritePosToAnimAttacker(sprite, TRUE);
+    if (gBattleAnimArgs[6])
+        SetAverageBattlerPositions(gBattleAnimTarget, TRUE, &l1, &l2);
+    else
+        l1 = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_X_2), l2 = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_Y_PIC_OFFSET);
+
+    if (GetBattlerSide(gBattleAnimAttacker))
+        gBattleAnimArgs[4] = -gBattleAnimArgs[4];
+
+    sprite->data[0] = gBattleAnimArgs[2];
+    sprite->data[2] = l1 + gBattleAnimArgs[4];
+    sprite->data[4] = l2 + gBattleAnimArgs[5];
+    sprite->data[5] = -30;
+    sprite->invisible = TRUE; //effectively a movement tracker where TRUE = moving and FALSE = stationary
+
+    InitAnimArcTranslation(sprite);
+
+    sprite->callback = AnimMedusaOrb_Step;
+}
+
+void AnimMedusaOrb_Step(struct Sprite *sprite)
+{
+    switch (sprite->invisible)
+    {
+        case TRUE: //still moving, therefore run function to move+check if needs destroying
+
+            if (TranslateAnimHorizontalArc(sprite))
+                sprite->invisible = FALSE;
+                sprite->data[7] = 50; //frame counter for how long the orb lingers in the air. data[7] is reserved for initanimarctranslation but can be hijacked after its finished :)
+            
+        case FALSE:
+            if (--sprite->data[7] == 0)
+                DestroyAnimSprite(sprite); 
+            
+    }
 }
 
 void AnimSludgeBombHitParticle(struct Sprite *sprite)

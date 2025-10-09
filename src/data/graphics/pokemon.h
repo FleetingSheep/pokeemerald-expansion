@@ -9492,6 +9492,18 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u32 gMonShinyPalette_DeoxysSpeed[] = INCBIN_U32("graphics/pokemon/deoxys/speed/shiny.gbapal.lz");
     const u8 gMonIcon_DeoxysSpeed[] = INCBIN_U8("graphics/pokemon/deoxys/speed/icon.4bpp");
 
+    const u32 gMonFrontPic_DeoxysRuined[] = INCBIN_U32("graphics/pokemon/deoxys/ruined/anim_front.4bpp.lz");
+    const u32 gMonPalette_DeoxysRuined[] = INCBIN_U32("graphics/pokemon/deoxys/normal.gbapal.lz");
+    const u32 gMonBackPic_DeoxysRuined[] = INCBIN_U32("graphics/pokemon/deoxys/back.4bpp.lz");
+    const u32 gMonShinyPalette_DeoxysRuined[] = INCBIN_U32("graphics/pokemon/deoxys/shiny.gbapal.lz");
+    const u8 gMonIcon_DeoxysRuined[] = INCBIN_U8("graphics/pokemon/deoxys/icon.4bpp");
+
+    const u32 gMonFrontPic_Dexis[] = INCBIN_U32("graphics/pokemon/dexis/anim_front.4bpp.lz");
+    const u32 gMonPalette_Dexis[] = INCBIN_U32("graphics/pokemon/dexis/normal.gbapal.lz");
+    const u32 gMonBackPic_Dexis[] = INCBIN_U32("graphics/pokemon/dexis/back.4bpp.lz");
+    const u32 gMonShinyPalette_Dexis[] = INCBIN_U32("graphics/pokemon/dexis/shiny.gbapal.lz");
+    const u8 gMonIcon_Dexis[] = INCBIN_U8("graphics/pokemon/dexis/icon.4bpp");
+
 #if OW_POKEMON_OBJECT_EVENTS
     const u32 gObjectEventPic_DeoxysNormal[] = INCBIN_COMP("graphics/pokemon/deoxys/overworld.4bpp");
     const u32 gObjectEventPic_DeoxysAttack[] = INCBIN_COMP("graphics/pokemon/deoxys/attack/overworld.4bpp");

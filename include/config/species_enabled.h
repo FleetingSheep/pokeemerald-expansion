@@ -260,6 +260,7 @@
 #define P_FAMILY_GROUDON                 P_GEN_3_POKEMON
 #define P_FAMILY_RAYQUAZA                P_GEN_3_POKEMON
 #define P_FAMILY_JIRACHI                 P_GEN_3_POKEMON
+#define P_FAMILY_DEXIS                   P_GEN_3_POKEMON
 #define P_FAMILY_DEOXYS                  P_GEN_3_POKEMON
 
 #define P_FAMILY_TURTWIG                 P_GEN_4_POKEMON

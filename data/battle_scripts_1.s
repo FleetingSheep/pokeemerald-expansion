@@ -3631,6 +3631,10 @@ BattleScript_EffectSpeedDown2::
 	setstatchanger STAT_SPEED, 2, TRUE
 	goto BattleScript_EffectStatDown
 
+BattleScript_EffectPetrify::
+	setstatchanger STAT_SPEED, 3, TRUE
+	goto BattleScript_EffectStatDown
+
 BattleScript_EffectSpecialDefenseDown2::
 	setstatchanger STAT_SPDEF, 2, TRUE
 	goto BattleScript_EffectStatDown

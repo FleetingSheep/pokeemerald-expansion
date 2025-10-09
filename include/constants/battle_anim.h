@@ -419,6 +419,13 @@
 #define ANIM_TAG_REVERSAL_RED_LINE          (ANIM_SPRITES_START + 405)
 #define ANIM_TAG_REVERSAL_RED_RING          (ANIM_SPRITES_START + 406)
 #define ANIM_TAG_REVERSAL_RED_BALL          (ANIM_SPRITES_START + 407)
+#define ANIM_TAG_LAPSE_BLUE_LINE            (ANIM_SPRITES_START + 408)
+#define ANIM_TAG_LAPSE_BLUE_RING            (ANIM_SPRITES_START + 409)
+#define ANIM_TAG_LAPSE_BLUE_BALL            (ANIM_SPRITES_START + 410)
+#define ANIM_TAG_HOLLOW_PURPLE              (ANIM_SPRITES_START + 411)
+#define ANIM_TAG_SMALL_BUBBLES_PURPLE       (ANIM_SPRITES_START + 412)
+#define ANIM_TAG_MEDUSA                     (ANIM_SPRITES_START + 413)
+#define ANIM_TAG_MEDUSA_ORB                 (ANIM_SPRITES_START + 414)
 
 // battlers
 #define ANIM_ATTACKER         0
@@ -531,7 +538,8 @@
 #define BG_CHLOROBLAST 80
 #define BG_RAINBOW 81
 #define BG_HOLLOW_PURPLE_OPPONENT 82
-#define BG_HOLLOW_PURPLE_PLAYER 93
+#define BG_HOLLOW_PURPLE_PLAYER 83
+#define BG_WHITE_WIREFRAME 84
 
 // table ids for general animations (gBattleAnims_General)
 #define B_ANIM_STATS_CHANGE             0

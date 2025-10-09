@@ -2285,5 +2285,11 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
         .battleScript = BattleScript_EffectImpactEvent,
         .battleTvScore = 0, // TODO: Assign points
     },
+    [EFFECT_PETRIFY] =
+    {
+        .battleScript = BattleScript_EffectPetrify,
+        .battleTvScore = 0, // TODO: Assign points
+
+    },
     
 };

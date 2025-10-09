@@ -7544,9 +7544,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_HUMAN_LIKE),
     #if P_UPDATED_ABILITIES >= GEN_4
-        .abilities = { ABILITY_GUTS, ABILITY_NO_GUARD, ABILITY_LIMITLESS },
+        .abilities = { ABILITY_GUTS, ABILITY_NO_GUARD, ABILITY_HYPERDENSITY },
     #else
-        .abilities = { ABILITY_GUTS, ABILITY_NONE, ABILITY_LIMITLESS },
+        .abilities = { ABILITY_GUTS, ABILITY_NONE, ABILITY_OVERBEARING },
     #endif
         .bodyColor = BODY_COLOR_GRAY,
         .speciesName = _("Machop"),
@@ -7611,9 +7611,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_HUMAN_LIKE),
     #if P_UPDATED_ABILITIES >= GEN_4
-        .abilities = { ABILITY_GUTS, ABILITY_NO_GUARD, ABILITY_LIMITLESS },
+        .abilities = { ABILITY_GUTS, ABILITY_NO_GUARD, ABILITY_HYPERDENSITY },
     #else
-        .abilities = { ABILITY_GUTS, ABILITY_NONE, ABILITY_LIMITLESS },
+        .abilities = { ABILITY_GUTS, ABILITY_NONE, ABILITY_OVERBEARING },
     #endif
         .bodyColor = BODY_COLOR_GRAY,
         .noFlip = TRUE,
@@ -7687,9 +7687,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_HUMAN_LIKE),
     #if P_UPDATED_ABILITIES >= GEN_4
-        .abilities = { ABILITY_GUTS, ABILITY_NO_GUARD, ABILITY_LIMITLESS },
+        .abilities = { ABILITY_GUTS, ABILITY_NO_GUARD, ABILITY_HYPERDENSITY },
     #else
-        .abilities = { ABILITY_GUTS, ABILITY_NONE, ABILITY_LIMITLESS },
+        .abilities = { ABILITY_GUTS, ABILITY_NONE, ABILITY_OVERBEARING },
     #endif
         .bodyColor = BODY_COLOR_GRAY,
         .speciesName = _("Machamp"),
@@ -11930,7 +11930,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_HUMAN_LIKE),
     #if P_UPDATED_ABILITIES >= GEN_4
-        .abilities = { ABILITY_LIMBER, ABILITY_RECKLESS, ABILITY_UNBURDEN },
+        .abilities = { ABILITY_LIMBER, ABILITY_OVERBEARING, ABILITY_UNBURDEN },
     #else
         .abilities = { ABILITY_LIMBER, ABILITY_NONE, ABILITY_UNBURDEN },
     #endif
@@ -12598,7 +12598,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_FIELD),
-        .abilities = { ABILITY_LIGHTNING_ROD, ABILITY_PERIAPSIS, ABILITY_SOLID_ROCK },
+        .abilities = { ABILITY_LIGHTNING_ROD, ABILITY_OVERBEARING, ABILITY_SOLID_ROCK },
         .bodyColor = BODY_COLOR_GRAY,
         .speciesName = _("Rhyperior"),
         .cryId = CRY_RHYPERIOR,
@@ -15018,7 +15018,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_2, EGG_GROUP_DRAGON),
-        .abilities = { ABILITY_SWIFT_SWIM, ABILITY_NONE, ABILITY_LIMITLESS },
+        .abilities = { ABILITY_SWIFT_SWIM, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_RED,
         .speciesName = _("Magikarp"),
         .cryId = CRY_MAGIKARP,
@@ -15403,9 +15403,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
     #if P_UPDATED_ABILITIES >= GEN_4
-        .abilities = { ABILITY_RUN_AWAY, ABILITY_ADAPTABILITY, ABILITY_LIMITLESS },
+        .abilities = { ABILITY_RUN_AWAY, ABILITY_ADAPTABILITY, ABILITY_NONE },
     #else
-        .abilities = { ABILITY_RUN_AWAY, ABILITY_NONE, ABILITY_LIMITLESS },
+        .abilities = { ABILITY_RUN_AWAY, ABILITY_NONE, ABILITY_NONE },
     #endif
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Eevee"),
@@ -17486,7 +17486,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .friendship = 0,
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
-        .abilities = { ABILITY_PRESSURE, ABILITY_NONE, ABILITY_LIMITLESS },
+        .abilities = { ABILITY_PRESSURE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_PURPLE,
         .speciesName = _("Mewtwo"),
         .cryId = CRY_MEWTWO,
@@ -17733,7 +17733,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = 29,
         .baseSpAttack  = 6,
         .baseSpDefense = 6,
-        .types = MON_TYPES(TYPE_NORMAL),
+        .types = MON_TYPES(TYPE_FLYING, TYPE_NORMAL),
         .catchRate = 100, //change
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 300,
@@ -17753,16 +17753,15 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .abilities = { ABILITY_ANOMALY, ABILITY_NONE, ABILITY_NONE }, //change
         .bodyColor = BODY_COLOR_PINK,
         .speciesName = _("MissingNo."),
-        .cryId = CRY_MEW,
-        .natDexNum = NATIONAL_DEX_MEW,
+        .cryId = CRY_NIDORAN_F,
+        .natDexNum = NATIONAL_DEX_MISSINGNO,
         .categoryName = _("Glitch"),
         .height = 1,
         .weight = 1,
         .description = COMPOUND_STRING(
             "A strange entity that defies logic.\n"
-            "Its fragmented existence is a reminder\n"
-            "that not all things in this world can be\n"
-            "explained. Approach with caution."),
+            "If you are reading this, it is most\n"
+            "likely too late."),
         .pokemonScale = 457,
         .pokemonOffset = 0,
         .trainerScale = 256,

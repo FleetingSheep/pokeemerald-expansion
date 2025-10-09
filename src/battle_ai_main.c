@@ -1374,6 +1374,7 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
             break;
         case EFFECT_SPEED_DOWN:
         case EFFECT_SPEED_DOWN_2:
+        case EFFECT_PETRIFY:
             if (!ShouldLowerStat(battlerDef, aiData->abilities[battlerDef], STAT_SPEED))
                 ADJUST_SCORE(-10);
             else if (aiData->abilities[battlerDef] == ABILITY_SPEED_BOOST)
@@ -3408,6 +3409,7 @@ static u32 AI_CalcMoveEffectScore(u32 battlerAtk, u32 battlerDef, u32 move)
         break;
     case EFFECT_SPEED_DOWN:
     case EFFECT_SPEED_DOWN_2:
+    case EFFECT_PETRIFY:
         if (AI_IsFaster(battlerAtk, battlerDef, move))
             ADJUST_SCORE(-3);
         else if (!AI_RandLessThan(70))
@@ -4871,6 +4873,7 @@ static s32 AI_SetupFirstTurn(u32 battlerAtk, u32 battlerDef, u32 move, s32 score
     case EFFECT_ATTACK_DOWN_2:
     case EFFECT_DEFENSE_DOWN_2:
     case EFFECT_SPEED_DOWN_2:
+    case EFFECT_PETRIFY:
     case EFFECT_SPECIAL_ATTACK_DOWN_2:
     case EFFECT_SPECIAL_DEFENSE_DOWN_2:
     case EFFECT_ACCURACY_DOWN_2:
@@ -5246,6 +5249,7 @@ static s32 AI_HPAware(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
             case EFFECT_ATTACK_DOWN_2:
             case EFFECT_DEFENSE_DOWN_2:
             case EFFECT_SPEED_DOWN_2:
+            case EFFECT_PETRIFY:
             case EFFECT_SPECIAL_ATTACK_DOWN_2:
             case EFFECT_SPECIAL_DEFENSE_DOWN_2:
             case EFFECT_ACCURACY_DOWN_2:

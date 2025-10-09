@@ -7798,6 +7798,20 @@ static const struct LevelUpMove sJirachiLevelUpLearnset[] = {
 #endif //P_FAMILY_JIRACHI
 
 #if P_FAMILY_DEOXYS
+static const struct LevelUpMove sDexisLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_LEER),
+    LEVEL_UP_MOVE( 1, MOVE_WRAP),
+    LEVEL_UP_MOVE( 5, MOVE_NIGHT_SHADE),
+    LEVEL_UP_MOVE(10, MOVE_TELEPORT),
+    LEVEL_UP_MOVE(15, MOVE_KNOCK_OFF),
+    LEVEL_UP_MOVE(20, MOVE_PURSUIT),
+    LEVEL_UP_MOVE(25, MOVE_PSYCHIC),
+    LEVEL_UP_MOVE(30, MOVE_SNATCH),
+    LEVEL_UP_MOVE(35, MOVE_COSMIC_POWER),
+    LEVEL_UP_MOVE(40, MOVE_RECOVER),
+    LEVEL_UP_END
+};
+
 static const struct LevelUpMove sDeoxysNormalLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_LEER),
     LEVEL_UP_MOVE( 1, MOVE_WRAP),
@@ -7809,8 +7823,8 @@ static const struct LevelUpMove sDeoxysNormalLevelUpLearnset[] = {
     LEVEL_UP_MOVE(30, MOVE_SNATCH),
     LEVEL_UP_MOVE(35, MOVE_COSMIC_POWER),
     LEVEL_UP_MOVE(40, MOVE_RECOVER),
-    LEVEL_UP_MOVE(45, MOVE_PSYCHO_BOOST),
-    LEVEL_UP_MOVE(50, MOVE_HYPER_BEAM),
+    LEVEL_UP_MOVE(60, MOVE_PSYCHO_BOOST),
+    LEVEL_UP_MOVE(65, MOVE_HYPER_BEAM),
     LEVEL_UP_END
 };
 

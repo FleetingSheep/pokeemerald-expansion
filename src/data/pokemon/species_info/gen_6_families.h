@@ -4969,12 +4969,12 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
 
     [SPECIES_AVALUGG] =
     {
-        .baseHP        = 95,
+        .baseHP        = 115,
         .baseAttack    = 117,
-        .baseDefense   = 184,
+        .baseDefense   = 188,
         .baseSpeed     = 28,
-        .baseSpAttack  = 44,
-        .baseSpDefense = 46,
+        .baseSpAttack  = 75,
+        .baseSpDefense = 82,
         .types = MON_TYPES(TYPE_ICE),
         .catchRate = 55,
         .expYield = 180,
@@ -4984,7 +4984,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = BERGMITE_EGG_GROUPS,
-        .abilities = { ABILITY_OWN_TEMPO, ABILITY_ICE_BODY, ABILITY_STURDY },
+        .abilities = { ABILITY_SNOW_WARNING, ABILITY_ICE_BODY, ABILITY_STURDY },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Avalugg"),
         .cryId = CRY_AVALUGG,

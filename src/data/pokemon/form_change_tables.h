@@ -521,6 +521,12 @@ static const struct FormChange sDeoxysSpeedFormChangeTable[] = {
     {FORM_CHANGE_ITEM_USE, SPECIES_DEOXYS_NORMAL,  ITEM_METEORITE},
     {FORM_CHANGE_TERMINATOR},
 };
+static const struct FormChange sDeoxysRuinedFormChangeTable[] = { //failsafe in case the player somehow gets their hands on it
+    {FORM_CHANGE_BATTLE_SWITCH,                 SPECIES_DEOXYS_NORMAL},
+    {FORM_CHANGE_FAINT,                         SPECIES_DEOXYS_NORMAL},
+    {FORM_CHANGE_END_BATTLE,                    SPECIES_DEOXYS_NORMAL},
+    {FORM_CHANGE_TERMINATOR},
+};
 #endif //P_FAMILY_DEOXYS
 
 #if P_FAMILY_BURMY

@@ -4766,7 +4766,7 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 effect++;
             }
             break;
-        case ABILITY_PERIAPSIS:
+        case ABILITY_OVERBEARING:
             if ((gFieldStatuses & STATUS_FIELD_GRAVITY) == FALSE)
             {
                 BattleScriptPushCursorAndCallback(BattleScript_PeriapsisActivates);
@@ -7634,11 +7634,11 @@ u8 ItemBattleEffects(u8 caseID, u32 battler, bool32 moveTurn)
                 BattleScriptPushCursorAndCallback(BattleScript_BerserkGeneRet);
                 effect = ITEM_STATS_CHANGE;
                 break;
-            case HOLD_EFFECT_CALCULATOR:
-                u32 monId = gBattlerPartyIndexes[battler];
-                struct Pokemon *party = GetBattlerParty(battler);
-                RecalcBattlerStats(battler, &party[monId]);
-                break;
+            //case HOLD_EFFECT_CALCULATOR:
+            //    u32 monId = gBattlerPartyIndexes[battler];
+            //    struct Pokemon *party = GetBattlerParty(battler);
+            //    RecalcBattlerStats(battler, &party[monId]);
+            //    break;
             case HOLD_EFFECT_MIRROR_HERB:
                 effect = TryConsumeMirrorHerb(battler, TRUE);
                 break;
@@ -9726,6 +9726,32 @@ static inline u32 CalcAttackStat(u32 move, u32 battlerAtk, u32 battlerDef, u32 m
         if (IS_MOVE_SPECIAL(move) && GetActiveGimmick(battlerAtk) != GIMMICK_DYNAMAX)
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
         break;
+    case HOLD_EFFECT_CALCULATOR:
+        u32 userAtk;
+        u32 userSpAtk;
+        float ratio;
+
+        userAtk = gBattleMons[battlerAtk].attack;
+        userSpAtk = gBattleMons[battlerAtk].spAttack;
+
+        if (userAtk == 0 || userSpAtk == 0)
+            break; // avoid div by zero
+
+        if (userSpAtk >= userAtk)
+            ratio = (float)userAtk / (float)userSpAtk;
+        else
+            ratio = (float)userSpAtk / (float)userAtk;
+        
+        // linear scaling, where at 1:1 ratio stats are multiplied by 1.3x.
+        ratio = 1 + ((ratio - 0.5f) * 0.6f);
+
+        if (ratio < 0.1f)
+            ratio = 0.1f;
+        if (ratio > 2.0f)
+            ratio = 2.0f;
+        u32 multFixed = UQ_4_12(ratio);
+        modifier = uq4_12_multiply_half_down(modifier, multFixed);
+        break;
     }
 
     // The offensive stats of a Player's Pokémon are boosted by x1.1 (+10%) if they have the 1st badge and 7th badges.
@@ -10217,7 +10243,7 @@ static inline s32 DoMoveDamageCalcVars(u32 move, u32 battlerAtk, u32 battlerDef,
         gBattleMovePower = fixedBasePower;
     else
         gBattleMovePower = CalcMoveBasePowerAfterModifiers(move, battlerAtk, battlerDef, moveType, updateFlags, abilityAtk, abilityDef, holdEffectAtk, weather);
-
+        
     userFinalAttack = CalcAttackStat(move, battlerAtk, battlerDef, moveType, isCrit, updateFlags, abilityAtk, abilityDef, holdEffectAtk);
     targetFinalDefense = CalcDefenseStat(move, battlerAtk, battlerDef, moveType, isCrit, updateFlags, abilityAtk, abilityDef, holdEffectDef, weather);
 
@@ -11569,12 +11595,11 @@ void CopyMonLevelAndBaseStatsToBattleMon(u32 battler, struct Pokemon *mon)
     gBattleMons[battler].speed = GetMonData(mon, MON_DATA_SPEED);
     gBattleMons[battler].spDefense = GetMonData(mon, MON_DATA_SPDEF);
 
-    if (GetBattlerHoldEffect(battler, TRUE) == HOLD_EFFECT_CALCULATOR) {
-        u32 avgatk = round((gBattleMons[battler].attack + gBattleMons[battler].spAttack) / 2);
-        gBattleMons[battler].attack = avgatk;
-        gBattleMons[battler].spAttack = avgatk;
+    //if (GetBattlerHoldEffect(battler, TRUE) == HOLD_EFFECT_CALCULATOR) {
+    //    u32 avgatk = round((gBattleMons[battler].attack + gBattleMons[battler].spAttack) / 2);
+    //    gBattleMons[battler].attack = avgatk;
+    //    gBattleMons[battler].spAttack = avgatk;
     }
-}
 
 void CopyMonAbilityAndTypesToBattleMon(u32 battler, struct Pokemon *mon)
 {

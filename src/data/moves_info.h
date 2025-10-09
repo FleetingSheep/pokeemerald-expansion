@@ -22033,7 +22033,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
         .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_MONS_WITH_GOOD_APPEALS,
-        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = 0,
         .contestComboMoves = {COMBO_STARTER_HAIL, COMBO_STARTER_MIND_READER},
         .battleAnimScript = Move_BLACK_HOLE,
@@ -22062,13 +22062,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_SOLAR_FLARE] =  // burns and boost in sunny day, flamethrower equivalent
     {
-
         .name = COMPOUND_STRING("Solar Flare"),
         .description = COMPOUND_STRING(
             "Boosted in sun and\n"
             "sometimes burns."),
         .effect = EFFECT_SOLAR_FLARE,
-        .power = 80,
+        .power = 85,
         .type = TYPE_FIRE,
         .accuracy = 100,
         .pp = 15,
@@ -22105,7 +22104,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .ignoresProtect = TRUE,
         .mirrorMoveBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_IMPROVE_CONDITION_PREVENT_NERVOUSNESS,
-        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
         .contestComboStarterId = COMBO_STARTER_DRAGON_DANCE,
         .contestComboMoves = {COMBO_STARTER_SUNNY_DAY},
         .battleAnimScript = Move_LUMINOSITY,
@@ -22117,10 +22116,10 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "Pummels multiple targets\n"
             "with high critical-hit ratio."),
         .effect = EFFECT_HIT,
-        .power = 85,
+        .power = 80,
         .type = TYPE_SPACE,
         .accuracy = 95,
-        .pp = 10,
+        .pp = 15,
         .target = MOVE_TARGET_FOES_AND_ALLY,
         .priority = 0,
         .criticalHitStage = 1,
@@ -22165,7 +22164,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     {
         .name = COMPOUND_STRING("Glimmer"),
         .description = COMPOUND_STRING(
-            "Flings rare unearthly\n"
+            "Spews rare unearthly\n"
             "elements at the target."),
         .effect = EFFECT_HIT,
         .power = 50,
@@ -22176,7 +22175,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
         .contestEffect = CONTEST_EFFECT_BETTER_IF_SAME_TYPE,
-        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestCategory = CONTEST_CATEGORY_SMART,
         .contestComboStarterId = COMBO_STARTER_ROCK_THROW,
         .contestComboMoves = {0},
         .battleAnimScript = Move_GLIMMER,
@@ -22200,7 +22199,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .skyBattleBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_FLINCH,
-            .chance = 30,
+            .chance = 10,
         }),
         .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_FRONT_MON,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
@@ -22301,10 +22300,10 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     {
         .name = COMPOUND_STRING("Starburst"),
         .description = COMPOUND_STRING(
-            "placeholder\n"
-            "placeholder"),
-        .effect = EFFECT_HIT,
-        .power = 50,
+            "Batters enemy with stars\n"
+            "from above. Breaks barriers."),
+        .effect = EFFECT_BRICK_BREAK,
+        .power = 80,
         .type = TYPE_SPACE,
         .accuracy = 100,
         .pp = 30,
@@ -22312,7 +22311,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
         .contestEffect = CONTEST_EFFECT_BETTER_IF_SAME_TYPE,
-        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestCategory = CONTEST_CATEGORY_SMART,
         .contestComboStarterId = COMBO_STARTER_ROCK_THROW,
         .contestComboMoves = {0},
         .battleAnimScript = Move_STARBURST, //todo
@@ -22335,6 +22334,26 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = COMBO_STARTER_ROCK_THROW,
         .contestComboMoves = {0},
-        .battleAnimScript = Move_HOLLOW_PURPLE, //todo 
-        }
+        .battleAnimScript = Move_HOLLOW_PURPLE, //todo
+        },
+    [MOVE_PETRIFY] =
+    {
+        .name = COMPOUND_STRING("Petrify"),
+        .description = COMPOUND_STRING(
+            "Turns target(s) to stone,\n"
+            "vastly lowering speed."),
+        .effect = EFFECT_PETRIFY,
+        .power = 0,
+        .type = TYPE_ROCK,
+        .accuracy = 100,
+        .pp = 10,
+        .target = MOVE_TARGET_FOES_AND_ALLY,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .contestEffect = CONTEST_EFFECT_BETTER_IF_SAME_TYPE,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = COMBO_STARTER_ROCK_THROW,
+        .contestComboMoves = {0},
+        .battleAnimScript = Move_PETRIFY, //todo
+        },
 };

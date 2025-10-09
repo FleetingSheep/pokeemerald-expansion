@@ -8020,8 +8020,8 @@ static void Cmd_cancelallactions(void)
 
 static void Cmd_setgravity(void)
 {
-    CMD_ARGS(const u8 *failInstr);
-
+    CMD_ARGS(const u8 *failInstr, u8 battler);
+    u32 battler = GetBattlerForBattleScript(cmd->battler);
     if (gFieldStatuses & STATUS_FIELD_GRAVITY)
     {
         gBattlescriptCurrInstr = cmd->failInstr;
@@ -8029,7 +8029,10 @@ static void Cmd_setgravity(void)
     else
     {
         gFieldStatuses |= STATUS_FIELD_GRAVITY;
-        gFieldTimers.gravityTimer = 5;
+        if (GetBattlerHoldEffect(battler, TRUE) == HOLD_EFFECT_NEWTONS_CRADLE)
+            gFieldTimers.gravityTimer = 8;
+        else
+            gFieldTimers.gravityTimer = 5;
         gBattlescriptCurrInstr = cmd->nextInstr;
     }
 }

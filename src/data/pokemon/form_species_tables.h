@@ -829,6 +829,22 @@ static const u16 sMedichamFormSpeciesIdTable[] = {
 };
 #endif //P_FAMILY_MEDITITE
 
+#if P_FAMILY_MINUN
+static const u16 sMinunFormSpeciesIdTable[] = {
+    SPECIES_MINUN,
+    SPECIES_MINUN_COSMIC,
+    FORM_SPECIES_END,
+};
+#endif //P_FAMILY_MINUN
+
+#if P_FAMILY_PLUSLE
+static const u16 sPlusleFormSpeciesIdTable[] = {
+    SPECIES_PLUSLE,
+    SPECIES_PLUSLE_COSMIC,
+    FORM_SPECIES_END,
+};
+#endif //P_FAMILY_PLUSLE
+
 #if P_FAMILY_ELECTRIKE
 static const u16 sManectricFormSpeciesIdTable[] = {
     SPECIES_MANECTRIC,
@@ -992,6 +1008,7 @@ static const u16 sDeoxysFormSpeciesIdTable[] = {
     SPECIES_DEOXYS_ATTACK,
     SPECIES_DEOXYS_DEFENSE,
     SPECIES_DEOXYS_SPEED,
+    SPECIES_DEOXYS_RUINED,
     FORM_SPECIES_END,
 };
 #endif //P_FAMILY_DEOXYS

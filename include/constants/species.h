@@ -1644,24 +1644,23 @@
 #define SPECIES_BELDUM_COSMIC                           1534 //based on sputnik
 #define SPECIES_METANG_COSMIC                           1535
 #define SPECIES_METAGROSS_COSMIC                        1536 //based on ISS
-#define SPECIES_METAGROSS_COSMIC_MEGA                   1537
+#define SPECIES_METAGROSS_COSMIC_MEGA                   1537 //death star? or some kind of futuristic war machine lookin thing
 #define SPECIES_DUSKULL_COSMIC                          1538 //
 #define SPECIES_DUSCLOPS_COSMIC                         1539 // mummy wraps surrounding a black hole underneath, use regiclipse base
-#define SPECIES_DUSKNOIR_COSMIC                         1540 //eldritch horror, giant eyeball in stomach with body kind of limply hanging over it, consult source image
+#define SPECIES_DUSKNOIR_COSMIC                         1540 //eldritch horror oooof some kind
 #define SPECIES_SHEDINJA_COSMIC                         1541 //biblically accurate space/ghost type
-#define SPECIES_TRAPINCH_COSMIC                         1542 //small rover shaped like trapinch
-#define SPECIES_VIBRAVA_COSMIC                          1543 //rover drone like on mars?? otherwise make a satellite tail
-#define SPECIES_FLYGON_COSMIC                           1544 //idk man consult the source image
-#define SPECIES_FLYGON_COSMIC_MEGA                      1545 //holy mackerel how am i gonna make this? also this whole line should be ground/space
 #define SPECIES_FEEBAS_COSMIC                           1546 //cracked asteroid like figure, water/space
 #define SPECIES_MILOTIC_COSMIC                          1547 //tail extend into a nebula-like spiral, pulsar design? water/space
 #define SPECIES_PLUSLE_COSMIC                           1548 // space/electric transmitter satellite, dish in ear
 #define SPECIES_MINUN_COSMIC                            1549 // space/electric receiver satellite
 #define SPECIES_COSMEON                                 1550 // space type eeveelution
-#define SPECIES_SPINDA_COSMIC                           1551 //death spiral, demented looking/tentacles probably
-#define SPECIES_CASTFORM_SANDY                          1552
+#define SPECIES_SPINDA_COSMIC                           1551 //spinda but spooky
+#define SPECIES_DOOMSDA                                 1552 //death spiral, demented looking/tentacles probably
+#define SPECIES_CASTFORM_SANDY                          1553
+#define SPECIES_DEXIS                                   1554 //deoxys preevo
+#define SPECIES_DEOXYS_RUINED                           1555
 
-#define SPECIES_EGG (SPECIES_CASTFORM_SANDY + 1)
+#define SPECIES_EGG (SPECIES_DEOXYS_RUINED + 1)
 
 #define NUM_SPECIES SPECIES_EGG
 

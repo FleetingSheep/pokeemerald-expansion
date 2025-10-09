@@ -162,6 +162,7 @@
 #define HOLD_EFFECT_BOOSTER_ENERGY      181 // Not implemented.
 
 #define HOLD_EFFECT_CALCULATOR          182
+#define HOLD_EFFECT_NEWTONS_CRADLE      183
 
 // Gen2 hold effect
 #define HOLD_EFFECT_BERSERK_GENE        184

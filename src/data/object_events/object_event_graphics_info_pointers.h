@@ -45,6 +45,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwimmerF;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BlackBelt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Beauty;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Scientist1;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Stargazer;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lass;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Gentleman;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Sailor;
@@ -296,6 +297,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_BLACK_BELT] =               &gObjectEventGraphicsInfo_BlackBelt,
     [OBJ_EVENT_GFX_BEAUTY] =                   &gObjectEventGraphicsInfo_Beauty,
     [OBJ_EVENT_GFX_SCIENTIST_1] =              &gObjectEventGraphicsInfo_Scientist1,
+    [OBJ_EVENT_GFX_STARGAZER] =                &gObjectEventGraphicsInfo_Stargazer,
     [OBJ_EVENT_GFX_LASS] =                     &gObjectEventGraphicsInfo_Lass,
     [OBJ_EVENT_GFX_GENTLEMAN] =                &gObjectEventGraphicsInfo_Gentleman,
     [OBJ_EVENT_GFX_SAILOR] =                   &gObjectEventGraphicsInfo_Sailor,

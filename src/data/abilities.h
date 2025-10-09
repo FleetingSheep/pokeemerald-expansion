@@ -2644,9 +2644,9 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .aiRating = 4,
     },
 
-    [ABILITY_PERIAPSIS] =
+    [ABILITY_OVERBEARING] =
     {
-        .name = _("Periapsis"),
+        .name = _("Overbearing"),
         .description = COMPOUND_STRING("Induces gravity on entry."),
         .aiRating = 1,
     },
@@ -2671,10 +2671,4 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .description = COMPOUND_STRING("Sounds may flinch."),
         .aiRating = 5,
     },
-    [ABILITY_LIMITLESS] =
-    {
-        .name = _("Limitless"),
-        .description = COMPOUND_STRING("May boost stats forever."),
-        .aiRating = 5,
-    }, 
 };

@@ -1468,6 +1468,13 @@ const struct CompressedSpriteSheet gBattleAnimPicTable[] =
     {gBattleAnimSpriteGfx_ReversalRedLine, 0x0200, ANIM_TAG_REVERSAL_RED_LINE},
     {gBattleAnimSpriteGfx_ReversalRedRing, 0x0200, ANIM_TAG_REVERSAL_RED_RING},
     {gBattleAnimSpriteGfx_ReversalRedBall, 0x0200, ANIM_TAG_REVERSAL_RED_BALL},
+    {gBattleAnimSpriteGfx_LapseBlueLine, 0x0200, ANIM_TAG_LAPSE_BLUE_LINE},
+    {gBattleAnimSpriteGfx_LapseBlueRing, 0x0200, ANIM_TAG_LAPSE_BLUE_RING},
+    {gBattleAnimSpriteGfx_LapseBlueBall, 0x0200, ANIM_TAG_LAPSE_BLUE_BALL},
+    {gBattleAnimSpriteGfx_HollowPurple, 0x800, ANIM_TAG_HOLLOW_PURPLE},
+    {gBattleAnimSpriteGfx_PurpleSmallBubbles, 0x0140, ANIM_TAG_SMALL_BUBBLES_PURPLE},
+    {gBattleAnimSpriteGfx_Medusa, 0x0200, ANIM_TAG_MEDUSA},
+    {gBattleAnimSpriteGfx_MedusaOrb, 0x800, ANIM_TAG_MEDUSA_ORB}
 };
 
 const struct CompressedSpritePalette gBattleAnimPaletteTable[] =
@@ -1937,11 +1944,18 @@ const struct CompressedSpritePalette gBattleAnimPaletteTable[] =
     {gBattleAnimSpritePal_ReversalRedLine, ANIM_TAG_REVERSAL_RED_LINE},
     {gBattleAnimSpritePal_ReversalRedRing, ANIM_TAG_REVERSAL_RED_RING},
     {gBattleAnimSpritePal_ReversalRedBall, ANIM_TAG_REVERSAL_RED_BALL},
+    {gBattleAnimSpritePal_LapseBlueLine, ANIM_TAG_LAPSE_BLUE_LINE},
+    {gBattleAnimSpritePal_LapseBlueRing, ANIM_TAG_LAPSE_BLUE_RING},
+    {gBattleAnimSpritePal_LapseBlueBall, ANIM_TAG_LAPSE_BLUE_BALL},
+    {gBattleAnimSpritePal_HollowPurple, ANIM_TAG_HOLLOW_PURPLE},
+    {gBattleAnimSpritePal_SmallBubblesPurple, ANIM_TAG_SMALL_BUBBLES_PURPLE},
+    {gBattleAnimSpritePal_Medusa, ANIM_TAG_MEDUSA},
+    {gBattleAnimSpritePal_MedusaOrb, ANIM_TAG_MEDUSA_ORB},
 };
 
 const struct BattleAnimBackground gBattleAnimBackgroundTable[] =
 {
-    [BG_NONE]                      = {gBattleAnimBgImage_Dark,                    gBattleAnimBgPalette_Dark,                    gBattleAnimBgTilemap_Dark},
+    [BG_NONE]                      = {gBattleAnimBgImage_Dark,                    gBattleAnimBgPalette_Blank,                    gBattleAnimBgTilemap_Dark},
     [BG_DARK]                      = {gBattleAnimBgImage_Dark,                    gBattleAnimBgPalette_Dark,                    gBattleAnimBgTilemap_Dark},
     [BG_GHOST]                     = {gBattleAnimBgImage_Ghost,                   gBattleAnimBgPalette_Ghost,                   gBattleAnimBgTilemap_Ghost},
     [BG_PSYCHIC]                   = {gBattleAnimBgImage_Psychic,                 gBattleAnimBgPalette_Psychic,                 gBattleAnimBgTilemap_Psychic},
@@ -2026,4 +2040,5 @@ const struct BattleAnimBackground gBattleAnimBackgroundTable[] =
     [BG_RAINBOW]                   = {gBattleAnimBgImage_Rainbow,                 gBattleAnimBGPalette_Rainbow,                 gBattleAnimBgTilemap_Rainbow},
     [BG_HOLLOW_PURPLE_OPPONENT]    = {gBattleAnimBgImage_Impact,                  gBattleAnimBgPalette_ImpactAlt,               gBattleAnimBgTilemap_ImpactOpponent},
     [BG_HOLLOW_PURPLE_PLAYER]      = {gBattleAnimBgImage_Impact,                  gBattleAnimBgPalette_ImpactAlt,               gBattleAnimBgTilemap_ImpactPlayer},
+    [BG_WHITE_WIREFRAME]           = {gBattleAnimBgImage_TrickRoom,               gBattleAnimBgPalette_WhiteWireframe,          gBattleAnimBgTilemap_TrickRoom},
 };

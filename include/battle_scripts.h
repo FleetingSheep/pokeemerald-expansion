@@ -869,5 +869,6 @@ extern const u8 BattleScript_EffectSolarFlare[];
 extern const u8 BattleScript_EventHorizonContactMade[];
 extern const u8 BattleScript_EffectImpactEvent[];
 extern const u8 BattleScript_EffectCombinedRedAndBlueShift[];
+extern const u8 BattleScript_EffectPetrify[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H

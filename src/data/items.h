@@ -20,7 +20,9 @@
 
 #define TREASURE_FACTOR ((I_SELL_VALUE_FRACTION >= GEN_9) ? 2 : 1)
 
-const u32 gItemIcon_Calculator[] = INCBIN_U32("graphics/items/icons/calculator.4bpp.lz"); //dumb workaround
+const u32 gItemIcon_Calculator[] = INCBIN_U32("graphics/items/icons/calculator.4bpp.lz"); //dumb workaround //edit again WTF was i thinking??? what is there to workaround??? dumbass.
+const u32 gItemIcon_NewtonsCradle[] = INCBIN_U32("graphics/items/icons/newtons_cradle.4bpp.lz");
+const u32 gItemIconPalette_NewtonsCradle[] = INCBIN_U32("graphics/items/icon_palettes/newtons_cradle.gbapal.lz");
 
 // Shared Item Description entries
 
@@ -9464,10 +9466,12 @@ const struct Item gItemsInfo[] =
         .name = _("Bluk Berry"),
         .pluralName = _("Bluk Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
+        .holdEffect = HOLD_EFFECT_RESIST_BERRY,
+        .holdEffectParam = TYPE_SPACE,
         .description = COMPOUND_STRING(
-            "{POKEBLOCK} ingredient.\n"
-            "Plant in loamy soil\n"
-            "to grow Bluk."),
+            "A hold item that\n"
+            "weakens a Space\n"
+            "move if weak to it."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -11175,7 +11179,9 @@ const struct Item gItemsInfo[] =
     {
         .name = _("TM51"),
         .price = 3000,
-        .description = sQuestionMarksDesc, // Todo
+        .description = COMPOUND_STRING(
+            "Raises SpAtk and\n"
+            "Speed, but burns."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -11183,28 +11189,33 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_LUMINOSITY,
     },
 
-    [ITEM_TM52] =
+    [ITEM_TM_PETRIFY] =
     {
         .name = _("TM52"),
         .price = 3000,
-        .description = sQuestionMarksDesc, // Todo
+        .description = COMPOUND_STRING(
+            "Drastically lowers\n"
+            "of every other\n"
+            "combatant."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_PETRIFY,
     },
 
-    [ITEM_TM53] =
+    [ITEM_TM_STARBURST] =
     {
         .name = _("TM53"),
         .price = 3000,
-        .description = sQuestionMarksDesc, // Todo
+        .description = COMPOUND_STRING(
+            "Breaks barriers\n"
+            "and deals damage."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_STARBURST,
     },
 
     [ITEM_TM54] =
@@ -13023,18 +13034,34 @@ const struct Item gItemsInfo[] =
     [ITEM_CALCULATOR] = 
     {
         .name = _("Calculator"),
-        .price = 5000,
+        .price = 10000,
         .holdEffect= HOLD_EFFECT_CALCULATOR,
         .description = COMPOUND_STRING(
-            "The holder's two\n"
-            "attacking stats\n"
-            "are averaged."),
+            "Boosts Atk/Spatk if\n"
+            "similar, or lowers\n"
+            "if lopsided."),
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
         .iconPic = gItemIcon_Calculator, 
         .iconPalette = gItemIconPalette_CardKey,
+    },
+
+    [ITEM_NEWTONS_CRADLE] = 
+    {
+        .name = HANDLE_EXPANDED_ITEM_NAME("NewtnsCradle", "Newton's Cradle"),
+        .price = 13500,
+        .holdEffect = HOLD_EFFECT_NEWTONS_CRADLE,
+        .description = COMPOUND_STRING(
+            "Extends the length\n"
+            "of gravity."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 50,
+        .iconPic = gItemIcon_NewtonsCradle,
+        .iconPalette = gItemIconPalette_NewtonsCradle,
     },
     
     [ITEM_CLEAR_AMULET] =

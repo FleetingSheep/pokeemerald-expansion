@@ -52,7 +52,9 @@
     F(SKILL_SWAP) \
     F(SNATCH) \
     F(OVERHEAT) \
-    F(LUMINOSITY)
+    F(LUMINOSITY) \
+    F(PETRIFY) \
+    F(STARBURST) \
 
 #define FOREACH_HM(F) \
     F(CUT) \
